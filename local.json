@@ -4,8 +4,8 @@
     "server":{
       "mongo": {
         "url": "mongodb://root:password@localhost:27017/",
-        "db": "firenext",
-        "prefix": "fn_"
+        "db": "sssmc-localdb",
+        "prefix": ""
       },
       "firebase": {
         "type": "service_account",

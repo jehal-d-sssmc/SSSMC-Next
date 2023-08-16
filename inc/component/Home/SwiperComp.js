@@ -1,66 +1,57 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination } from "swiper/modules";
 
-export default function SwiperComp() {
+export default function SwiperComp(props) {
+  //console.log(props);
   return (
     <>
       <Swiper
-        slidesPerView={'auto'}
-        spaceBetween={27}
+        slidesPerView={"auto"}
+        spaceBetween={9}
         pagination={{
           clickable: true,
         }}
+        loop={true}
         modules={[Pagination]}
         className="vslider"
       >
-        <SwiperSlide>
-          <img
-            class="d-block w-100"
-            src="https://i3.ytimg.com/vi/KCbA6Il30P0/maxresdefault.jpg"
-            alt="First slide"
-            style={{ width: '100%' }}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            class="d-block w-100"
-            src="https://i3.ytimg.com/vi/C3U3ttbUlEg/maxresdefault.jpg"
-            alt="First slide"
-            style={{ width: '100%' }}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            class="d-block w-100"
-            src="https://i3.ytimg.com/vi/UlDWRZa0Liw/maxresdefault.jpg"
-            alt="First slide"
-            style={{ width: '100%' }}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            class="d-block w-100"
-            src="https://i3.ytimg.com/vi/dndw9D5hvPg/maxresdefault.jpg"
-            alt="First slide"
-            style={{ width: '100%' }}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            class="d-block w-100"
-            src="https://i3.ytimg.com/vi/j45U0Igtqw4/maxresdefault.jpg"
-            alt="First slide"
-            style={{ width: '100%' }}
-          />
-        </SwiperSlide>
+        {props.featuredItems.type !== "success" ? (
+          <div className="alert alert-error">{props.featuredItems.msg}</div>
+        ) : (
+          props.featuredItems.data.map((item, i) => {
+            return (
+              <>
+              {
+                item.featuredUrl !== undefined && 
+                <>
+                <SwiperSlide key={i}>
+                  <div className="featuredItem">
+                    <div className="featuredImg">
+                      <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
+                      <img
+                        class="d-block w-100"
+                        src={`https://content.sssmediacentre.org/${item.featuredUrl}`}
+                        alt={item.title}
+                        style={{ width: "100%" }}
+                      />
+                      </a>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                </>
+              }
+              </>
+            );
+          })
+        )}
       </Swiper>
     </>
   );

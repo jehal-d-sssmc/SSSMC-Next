@@ -9,7 +9,9 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-export default function Shorts(props) {
+
+
+export default function Read(props) {
   return (
     <>
       <Swiper
@@ -18,30 +20,32 @@ export default function Shorts(props) {
         pagination={{
           clickable: true,
         }}
-        loop={true}
         modules={[Pagination]}
-        className="shorts"
+        className="read align-self-center"
       >
-        {props.shorts.type !== "success" ? (
-          <div className="alert alert-error">{props.shorts.msg}</div>
+        {props.read.type !== "success" ? (
+          <div className="alert alert-error">{props.read.msg}</div>
         ) : (
-          props.shorts.data.map((item, i) => {
+          props.read.data.map((item, i) => {
             return (
               <>
               {
-                item.featuredUrl !== undefined && 
+                item.thumbPath !== undefined && 
                 <>
                 <SwiperSlide key={i}>
-                  <div className="shortsItem" style={{maxWidth:"320px"}}>
-                    <div className="shortsImg ratio ratio-9x16" >
-                      <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
+                  <div className="featuredItem">
+                    <div className="featuredImg">
+                      <a href={item.file_url} flink="f_reads" data-caption={item.title}>
                       <img
                         class="d-block w-100"
-                        src={`${item.thumb_path}`}
+                        src={`https://content.sssmediacentre.org/${item.thumbPath}`}
                         alt={item.title}
                         style={{ width: "100%" }}
                       />
                       </a>
+                    </div>
+                    <div className='featuredContent'>
+                      <h5>{item.title}</h5>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -55,4 +59,3 @@ export default function Shorts(props) {
     </>
   );
 }
-

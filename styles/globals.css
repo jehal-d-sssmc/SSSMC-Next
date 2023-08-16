@@ -11,6 +11,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  color: #d21d25;
+  transition: .5s all;
+}
+
+a:hover{
+  color: #004071;
+  transition: .5s all;
 }
 
 * {
@@ -183,21 +190,40 @@ header.topnav {
 .swiper {
   width: 100%;
   height: 100%;
+  padding-bottom: 36px !important;
 }
-
+/*
 .shorts .swiper-wrapper {
   justify-content: center;
+}*/
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 36px)) !important;
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 5px)) !important;
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 20%) !important;
+  background: var(--swiper-pagination-bullet-inactive-color, #000) !important;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-pagination {
+  top: 92% !important;
+  right: 0;
+  justify-content: flex-end !important;
+  text-align: left !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #cc470e !important;
 }
 
 .swiper-slide img {
@@ -208,9 +234,56 @@ header.topnav {
 }
 
 .vslider .swiper-slide {
-  width: 45%;
+  width: 36%;
   border-radius: 15px;
   overflow: hidden;
+}
+
+.read .featuredImg img {
+  border-radius: 15px;
+}
+.read .featuredItem {
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 15px;
+  font-size: 14px;
+}
+.read .featuredItem h5{
+  color: #cc470e;
+  padding: 10px 0;
+  margin: 0;
+}
+
+
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+   /* gutter size offset */
+  width: auto;
+  
+}
+.my-masonry-grid_column {
+  padding-left: 5px; /* gutter size */
+  background-clip: padding-box;
+  margin-bottom: 3px;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  
+  margin-bottom: 5px;
+}
+
+.my-masonry-grid img {
+  border-radius: 15px;
+}
+
+.my-masonry-grid .featuredContent h5{
+  color: #cc470e;
+  padding: 10px 0;
+  margin: 0;
 }
 
 .shorts .swiper-slide {
@@ -221,6 +294,28 @@ header.topnav {
 .watch .swiper-slide {
   width: 25%;
   border-radius: 15px;
+}
+
+.read .swiper-slide {
+  width: 20%;
+  border-radius: 15px;
+}
+
+.listen .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.listen .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+}
+
+.listen .swiper-slide img {
+  display: block;
+  width: 100%;
 }
 
 .section-title {
@@ -238,9 +333,35 @@ header.topnav {
   width: 90%;
 }
 
+.ratio-9x16{
+  position:relative;
+  width:100%;
+  height:0;
+  padding-top:177%;
+  overflow:hidden;
+}
+.ratio-9x16 img,
+.ratio-9x16 iframe{
+  position:absolute;
+  top:0;
+  width:100%;
+  height:100%;
+}
+
+.shortsItem{
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 1s all;
+}
+
+.shortsItem:hover img{
+  transform: scale(1.1);
+  transition: 1s all;
+}
+
 footer {
-  border-top: 5px solid #cc8d31;
-  padding-top: 54px;
+  
+  padding: 54px 0;
   margin-top: 63px;
   background-color: #f9f6ef;
 }
@@ -260,6 +381,23 @@ footer {
 }
 .bg-dark-1 {
   background-color: #004071;
+}
+
+ul.nav.nav-tabs.custom-tab {
+    justify-content: center;
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item .nav-link, .nav-tabs .nav-link{
+  color: #004071;
+}
+.nav-tabs .nav-item .nav-link:hover, .nav-tabs .nav-link:hover{
+  border: 1px solid #004071;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border: 1px solid #cc470e;
+  border-radius: 5px;
+  color: #cc470e;
 }
 
 @media only screen and (max-width: 768px) {
