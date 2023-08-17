@@ -1,17 +1,24 @@
 import React from "react";
 import FooterMenu from "./FooterMenu";
+import CardMusic from "./CardMusic";
+import Draggable from 'react-draggable'; // The default
 
 export default class Footer extends React.Component {
 
- 
+  componentDidMount(){
+    console.log(this.props)
+  }
+
+
+  shouldComponentUpdate = () => false;
+
   render() {
     return (
       <>
+        
         <div>
           <footer className="topnav">
             
-
-
             <div style={{ flexGrow: "1" }}>
               <FooterMenu />
             </div>

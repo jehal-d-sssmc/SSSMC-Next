@@ -40,7 +40,7 @@ export default function Listen(props) {
               {
                 item.file_identifier_thumb !== undefined && 
                 <>
-                <SwiperSlide key={i}>
+                <SwiperSlide key={i} className='effect2'>
                   <div className="listenItem">
                     <div className="listenImg" >
                       <a href={`https://content.sssmediacentre.org/${item.file_identifier}`} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>

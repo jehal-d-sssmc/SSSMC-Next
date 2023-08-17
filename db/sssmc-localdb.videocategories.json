@@ -1,0 +1,4315 @@
+[{
+  "_id": {
+    "$oid": "5f8ad049af50ad5405f80372"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "b7ebb640-0879-4c68-843a-a60219fdd456",
+  "catogoryName": "Thematic Presentations",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad0dc4f80373"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "catogoryName": "Songs",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad2beff80382"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "69555b96-ecb2-47f5-8b30-df684ed5298a",
+  "catogoryName": "Samarpan",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_1__SPLIT__1597840364302.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50addb6af8038d"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "bce8251c-626b-4d21-9e9c-d81601914608",
+  "catogoryName": "Tryst With Divinity",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_16__SPLIT__1597840364564.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad231af80370"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "0a78aa8a-80d3-4758-895a-805364f81dc9",
+  "catogoryName": "Music Video",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adbfd7f80378"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "295346e4-0c4a-47c4-94dd-33d85407ad86",
+  "catogoryName": "Aravind Balasubramanya Hosted Shows",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ada965f80391"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1b7d3915-7b0f-4bcc-9553-9fbff8cb36c8",
+  "catogoryName": "Utsaha",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad3b25f8037d"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "296222f6-1be2-49eb-8ad6-6fe1219b9b93",
+  "catogoryName": "Sai Sings",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_16__SPLIT__1597840364564.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adb5aff80392"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "603ec0a2-6b8f-4a56-9a48-42f3be340b00",
+  "catogoryName": "Vedalalo Jaganmatha Tatvam (Telugu)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad5e92f8037b"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "catogoryName": "Bhajan",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad51dff80384"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "7fda7a07-7292-4635-ac43-e95e7662d441",
+  "catogoryName": "Manishini Madhavuni Cheya (Telugu)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:56:09.838Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adf495f8038c"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "d7ce0edf-7262-4d7d-becb-8ea7d9f0f280",
+  "catogoryName": "My Moment with Ganesha",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_10__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad93ccf803a1"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "eabcf489-4c46-4ab1-a2d6-d7759b1d562a",
+  "catogoryName": "Devi Mahatmya Parayanam (English)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adede1f803a6"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "catogoryName": "Documentaries",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad6ed4f80375"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "c2366759-e4e8-4932-ae74-210f23ade1a8",
+  "catogoryName": "Prasanthi Chronicles",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_16__SPLIT__1597840364564.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad7c4cf80380"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "4fa98d4e-2159-44f4-8b8a-fffa4be47f60",
+  "catogoryName": "Bhajan Tutor",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_25__SPLIT__1597840364712.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad4925f80377"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "12469bf0-160c-4d5d-8069-9d5f05624f9f",
+  "catogoryName": "Sathya to Sai",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_1__SPLIT__1597840364302.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adb63ef8039c"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "08330928-22bb-4704-ab35-5673019b367d",
+  "catogoryName": "Jnana Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_10__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:39:54.082Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad011bf8037f"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "7712a28b-5950-404c-9f96-1fbdc9728d30",
+  "catogoryName": "Bhajan Medley",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_9__SPLIT__1597840364408.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad4a8cf80386"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "742dd290-558c-45bd-a37c-c0e905170e3e",
+  "catogoryName": "Miracle of Pure Love",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad6e7bf8038e"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1fee98e6-2c77-407e-a572-630da0ad2191",
+  "catogoryName": "Patha Mandiram (Telugu)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:58:08.684Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50addd36f8039a"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "dd816fa5-af2c-4bbc-9018-f441fb8c9d6c",
+  "catogoryName": "Sandeha Nivarini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_16__SPLIT__1597840364564.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T11:33:09.477Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adc3b3f8039e"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "09dc21f6-4207-4bb3-a4e0-36c6d94a9ccb",
+  "catogoryName": "Prasnottara Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T11:33:17.437Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50add4f4f8037e"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "66eb6609-20bb-48dd-931b-cb107b873c23",
+  "catogoryName": "Juke Box",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_4__SPLIT__1597840364347.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ade63ef80381"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "d39aba46-d863-4980-a34a-450b6abff753",
+  "catogoryName": "Talks",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adf5e8f80394"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "43d69ecd-3687-4ac5-9c77-084813402e92",
+  "catogoryName": "Drama",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad02f8f80399"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "catogoryName": "Audio Book",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad82e8f803a2"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "catogoryName": "Animations",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad1e0af803a3"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "3b394ab0-f53a-4031-a06e-518b383ad533",
+  "catogoryName": "Simham Cheppina Kathalu (Telugu)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:57:03.470Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad66c0f8037c"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "5e85ebd3-d083-4b60-a928-8b4cb5b015a9",
+  "catogoryName": "A Bhajan A Day",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-19T07:02:14.319Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adc7b7f8039b"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "095be36c-fa1a-4e02-bcf6-f36aa85af62a",
+  "catogoryName": "Prema Vahini (Telugu)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad7386f80374"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "catogoryName": "Hosted Show",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad63f6f80395"
+  },
+  "tree": [
+    "43d69ecd-3687-4ac5-9c77-084813402e92"
+  ],
+  "nameTree": [
+    "Drama"
+  ],
+  "isDeleted": false,
+  "catogoryId": "58779f73-aecf-4470-8ecd-bf02a7101e17",
+  "catogoryName": "Golden History",
+  "parent": "43d69ecd-3687-4ac5-9c77-084813402e92",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad348cf8036e"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "866c9e1e-a599-445a-b29a-6e108d4c0f18",
+  "catogoryName": "Concert",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad0bf4f80387"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "9f6028fe-d895-4932-a18d-5e2674709db4",
+  "catogoryName": "Trishakti Pradatha Saimatha (Telugu)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_25__SPLIT__1597840364712.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:55:40.963Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ade96bf80371"
+  },
+  "tree": [
+    "0a78aa8a-80d3-4758-895a-805364f81dc9"
+  ],
+  "nameTree": [
+    "Music Video"
+  ],
+  "isDeleted": false,
+  "catogoryId": "7abb9e01-6088-4043-870e-6e22940c9d05",
+  "catogoryName": "Melodic Stories",
+  "parent": "0a78aa8a-80d3-4758-895a-805364f81dc9",
+  "imagePath": "gallery/thumb/imagefile_10__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad1ccaf80385"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "d89b38f1-67a7-46d8-9134-13176a0ef9b9",
+  "catogoryName": "Tyagopanishad (Telugu)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_1__SPLIT__1597840396118.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:55:58.849Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adf508f803a4"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "d2e0c6e2-da99-4837-9792-e0c5e07ebdc0",
+  "catogoryName": "Miracles and Beyond",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adabf9f8036f"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "catogoryName": "Mandir/LIVE Events",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.213Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:35:56.760Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adf180f80383"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "00ac92ee-9319-4aa1-bded-1abf83af452a",
+  "catogoryName": "Navaratrulalo Navavidha Bhakti (Telugu)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:56:20.956Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad60e0f80389"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "c8e6ca1b-f531-4eee-a053-d0d9714a39a9",
+  "catogoryName": "When Singing Souls Speak",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_1__SPLIT__1597840396118.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adacbef80390"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "30c5cd21-f836-4ed4-b097-02fb8ce3f34a",
+  "catogoryName": "Brindavan Diaries",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_25__SPLIT__1597840364712.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad83b2f80396"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "catogoryName": "Discourses",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adb9bcf80397"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "e4ae80ee-c3b1-4b27-a894-a01a38c14f65",
+  "catogoryName": "Sai Aanimuthyalu (Telugu)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_9__SPLIT__1597840364408.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:55:24.675Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad7c70f80398"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1c33d1ae-4b1a-44c1-a5d9-7df01b07363d",
+  "catogoryName": "Premamrutham (Telugu)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:55:14.986Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adfa5df803a0"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "4780a673-d956-433f-a07e-24fe58b07070",
+  "catogoryName": "Dhyana Vahini (Telugu)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_25__SPLIT__1597840364712.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad6f3af803a7"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "823d10d1-ff0b-4cfd-ba7b-047e19317cfd",
+  "catogoryName": "Sai Prema Vahini (Telugu)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_16__SPLIT__1597840364564.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:57:22.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50adedddf80379"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "4144957f-24fe-44ff-9868-a7e548f15953",
+  "catogoryName": "Panel Discussions",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_17__SPLIT__1597840364584.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad4c76f8037a"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "95eef64e-339d-4b41-a8da-28e5ff61618e",
+  "catogoryName": "Darshan",
+  "imagePath": "gallery/thumb/imagefile_10__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad22f5f8038a"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "e5bcfea6-c7af-4ce6-9d9a-adeb267479d3",
+  "catogoryName": "Antaranga Tarangalu, Ananda Laharulu (Telugu)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_25__SPLIT__1597840364712.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:57:46.655Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad3eb0f8038b"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "46e5829e-11e1-4310-bc6a-6abc38a65310",
+  "catogoryName": "Divine Reminiscences of Brindavan Boys With Sri Sathya Sai",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad6b57f8038f"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "f22fcad1-a55c-4465-ae0f-df328594d981",
+  "catogoryName": "Gayathri Mantra",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_17__SPLIT__1597840364584.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad34b7f803a5"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "263ea25b-7093-447c-a649-55b4448e8163",
+  "catogoryName": "Uncle Lion's Tales",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_25__SPLIT__1597840364712.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.219Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T10:11:10.049Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ade55bf80388"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "catogoryName": "Conversations",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.215Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad64b7f8039f"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "bddb8181-1822-4021-8d08-1057bfa5c4a7",
+  "catogoryName": "Sathya Sai Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.218Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T11:33:27.334Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad4f70f80376"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "dcaff569-c888-4cc0-ada5-752610a7b34d",
+  "catogoryName": "Sathya to Sai - Snippets",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_1__SPLIT__1597840364302.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5f8ad049af50ad5c5bf8039d"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "8c2cd3de-7b1e-48a9-a9f0-74baefe9e56c",
+  "catogoryName": "Prasanthi Vahini (Telugu)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_17__SPLIT__1597840364584.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  },
+  "updatedAt": {
+    "$date": "2020-10-17T11:06:49.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "5fa2503808ff40b14ee76751"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "48badb3b-d556-45fa-b2e6-4ecaa815513d",
+  "catogoryName": "Avatar Vani (Hindi)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-04T06:54:48.685Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-04T06:54:48.685Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa399d308ff4029c6e76763"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "56e21ec3-31cf-4df0-9673-4af5ff0b3a39",
+  "catogoryName": "Devi Mahatmya Parayanam (English)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-05T06:21:07.925Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-05T06:21:07.925Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa909e808ff405062e76798"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "627c47b2-9fa8-4381-a433-151453496ff7",
+  "catogoryName": "Vedam",
+  "parent": null,
+  "batchDate": {
+    "$date": "2020-11-09T09:20:40.639Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T09:20:40.640Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-09T09:20:40.640Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa909fa08ff40c0aae7679a"
+  },
+  "tree": [
+    "627c47b2-9fa8-4381-a433-151453496ff7"
+  ],
+  "nameTree": [
+    "Vedam"
+  ],
+  "isDeleted": false,
+  "catogoryId": "f238b7f4-ee78-4f61-b359-05008626d922",
+  "catogoryName": "Chants",
+  "parent": "627c47b2-9fa8-4381-a433-151453496ff7",
+  "batchDate": {
+    "$date": "2020-11-09T09:20:40.639Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T09:20:58.891Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-09T09:21:17.203Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa90b1508ff400defe7679e"
+  },
+  "tree": [
+    "627c47b2-9fa8-4381-a433-151453496ff7",
+    "f238b7f4-ee78-4f61-b359-05008626d922"
+  ],
+  "nameTree": [
+    "Vedam",
+    "Chants"
+  ],
+  "isDeleted": false,
+  "catogoryId": "3df6f6a4-0be5-42a8-8d56-388c2978bb0e",
+  "catogoryName": "Telugu",
+  "parent": "f238b7f4-ee78-4f61-b359-05008626d922",
+  "batchDate": {
+    "$date": "2020-11-09T09:20:40.639Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T09:25:41.869Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-09T09:25:41.869Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa9437f08ff40dd11e767a5"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "570c9ebc-3ddd-4fd5-aa81-b8436af3bd11",
+  "catogoryName": "Bhagavatha Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T13:26:23.438Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T11:34:41.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa9455108ff4019b5e767ab"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "3d23a294-9fe8-41f4-b29e-767ef2d78f12",
+  "catogoryName": "Ramakatha Rasavahini (Hindi)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T13:34:09.600Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T11:44:33.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa945e508ff40375de767ae"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "023f801f-02ae-4cc1-996f-5f17391cbd9d",
+  "catogoryName": "Divyanubhav (Hindi)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T13:36:37.552Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-09T13:36:37.552Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fa9469208ff403ca8e767b1"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "9e621654-f414-4b27-b0a4-d71e12a0de5f",
+  "catogoryName": "Sai Prem Vani (Hindi)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-09T13:39:30.707Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-09T13:39:30.707Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5faa7e9a08ff40148ae767bb"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "e4e481a3-dae7-4797-ae3b-eb7510cadfef",
+  "catogoryName": "Sundarakhand (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-10T11:50:50.792Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-10T11:50:50.792Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5faa834a08ff40c29be767be"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "9bf6a0b8-9200-4e13-af44-5e5697d565d7",
+  "catogoryName": "Atmartha Anubhavangal (Tamil)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-10T12:10:50.142Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-10T12:10:50.142Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5faa83f608ff4070cbe767c1"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "879da289-dce5-4341-8cc4-37f7cec3345b",
+  "catogoryName": "Bhajan Tutor (Tamil)",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-10T12:13:42.401Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-10T12:13:42.401Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5faa89e608ff4009a5e767c5"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "9f7e4335-e87a-4229-9452-94f69ddcecf3",
+  "catogoryName": "Bhagavatha Vahini (Tamil)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-10T12:39:02.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-10T12:39:02.516Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5faa934908ff40a29fe767cd"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "2400ec0a-fdce-41ec-aec8-88ae85f5bbaa",
+  "catogoryName": "Sri Sathya Sai Speaks",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-10T13:19:05.024Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-10T13:19:05.024Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb21f919610c27c2a66c4f0"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "fc07f718-1b11-47b4-a451-a09dad2754f8",
+  "catogoryName": "Global Akhanda Bhajan",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-16T06:43:29.697Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-16T06:43:29.697Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb21fa09610c2d87566c4f2"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+    "fc07f718-1b11-47b4-a451-a09dad2754f8"
+  ],
+  "nameTree": [
+    "Bhajan",
+    "Global Akhanda Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "a1349eb7-21f8-47fa-a91f-5a32b6cfcdc5",
+  "catogoryName": "2020",
+  "parent": "fc07f718-1b11-47b4-a451-a09dad2754f8",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-16T06:43:44.152Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-16T06:43:44.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb24fe89610c28a5c66c509"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "4aac9b72-b528-4861-bdd1-b0f684494778",
+  "catogoryName": "Navasutra Niyamavali (Telugu)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-16T10:09:44.996Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-16T10:09:44.996Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb253919610c2120a66c50f"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": true,
+  "catogoryId": "69b35950-cf2c-4e83-a790-3adba0e899ba",
+  "catogoryName": "Discourses (Tamil)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-16T10:25:21.771Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-12T10:28:54.013Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb3a0279610c2245466c527"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "a342ce4a-7f53-4186-9497-f175fafdf7eb",
+  "catogoryName": "Geetha Vahini (Hindi)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-17T10:04:23.674Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-17T10:04:23.674Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb3a2be9610c27ea866c52b"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "9baecad5-04ac-4f8f-9abe-10649cdd680c",
+  "catogoryName": "Uncle Lion's Tales (Hindi)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-17T10:15:26.101Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-17T10:15:26.101Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fbe58139610c25be666c576"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "cefc6c85-8ed5-4d03-a2e3-e8b0a27ca0b1",
+  "catogoryName": "Divine Droplets (Tamil)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-25T13:11:47.978Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-25T13:11:47.978Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fc23d3df6cba3e83c1c0660"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": true,
+  "catogoryId": "f581fb71-1555-45ef-9e45-aa92ace4a7bf",
+  "catogoryName": "Chinnarula Chirukanuka (Telugu)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-28T12:06:21.716Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-28T12:06:21.716Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fc23d5ff6cba3fb841c0663"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "cf10d9e3-1afe-439a-be56-f00cff9c7867",
+  "catogoryName": "Chinnarula Chirukanuka (Telugu)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-11-28T12:06:55.513Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-28T12:06:55.513Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fc635acd25a3cc0f3cb8711"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "aa7fd464-0720-478f-90d0-170531eeb48b",
+  "catogoryName": "Sai Samsmaranam (Telugu)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-01T12:23:08.630Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-01T12:23:23.505Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fc9d1c7d25a3cf031cb8747"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "51cb5769-e766-469e-8454-df39351d1e5f",
+  "catogoryName": "Premavatar Sri Sathya Sai (Hindi)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-04T06:05:59.688Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-04T06:05:59.688Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fc9d860d25a3c3411cb874b"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "isDeleted": true,
+  "catogoryId": "1356ffbe-b134-497d-9465-3713d57c96b0",
+  "catogoryName": "Gaan Sarita - (Hindi)",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-04T06:34:08.496Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-07T05:18:18.488Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fc9db10d25a3c6585cb8750"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "b58c6490-1456-41ac-bbaa-a5a4bb507407",
+  "catogoryName": "Sai Kaviyamudham - Poems Series | Anandame Sai (Tamil)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-04T06:45:36.754Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-04T06:45:36.754Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fb645e0a05f6622cc7a9f8f"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:00.320Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:00.320Z"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "catogoryId": "b65e6a60-ece4-47f0-b633-c23ed0788cd1",
+  "catogoryName": "Discourses - (Tamil)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645e0a05f6622cc7a9f94"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:00.358Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:00.358Z"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "catogoryId": "ee411deb-f002-4d9c-be62-a0a4c86eded4",
+  "catogoryName": "Chinna Katha (Tamil)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645e0a05f6622cc7aa014"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:00.598Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T10:02:29.355Z"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "catogoryId": "79f42d7e-f75f-4bc6-8f35-5bb2ea7aa6db",
+  "catogoryName": "Jnana Vahini - (Tamil)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": null,
+  "isDeleted": true
+},
+{
+  "_id": {
+    "$oid": "5fb645fea05f6622cc7aa0ef"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:30.621Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T12:27:32.643Z"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "catogoryId": "55c36cef-e0b0-4598-9f5a-70bc746b76e2",
+  "catogoryName": "Premavatar SriSathya Sai (Hindi)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": null,
+  "isDeleted": true
+},
+{
+  "_id": {
+    "$oid": "5fb645fea05f6622cc7aa0fd"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:30.651Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:30.651Z"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "catogoryId": "770c78a4-4c26-4761-a288-b06e1f30fba4",
+  "catogoryName": "Gaan Sarita (Hindi)",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645fea05f6622cc7aa102"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:30.659Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:30.659Z"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "catogoryId": "5de0780a-a13b-425f-98ae-33cc60fdec96",
+  "catogoryName": "Uncle Lion Tales (Hindi)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": null,
+  "isDeleted": true
+},
+{
+  "_id": {
+    "$oid": "5fb645fea05f6622cc7aa12f"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:30.778Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:30.778Z"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "catogoryId": "ecab608d-ee54-4c6f-83b6-3327222ab1d7",
+  "catogoryName": "Hindi Documentaries (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645fea05f6622cc7aa143"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:30.827Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:30.827Z"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "catogoryId": "5da35de6-d108-4d87-9fb3-f90d88446a0c",
+  "catogoryName": "Hindi Hosted Shows (Hindi)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645fea05f6622cc7aa178"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:30.961Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:30.961Z"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "catogoryId": "f599eb97-2a41-42d7-b9e0-e5bf5c8e5fb2",
+  "catogoryName": "Anmol Moti (Hindi)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645ffa05f6622cc7aa210"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:31.349Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-18T09:48:34.569Z"
+  },
+  "tree": [
+    "43d69ecd-3687-4ac5-9c77-084813402e92"
+  ],
+  "nameTree": [
+    "Drama"
+  ],
+  "catogoryId": "647ca329-2a3e-4edd-a63a-7b956bd5487b",
+  "catogoryName": "Natya Pushpanjali (Hindi)",
+  "parent": "43d69ecd-3687-4ac5-9c77-084813402e92",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645ffa05f6622cc7aa332"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:31.696Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:31.696Z"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "catogoryId": "c3908da7-99c4-4d83-acec-003909ed9460",
+  "catogoryName": "Love Flows North (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645ffa05f6622cc7aa409"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:31.937Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:31.937Z"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "catogoryId": "b28623fb-497b-4993-a03d-ed5f70bd796d",
+  "catogoryName": "Miracles and Beyond (Hindi)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb645ffa05f6622cc7aa41d"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:31.958Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:31.958Z"
+  },
+  "tree": [
+    "43d69ecd-3687-4ac5-9c77-084813402e92"
+  ],
+  "nameTree": [
+    "Drama"
+  ],
+  "catogoryId": "e84ed96f-4325-48e3-8d38-46f354df953a",
+  "catogoryName": "Adarsh Jeevan Anand Upavan (Hindi)",
+  "parent": "43d69ecd-3687-4ac5-9c77-084813402e92",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb64600a05f6622cc7aa47f"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:32.067Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:32.067Z"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "catogoryId": "cc424e63-ee50-456e-a2c5-693a6bc8e3d1",
+  "catogoryName": "The Advent (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb64600a05f6622cc7aa4ab"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:32.114Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:32.114Z"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "catogoryId": "e6ca78a6-0c51-4bf5-a756-79f0c287ed41",
+  "catogoryName": "Parthi Yatra (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb64600a05f6622cc7aa540"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:32.283Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:32.283Z"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "catogoryId": "2db2e2ba-a2b5-4523-a133-dfaeed0c9dd4",
+  "catogoryName": "Bhajan Tutor (Hindi)",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fb64600a05f6622cc7aa59c"
+  },
+  "createdAt": {
+    "$date": "2020-11-19T10:16:32.384Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-19T10:16:32.384Z"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "catogoryId": "c1e02e2f-d982-401e-811c-72d82d9e855a",
+  "catogoryName": "Sai Ka Pyar Jeevan Aadhar (Hindi)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": null
+},
+{
+  "_id": {
+    "$oid": "5fd7152516fdcf43e8f88219"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "20b164d7-5055-40f1-b8ba-f6fc2caabfdf",
+  "catogoryName": "Upanishad Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-14T07:32:53.543Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T11:01:02.771Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fdc845bd85e9f9cf7e69245"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "isDeleted": true,
+  "catogoryId": "bf03ac6b-62f5-49b3-8415-42799108115b",
+  "catogoryName": "Mata Ka Prem (Hindi)",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-18T10:28:43.366Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-18T10:28:43.366Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fe4369533642e8d55e42111"
+  },
+  "tree": [
+    "866c9e1e-a599-445a-b29a-6e108d4c0f18"
+  ],
+  "nameTree": [
+    "Concert"
+  ],
+  "isDeleted": false,
+  "catogoryId": "21bcfcbb-e690-4bb3-b49e-f204394efa7c",
+  "catogoryName": "Sri Sathya Sai Sangeet",
+  "parent": "866c9e1e-a599-445a-b29a-6e108d4c0f18",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-24T06:35:01.857Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-24T06:35:01.857Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fe6ddaee16f1d0ba76ea901"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "167dccaf-a6ba-4c8d-bced-4973c184faca",
+  "catogoryName": "Premaku Nilayam Vidyarthulaku Aalayam (Telugu)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-26T06:52:30.028Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-26T06:52:30.028Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fed6f37e16f1dbe3b6eac47"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "d23ef34c-1e67-475b-9b34-2594a1ce0371",
+  "catogoryName": "Dhyan Vahini (Hindi)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-31T06:27:03.339Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-31T06:27:03.339Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5fed709fe16f1d9ca76eac4f"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "7521ba1d-47b0-43ae-89bd-1b878382425c",
+  "catogoryName": "Short Experiences (Telugu)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2020-12-31T06:33:03.652Z"
+  },
+  "updatedAt": {
+    "$date": "2020-12-31T06:33:03.652Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5ff2a740e16f1db57d6ead48"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "isDeleted": false,
+  "catogoryId": "d5f9c9d6-a8ba-4e63-8659-b45d798da28b",
+  "catogoryName": "Prayers",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-04T05:27:28.918Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-04T05:27:28.918Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "5ff7ece1e16f1d3fcd6eaf01"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "43dd3258-77d0-49fe-b1af-8e998a633993",
+  "catogoryName": "Prasanthi Gatha (Hindi)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-08T05:25:53.946Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-08T05:25:53.946Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6013a8b96c0db46469fe2d29"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "201ec6f2-9dbc-472b-94f2-78f961a073b4",
+  "catogoryName": "Premamrutha Dhara (Hindi) - Swami's Padyams",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T06:18:33.931Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T06:18:33.931Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6013a9b36c0db43989fe2d39"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "0694cffb-83c8-4374-8f2d-8cfa74cabfb8",
+  "catogoryName": "Sri Sathya Sai Padyam",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T06:22:43.380Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T06:22:43.380Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6013af126c0db409e1fe2d66"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "isDeleted": false,
+  "catogoryId": "5c8f10ad-bf68-405f-9b93-4afd8ccb4a67",
+  "catogoryName": "Sama",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T06:45:38.489Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T06:45:38.489Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6013b2046c0db46c0ffe2d83"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "isDeleted": false,
+  "catogoryId": "d943419e-6b64-483b-aa60-97f692d699cb",
+  "catogoryName": "Songs Tutor",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T06:58:12.942Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T06:58:12.942Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6013f5106c0db47ef3fe2e0a"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "6612b3d3-4223-4ac7-ac96-997c6375602c",
+  "catogoryName": "Ramakatha Rasavahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T11:44:16.466Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:48:13.567Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601431496c0db46bdffe2e55"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "5a1ddead-8dbb-4160-a217-c152860857d2",
+  "catogoryName": "Geetha Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-29T16:01:13.977Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:56:25.747Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6015268e9237d61820850700"
+  },
+  "tree": [
+    "f0b83d9d-cf10-444b-b8c3-1d26d18edc33"
+  ],
+  "nameTree": [
+    "Songs"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1c41885e-c8bf-4e81-b9b1-eb1bc054b8d9",
+  "catogoryName": "Gana Sudhe (Kannada)",
+  "parent": "f0b83d9d-cf10-444b-b8c3-1d26d18edc33",
+  "imagePath": "gallery/thumb/imagefile_20__SPLIT__1597840364630.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T09:27:42.662Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T09:27:42.662Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60152f439237d6cc2885070c"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "81b56c80-d367-476a-b2e3-715adb91f661",
+  "catogoryName": "Prasanthi Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T10:04:51.230Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:56:08.694Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601530ad9237d6d79a850716"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "83ebd490-f1cd-45e7-ab1f-3fd3f5bace40",
+  "catogoryName": "Uncle Lion's Tales (Kannada)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T10:10:53.033Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T10:10:53.033Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601534f99237d6ebe1850727"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "68882653-5e6f-4a63-97ef-2af4c4b8372c",
+  "catogoryName": "Divya Sandesha (Kannada)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T10:29:13.136Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T10:29:13.136Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601535139237d64312850729"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "767a0d67-a048-44f8-b28a-b07fa558a3fd",
+  "catogoryName": "Premamrutha Dhare (Kannada)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T10:29:39.284Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T10:29:39.284Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6015353c9237d66afa85072b"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1dd788f8-fc6e-441c-aa74-304e6645012f",
+  "catogoryName": "Miracles And Beyond (Kannada)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T10:30:20.611Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T10:30:20.611Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601535709237d6464b85072d"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": true,
+  "catogoryId": "82b7f24f-6e2b-4858-b8af-f41fee555c0c",
+  "catogoryName": "Premavatara Sri Sathya Sai (Kannada)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T10:31:12.908Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T10:31:12.908Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60154f519237d6d699850762"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "6269e565-ab5e-46bf-89f0-8f8e7ab6760b",
+  "catogoryName": "Chinna Katha (Kannada)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T12:21:37.152Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T12:21:37.152Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601552849237d6733b850776"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "154bce45-6606-4f66-aa7d-50e1a666c0ca",
+  "catogoryName": "Premavatar Sri Sathya Sai (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T12:35:16.905Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T12:35:16.905Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "601553449237d637a7850782"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "82b01495-2916-41fc-90a7-e41b78dfb176",
+  "catogoryName": "Premavatara Sri Sathya Sai (Kannada)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-01-30T12:38:28.620Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-30T12:52:53.286Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6019e4677431ab7ec4293564"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "e1260674-e0f1-4995-8d0b-9efc8e4dc6a8",
+  "catogoryName": "Kids World",
+  "parent": null,
+  "batchDate": {
+    "$date": "2021-02-02T23:46:47.065Z"
+  },
+  "createdAt": {
+    "$date": "2021-02-02T23:46:47.068Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T23:46:47.068Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "604672d40b7e667ec7056afd"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "4bfafa42-452d-49bb-b74e-54b0ff814721",
+  "catogoryName": "Short and Sweet Sai Snippets",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-03-08T18:54:12.519Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-08T18:54:12.519Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "606ff44e0b7e660165056d3d"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1d7a2fe9-5cdb-477b-bce7-8435a59ca55f",
+  "catogoryName": "Sathyam Shivam Sundaram",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-04-09T06:29:34.252Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:55:56.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "607d15b50b7e668561056e27"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "ed0afd26-7f09-454d-92b5-fec836f31370",
+  "catogoryName": "Ramayana Katha Samputi (Telugu)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-04-19T05:31:33.345Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-19T05:31:33.345Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "608691cb0b7e6694e8056ea3"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "0a72fbd3-54b6-4644-8625-078a84bab00d",
+  "catogoryName": "Bhakti - Mukti (Hindi)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-04-26T10:11:23.125Z"
+  },
+  "updatedAt": {
+    "$date": "2021-04-26T10:11:23.125Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60c18f52a7c8955edd7464f9"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "10b9d45b-7b55-4d54-b6e5-a31c38abeedd",
+  "catogoryName": "Badri Yatra (Telugu)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-06-10T04:04:34.400Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-10T04:05:15.601Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60d57376a7c89556637466c2"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "5831ceb3-c330-4153-bee4-b8e5c292ac9b",
+  "catogoryName": "Prem Vahini (Hindi)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-06-25T06:11:02.216Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T06:11:02.216Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60eeaf9ba7c8951431746864"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "57dbca23-f929-4348-b96f-ed8067b55de8",
+  "catogoryName": "Dharma Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-07-14T09:34:19.922Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:45:53.041Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60f7efe8a7c895303174692b"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "ed56cd24-f84a-407b-a3b2-32b9a5fdd1a4",
+  "catogoryName": "Sundaram Bhajans (Tamil)",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-07-21T09:59:04.800Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-21T09:59:04.800Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "60fa5c0da7c895a120746974"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "9f63d578-41b1-4fd4-a75e-b2929b8eca45",
+  "catogoryName": "Tasmai Sri Gurave Namah (Hindi)",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-07-23T06:05:01.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-07-23T06:05:01.961Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "611212646f8013491c2dac5d"
+  },
+  "tree": [
+    "b7ebb640-0879-4c68-843a-a60219fdd456"
+  ],
+  "nameTree": [
+    "Thematic Presentations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "20d5ee8d-e827-46d8-b097-ba3330b2c96f",
+  "catogoryName": "10th Telugu Anniversary",
+  "parent": "b7ebb640-0879-4c68-843a-a60219fdd456",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-08-10T05:45:08.017Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-10T05:45:08.017Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "611f7b9dc94df1005eeefbef"
+  },
+  "tree": [
+    "b7ebb640-0879-4c68-843a-a60219fdd456"
+  ],
+  "nameTree": [
+    "Thematic Presentations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "93ec7e05-73f7-4a63-bfb7-77c9315d65d6",
+  "catogoryName": "Radiosai Anniversaries",
+  "parent": "b7ebb640-0879-4c68-843a-a60219fdd456",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-08-20T09:53:33.774Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-20T09:53:33.774Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61248d3bc94df138f2eefcb6"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "20a448e7-e1c6-457f-bfc1-0d5907947cc2",
+  "catogoryName": "Sai Padya Deepikalu (Telugu)",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-08-24T06:10:03.316Z"
+  },
+  "updatedAt": {
+    "$date": "2021-08-24T06:10:16.594Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "612f4edfc94df1636beefd7b"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "bcd38b1b-e4a2-4522-b74e-4a230aebdf6b",
+  "catogoryName": "Radha Krishna Drama (Telugu)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-09-01T09:58:55.343Z"
+  },
+  "updatedAt": {
+    "$date": "2021-09-01T09:58:55.343Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "615d73b34050296071ee8036"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "2b8a510c-9af5-4873-a4e3-28e34adc6f04",
+  "catogoryName": "Sri Lalitha Sahasra Namavali - Sri Sathya Sai",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-06T10:00:19.360Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-06T10:00:19.360Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "615ebb114050293decee806b"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": true,
+  "catogoryId": "6c64e25a-7f82-4209-8918-bef9bd613d13",
+  "catogoryName": "Navratri Mahatmya (Hindi)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-07T09:17:05.130Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-07T09:17:05.130Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "615ebbef40502991eeee806e"
+  },
+  "tree": [
+    "b7ebb640-0879-4c68-843a-a60219fdd456"
+  ],
+  "nameTree": [
+    "Thematic Presentations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "5edb588b-a5eb-4877-9ad4-86d7f7507cac",
+  "catogoryName": "Navratri Mahatmya",
+  "parent": "b7ebb640-0879-4c68-843a-a60219fdd456",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-07T09:20:47.679Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-07T09:20:47.679Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61600d914050297bfeee8091"
+  },
+  "tree": [
+    "0a78aa8a-80d3-4758-895a-805364f81dc9"
+  ],
+  "nameTree": [
+    "Music Video"
+  ],
+  "isDeleted": false,
+  "catogoryId": "cdae1431-0cc1-4227-b0b9-620eadbe73dd",
+  "catogoryName": "Sapta Swara Navaratri",
+  "parent": "0a78aa8a-80d3-4758-895a-805364f81dc9",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-08T09:21:21.861Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-08T09:21:21.861Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "616016e94050295334ee809f"
+  },
+  "tree": [
+    "d39aba46-d863-4980-a34a-450b6abff753"
+  ],
+  "nameTree": [
+    "Talks"
+  ],
+  "isDeleted": false,
+  "catogoryId": "3ffa8f06-fde1-4add-9beb-f3c9727ce452",
+  "catogoryName": "Deviyin Mahatthuvam - Navaratri Special Talks - (Tamil)",
+  "parent": "d39aba46-d863-4980-a34a-450b6abff753",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-08T10:01:13.466Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-08T10:01:13.466Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "616531174050295fcfee8170"
+  },
+  "tree": [
+    "0a78aa8a-80d3-4758-895a-805364f81dc9"
+  ],
+  "nameTree": [
+    "Music Video"
+  ],
+  "isDeleted": false,
+  "catogoryId": "27a4ee0c-909e-4890-a2cf-d53bdb1ecb73",
+  "catogoryName": "Natyanjali (Dance)",
+  "parent": "0a78aa8a-80d3-4758-895a-805364f81dc9",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-12T06:54:15.372Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-12T06:54:15.372Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "616e6738405029169cee822e"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "608c6b5a-be78-44e8-a558-d388afd128ab",
+  "catogoryName": "Prema Vahini (Tamil)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-19T06:35:36.160Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-19T06:35:36.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6173d3c6dc596b26d516d492"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b"
+  ],
+  "nameTree": [
+    "Bhajan"
+  ],
+  "isDeleted": true,
+  "catogoryId": "e6b65103-903c-4d49-a597-1136c3c375f0",
+  "catogoryName": "GAB",
+  "parent": "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-23T09:20:06.639Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-23T09:20:06.639Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "617683d8dc596b9d1416d4b2"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+    "08330928-22bb-4704-ab35-5673019b367d"
+  ],
+  "nameTree": [
+    "Audio Book",
+    "Jnana Vahini"
+  ],
+  "isDeleted": false,
+  "catogoryId": "068b07ac-8f98-4cb0-9f4b-457f3e27693e",
+  "catogoryName": "Chapter 1",
+  "parent": "08330928-22bb-4704-ab35-5673019b367d",
+  "imagePath": "gallery/thumb/imagefile_10__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-10-25T10:15:52.601Z"
+  },
+  "updatedAt": {
+    "$date": "2021-10-25T10:15:52.601Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "619895ae73adff1e357e162e"
+  },
+  "tree": [
+    "5c7f52a8-0b9a-411c-ad4b-0f960cbf948b",
+    "fc07f718-1b11-47b4-a451-a09dad2754f8"
+  ],
+  "nameTree": [
+    "Bhajan",
+    "Global Akhanda Bhajan"
+  ],
+  "isDeleted": false,
+  "catogoryId": "5b270cf9-772d-45f9-b208-0ab20be82d05",
+  "catogoryName": "2021",
+  "parent": "fc07f718-1b11-47b4-a451-a09dad2754f8",
+  "imagePath": "gallery/thumb/imagefile_7__SPLIT__1597840364368.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-11-20T06:29:02.701Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T06:29:02.701Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61bc29fd73adffaa367e1817"
+  },
+  "tree": [
+    "b7ebb640-0879-4c68-843a-a60219fdd456"
+  ],
+  "nameTree": [
+    "Thematic Presentations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "5ee008ab-5c12-4505-9715-871901e5f086",
+  "catogoryName": "Tiruppavai (Tamil)",
+  "parent": "b7ebb640-0879-4c68-843a-a60219fdd456",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2021-12-17T06:11:09.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-12-17T06:11:09.961Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61d3db5e66afd22249d89df0"
+  },
+  "tree": [
+    "cd21ecfb-30d9-47d1-bf18-cd462328458d"
+  ],
+  "nameTree": [
+    "Conversations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "7e5e9fe5-19c7-4e60-97e8-c939b96b7152",
+  "catogoryName": "Sai Anubhavamruta (Kannada)",
+  "parent": "cd21ecfb-30d9-47d1-bf18-cd462328458d",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-01-04T05:30:06.218Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-04T05:30:16.322Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61e26633cc7eb8cc44c92d94"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "0b8fbed1-01d4-41aa-b223-b0ac82c92f0c",
+  "catogoryName": "English",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-01-15T06:14:11.422Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-15T06:14:11.422Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61e268aacc7eb82fedc92d9a"
+  },
+  "tree": [
+    "b7ebb640-0879-4c68-843a-a60219fdd456"
+  ],
+  "nameTree": [
+    "Thematic Presentations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "2b9ccfb9-e6db-45d6-8402-321cf86b72a2",
+  "catogoryName": "Collective Prayers",
+  "parent": "b7ebb640-0879-4c68-843a-a60219fdd456",
+  "imagePath": "gallery/thumb/imagefile_26__SPLIT__1597840364733.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-01-15T06:24:42.746Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-15T06:24:42.746Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61e8e18fcc7eb8d5c6c92e40"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "ce30562e-b993-40ec-8df5-7123ae877a98",
+  "catogoryName": "Loving God",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-01-20T04:14:07.937Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T10:46:05.364Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "61f386690c3b5f73be83fd25"
+  },
+  "tree": [
+    "041b382d-9ce8-4750-96dd-9f3dff1617f3"
+  ],
+  "nameTree": [
+    "Documentaries"
+  ],
+  "isDeleted": false,
+  "catogoryId": "6f1b8624-0f73-4d0c-804e-e4ff64c7c1c4",
+  "catogoryName": "Service - His Mission",
+  "parent": "041b382d-9ce8-4750-96dd-9f3dff1617f3",
+  "imagePath": "gallery/thumb/imagefile_29__SPLIT__1597840364855.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-01-28T06:00:09.891Z"
+  },
+  "updatedAt": {
+    "$date": "2022-01-28T06:00:09.891Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62038ccf0c3b5f5a7e83fecd"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "4877823f-b176-4176-af09-0e76d204f6ed",
+  "catogoryName": "Adbhutalaku Avala",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-02-09T09:43:43.600Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-09T09:43:43.600Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62199a920c3b5f55ed8401bd"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": true,
+  "catogoryId": "4da2d207-0535-4a43-82df-3f4818c9fb38",
+  "catogoryName": "Promo",
+  "parent": null,
+  "batchDate": {
+    "$date": "2022-02-26T03:12:18.529Z"
+  },
+  "createdAt": {
+    "$date": "2022-02-26T03:12:18.530Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-26T03:12:18.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "623c497b0c3b5f42ec84043f"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "251eb05c-fcc1-4fd7-9f08-f4a6b02c44e6",
+  "catogoryName": "Dhyana Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-03-24T10:35:39.176Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-24T10:35:39.176Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6242ab520c3b5f0fb18404cd"
+  },
+  "tree": [
+    "6fec718f-4aa5-44eb-b2c8-efbbce97fad3"
+  ],
+  "nameTree": [
+    "Mandir Events"
+  ],
+  "isDeleted": true,
+  "catogoryId": "438bd4a1-a46c-4c77-b98d-7664ee5bc0b2",
+  "catogoryName": "Sundaram Mandir - Chennai",
+  "parent": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-03-29T06:46:42.853Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-29T06:46:42.853Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62483a110c3b5f62e9840525"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": true,
+  "catogoryId": "d9eb7be1-0a2b-4874-9256-0f0df05845f8",
+  "catogoryName": "Dhyana Vahini (Tamil)",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-04-02T11:57:05.208Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-02T11:57:05.208Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "625e52b196dd6da738139092"
+  },
+  "tree": [
+    "abf4be28-bd15-49e2-92a2-cfbeac3cba20"
+  ],
+  "nameTree": [
+    "Audio Book"
+  ],
+  "isDeleted": false,
+  "catogoryId": "dbe61574-f2c4-4e18-a176-f3ae04c6c1e8",
+  "catogoryName": "Prema Vahini",
+  "parent": "abf4be28-bd15-49e2-92a2-cfbeac3cba20",
+  "imagePath": "gallery/thumb/imagefile_11__SPLIT__1597840364425.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-04-19T06:12:01.760Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-19T06:12:01.760Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62ad73490d3bd46adda0d57b"
+  },
+  "tree": [
+    "64b26510-5f47-47f4-b606-78f5227fb597"
+  ],
+  "nameTree": [
+    "Discourses"
+  ],
+  "isDeleted": false,
+  "catogoryId": "756b9b44-c158-40ea-af09-b12feadbc6f9",
+  "catogoryName": "A Minute With Sai",
+  "parent": "64b26510-5f47-47f4-b606-78f5227fb597",
+  "imagePath": "gallery/thumb/imagefile_2__SPLIT__1597840396120.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-06-18T06:40:09.462Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T06:40:09.462Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62ad9a2b0d3bd43568a0d597"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "8172edd4-10b6-4e28-b024-0a7a078de519",
+  "catogoryName": "Web Series",
+  "parent": null,
+  "batchDate": {
+    "$date": "2022-06-18T09:26:03.070Z"
+  },
+  "createdAt": {
+    "$date": "2022-06-18T09:26:03.072Z"
+  },
+  "updatedAt": {
+    "$date": "2022-06-18T09:26:03.072Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62d79e1a799f4aabee7acbb3"
+  },
+  "tree": [
+    "02d175f0-8f1a-414a-aaae-308d087173b6"
+  ],
+  "nameTree": [
+    "Hosted Show"
+  ],
+  "isDeleted": false,
+  "catogoryId": "d4f83b70-b004-443c-8d4d-a734e63e587e",
+  "catogoryName": "Chinna Katha (Kannada)",
+  "parent": "02d175f0-8f1a-414a-aaae-308d087173b6",
+  "imagePath": "gallery/thumb/imagefile_27__SPLIT__1597840364814.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-07-20T06:18:02.073Z"
+  },
+  "updatedAt": {
+    "$date": "2022-07-20T06:18:02.073Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62da412d16f850404a28ad4b"
+  },
+  "tree": [
+    "e1260674-e0f1-4995-8d0b-9efc8e4dc6a8"
+  ],
+  "nameTree": [
+    "Kids World"
+  ],
+  "isDeleted": false,
+  "catogoryId": "80ab969f-84b4-4704-9f74-fb7db5509d00",
+  "catogoryName": "His Story",
+  "parent": "e1260674-e0f1-4995-8d0b-9efc8e4dc6a8",
+  "batchDate": {
+    "$date": "2021-02-02T23:46:47.065Z"
+  },
+  "createdAt": {
+    "$date": "2022-07-22T06:18:21.312Z"
+  },
+  "updatedAt": {
+    "$date": "2022-07-22T06:18:21.312Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "62de382e16f850a62928ad7f"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": false,
+  "catogoryId": "6ebbaed3-9d73-4514-8851-9196d2429970",
+  "catogoryName": "Shorts",
+  "parent": null,
+  "batchDate": {
+    "$date": "2022-07-25T06:29:02.204Z"
+  },
+  "createdAt": {
+    "$date": "2022-07-25T06:29:02.205Z"
+  },
+  "updatedAt": {
+    "$date": "2022-07-25T06:29:02.205Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63313a42bf1660d27f397ad8"
+  },
+  "tree": [
+    "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc"
+  ],
+  "nameTree": [
+    "Animations"
+  ],
+  "isDeleted": false,
+  "catogoryId": "74e70311-be0d-44aa-a1dc-2dfc7332f649",
+  "catogoryName": "Uncle Lion's Tales (Malayalam)",
+  "parent": "5547b3c5-8ab5-413e-975a-0cc6ee0aa3dc",
+  "imagePath": "gallery/thumb/imagefile_19__SPLIT__1597840364607.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2022-09-26T05:36:02.650Z"
+  },
+  "updatedAt": {
+    "$date": "2022-09-26T05:36:02.650Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63ce62cef7d3645b112210b4"
+  },
+  "tree": [],
+  "nameTree": [],
+  "isDeleted": true,
+  "catogoryId": "1cfa323f-1724-4787-a2b9-e32cd45b56f3",
+  "catogoryName": "Clips from LIVE",
+  "parent": null,
+  "batchDate": {
+    "$date": "2023-01-23T10:34:54.641Z"
+  },
+  "createdAt": {
+    "$date": "2023-01-23T10:34:54.646Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:34:54.646Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63ce6317f7d364601c2210b8"
+  },
+  "tree": [
+    "6fec718f-4aa5-44eb-b2c8-efbbce97fad3"
+  ],
+  "nameTree": [
+    "Mandir/LIVE Events"
+  ],
+  "isDeleted": false,
+  "catogoryId": "1701a97b-0d6b-45c1-af4b-2c88c4a88473",
+  "catogoryName": "Songs",
+  "parent": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2023-01-23T10:36:07.698Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:36:07.698Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63ce6324f7d3640d2a2210ba"
+  },
+  "tree": [
+    "6fec718f-4aa5-44eb-b2c8-efbbce97fad3"
+  ],
+  "nameTree": [
+    "Mandir/LIVE Events"
+  ],
+  "isDeleted": false,
+  "catogoryId": "e5664c2a-056e-4e4a-a926-e16c8c6e048d",
+  "catogoryName": "Talks",
+  "parent": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2023-01-23T10:36:20.762Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:36:20.762Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63ce632bf7d36483262210bc"
+  },
+  "tree": [
+    "6fec718f-4aa5-44eb-b2c8-efbbce97fad3"
+  ],
+  "nameTree": [
+    "Mandir/LIVE Events"
+  ],
+  "isDeleted": false,
+  "catogoryId": "238a5d32-4a0f-4fe8-a233-37e4cf5c30f1",
+  "catogoryName": "Dance",
+  "parent": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2023-01-23T10:36:27.994Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:36:27.994Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63ce6336f7d3648b942210be"
+  },
+  "tree": [
+    "6fec718f-4aa5-44eb-b2c8-efbbce97fad3"
+  ],
+  "nameTree": [
+    "Mandir/LIVE Events"
+  ],
+  "isDeleted": false,
+  "catogoryId": "cc52718d-a096-4ab6-a21f-1060cab0a036",
+  "catogoryName": "Documentry",
+  "parent": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2023-01-23T10:36:38.282Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:36:38.282Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "63ce6341f7d36483b22210c0"
+  },
+  "tree": [
+    "6fec718f-4aa5-44eb-b2c8-efbbce97fad3"
+  ],
+  "nameTree": [
+    "Mandir/LIVE Events"
+  ],
+  "isDeleted": true,
+  "catogoryId": "c6d1febc-1e6d-413f-aa5c-eb2fcf92bd96",
+  "catogoryName": "Others",
+  "parent": "6fec718f-4aa5-44eb-b2c8-efbbce97fad3",
+  "imagePath": "gallery/thumb/imagefile_28__SPLIT__1597840364835.jpeg",
+  "batchDate": {
+    "$date": "2020-10-17T11:06:48.958Z"
+  },
+  "createdAt": {
+    "$date": "2023-01-23T10:36:49.682Z"
+  },
+  "updatedAt": {
+    "$date": "2023-01-23T10:36:49.682Z"
+  },
+  "__v": 0
+}]

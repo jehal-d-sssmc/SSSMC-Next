@@ -1,21 +1,26 @@
 import App from 'next/app'
 import { useEffect, useState } from 'react'
+
 import '../styles/globals.css';
 import '../styles/globals.scss';
+import  '../styles/music.scss';
+import { useRouter } from "next/router";
+
+
+
 import client from '../inc/client'
 
 function MyApp({ Component, pageProps, request }) {
   const loader = <div className='preloader'>
-    <div className="pencil">
-    <div className="pencil__ball-point"></div>
-    <div className="pencil__cap"></div>
-    <div className="pencil__cap-base"></div>
-    <div className="pencil__middle"></div>
-    <div className="pencil__eraser"></div>
-  </div>
-  <div className="line"></div>
+    <img src='/loading.gif' alt='loader' />
+    <div className="line"></div>
   </div>
   const [app, setApp] = useState(null);
+  const router = useRouter()
+  const redirect = (path) => {
+      router.push(path,undefined,{shallow:true})
+  }
+  
  // console.log("8.)",_client);
   useEffect(()=>{
     let _app = (new client());
@@ -34,7 +39,7 @@ function MyApp({ Component, pageProps, request }) {
     <>
     {loader}
     </> :
-    <Component {...{attr: pageProps, app: app, loader: loader}} /> 
+    <Component {...{attr: pageProps, app: app, loader: loader, router: router, redirect: redirect}} /> 
   }
   </>
 }
@@ -55,4 +60,4 @@ MyApp.getInitialProps = async (context) => {
   } }
 }
 
-export default MyApp
+export default (MyApp);

@@ -27,12 +27,13 @@ export default function Read(props) {
           <div className="alert alert-error">{props.read.msg}</div>
         ) : (
           props.read.data.map((item, i) => {
+            console.log(item);
             return (
               <>
               {
                 item.thumbPath !== undefined && 
                 <>
-                <SwiperSlide key={i}>
+                <SwiperSlide key={i} className='effect2'>
                   <div className="featuredItem">
                     <div className="featuredImg">
                       <a href={item.file_url} flink="f_reads" data-caption={item.title}>

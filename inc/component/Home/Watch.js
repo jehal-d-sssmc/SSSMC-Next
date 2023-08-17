@@ -9,7 +9,8 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-export default function Watch() {
+export default function Watch(props) {
+  console.log(props)
   return (
     <>
       <Swiper
@@ -21,9 +22,9 @@ export default function Watch() {
         modules={[Pagination]}
         className="watch"
       >
-        <SwiperSlide>
+        <SwiperSlide className='effect2'>
           <img
-            class="d-block w-100"
+            className="d-block w-100 "
             src="https://i3.ytimg.com/vi/KCbA6Il30P0/maxresdefault.jpg"
             alt="First slide"
             style={{ width: '100%' }}

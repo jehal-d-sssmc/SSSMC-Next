@@ -3,8 +3,8 @@
   "name":"Sri Sathya Sai Media Centre Dev",
   "server":{
     "mongo": {
-      "url": "mongodb+srv://developer:A2cxr4de0nAc8AU2@sssmcdev.ujtmysa.mongodb.net/",
-      "db": "sssmcdev",
+      "url": "mongodb://root:password@localhost:27017/",
+      "db": "sssmc-localdb",
       "prefix": ""
     },
     "firebase": {

@@ -1,0 +1,2375 @@
+[{
+  "_id": {
+    "$oid": "638eb3952976535bbc2fdc75"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=5aaYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=5aaYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "N Kasturi"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Dhyana Vahini",
+    "subtitle": "Stream Of Meditation",
+    "publisher": "Sri Sathya Sai Media Centre",
+    "publishedDate": {
+      "$date": "2014-09-01T00:00:00.000Z"
+    },
+    "description": "To be living as a contemporary of Bhagawan Sri Sathya Sai Baba is itself a unique chance, for His is the au\u0002thentic voice of the Lord Himself; and He is easily accessible and eager to receive pious souls and persons afflicted with physical ...",
+    "pageCount": 61,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=5aaYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=5aaYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=5aaYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=5aaYEAAAQBAJ&rdid=book-5aaYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Dhyana_Vahini-sample-pdf.acsm?id=5aaYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=5aaYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "5aaYEAAAQBAJ",
+  "etag": "Nk+dUeotAJs",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/5aaYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.573Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.573Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976531b7c2fdc76"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=BnqYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=BnqYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Bhagawan Sri Sathya Sai Baba"
+    ],
+    "categories": [
+      "Juvenile Fiction"
+    ],
+    "title": "Ramakatha Rasavahini Volume 1",
+    "subtitle": "Ramayan in English by Bhagawan Sri Sathya Sai Baba",
+    "publisher": "Sri Sathya Sai Media Centre",
+    "publishedDate": {
+      "$date": "2014-11-23T00:00:00.000Z"
+    },
+    "description": "This edition of Ramakatha Rasavahini improves on the previous edition. Grammatical errors and typos have been corrected, and some sentences have been rewritten to smooth and clarify the presentation —of course, without disturbing the meaning ...",
+    "pageCount": 210,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=BnqYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=BnqYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=BnqYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=BnqYEAAAQBAJ&rdid=book-BnqYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Ramakatha_Rasavahini_Volume_1-sample-pdf.acsm?id=BnqYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=BnqYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "BnqYEAAAQBAJ",
+  "etag": "UlEJCp5yo4A",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/BnqYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.586Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.586Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653f6802fdc77"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=ZIGYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=ZIGYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Bhagawan Sri Sathya Sai Baba"
+    ],
+    "categories": [
+      "Religion"
+    ],
+    "title": "Ramakatha Rasavahini Volume 2",
+    "subtitle": "Ramayan in English by Bhagawan Sri Sathya Sai Baba",
+    "publisher": "Sri Sathya Sai Media Centre",
+    "publishedDate": {
+      "$date": "2014-11-23T00:00:00.000Z"
+    },
+    "description": "This edition of Ramakatha Rasavahini improves on the previous edition. Grammatical errors and typos have been corrected, and some sentences have been rewritten to smooth and clarify the presentation —of course, without disturbing the meaning ...",
+    "pageCount": 163,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=ZIGYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=ZIGYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ZIGYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=ZIGYEAAAQBAJ&rdid=book-ZIGYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Ramakatha_Rasavahini_Volume_2-sample-pdf.acsm?id=ZIGYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=ZIGYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "ZIGYEAAAQBAJ",
+  "etag": "PByq3ckDt4Y",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/ZIGYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.608Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.608Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653656f2fdc78"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=Gmt7EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=Gmt7EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Religion"
+    ],
+    "title": "His Story - Childhood Stories of Bhagawan Sri Sathya Sai Baba",
+    "subtitle": "Comic eBook - Childhood Stories of Bhagawan Sri Sathya Sai Baba",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-07-15T00:00:00.000Z"
+    },
+    "description": "His Story is a Comic eBook based on Childhood Stories of Bhagawan Sri Sathya Sai Baba. This was the story of the Advent of the Avatar and the early years of His life and mission, a mission that would bring millions to His Lotus Feet to taste the ...",
+    "pageCount": 224,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=Gmt7EAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=Gmt7EAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Gmt7EAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=Gmt7EAAAQBAJ&rdid=book-Gmt7EAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/His_Story_Childhood_Stories_of_Bhagawan-sample-pdf.acsm?id=Gmt7EAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=Gmt7EAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "Gmt7EAAAQBAJ",
+  "etag": "1vEeEceT7KE",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/Gmt7EAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.630Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.630Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765356da2fdc79"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=GJ2aEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=GJ2aEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Biography & Autobiography"
+    ],
+    "title": "Sathyam Sivam Sundaram",
+    "subtitle": "Life Story Of Bhagawan Sri Sathya Sai Baba",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-08T00:00:00.000Z"
+    },
+    "description": "Sai Ram from Prasanthi Nilayam, Life Story Of Bhagawan Sri Sathya Sai Baba (Biography) offered by Sri Sathya Sai Media Centre",
+    "pageCount": 802,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.0.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=GJ2aEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=GJ2aEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=GJ2aEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=GJ2aEAAAQBAJ&rdid=book-GJ2aEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sathyam_Sivam_Sundaram-sample-pdf.acsm?id=GJ2aEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=GJ2aEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "GJ2aEAAAQBAJ",
+  "etag": "I+wZvsPnsVw",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/GJ2aEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.641Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.641Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653931c2fdc7a"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=uxObEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=uxObEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 03 (1980 to 1989)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-09T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 2883,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=uxObEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=uxObEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=uxObEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=uxObEAAAQBAJ&rdid=book-uxObEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_03_1980-sample-pdf.acsm?id=uxObEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=uxObEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "uxObEAAAQBAJ",
+  "etag": "30kMzhJmzCA",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/uxObEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.651Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.651Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765322652fdc7b"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=P6mYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=P6mYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Bhagawan Sri Sathya Sai Baba"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sri Sathya Sai Vahini - Voice of the Divine Phenomenon",
+    "subtitle": "The Stream of Divine Grace",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "1992-01-01T00:00:00.000Z"
+    },
+    "description": "This must be said of this book: It is the authentic Voice of the Divine Phenomenon, that is setting right the moral codes and behaviour of millions of men and women today. And, so, it merits careful and devoted study. The Lord has declared that ...",
+    "pageCount": 130,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=P6mYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=P6mYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=P6mYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=P6mYEAAAQBAJ&rdid=book-P6mYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sri_Sathya_Sai_Vahini_Voice_of_the_Divin-sample-pdf.acsm?id=P6mYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=P6mYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "P6mYEAAAQBAJ",
+  "etag": "w+nfss7jsPc",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/P6mYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.661Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.661Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976533cba2fdc7c"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=8uSbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=8uSbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Upanishad Vahini",
+    "subtitle": "Stream of the Upanishads",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-15T00:00:00.000Z"
+    },
+    "description": "Bhagawan Sri Sathya Sai Baba has come among humanity and is providing spiritual sustenance and guidance, in order to re-establish truth, justice, peace, and love as the mainspring of individual, social, and national life. He is using ancient and ...",
+    "pageCount": 70,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=8uSbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=8uSbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=8uSbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=8uSbEAAAQBAJ&rdid=book-8uSbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Upanishad_Vahini-sample-pdf.acsm?id=8uSbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=8uSbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "8uSbEAAAQBAJ",
+  "etag": "EDoxWWI/qvA",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/8uSbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.675Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.675Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765382b62fdc7d"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=kYmbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=kYmbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 04 (2011 - Sri Sathya Sai Aradhana Special Edition)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-11T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 490,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.0.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=kYmbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=kYmbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=kYmbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=kYmbEAAAQBAJ&rdid=book-kYmbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_04_2011-sample-pdf.acsm?id=kYmbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=kYmbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "kYmbEAAAQBAJ",
+  "etag": "94A0yvUpqso",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/kYmbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.686Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.686Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653306d2fdc7e"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=vPScEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=vPScEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sri Sathya Sai Speaks Volume 01 to 43",
+    "subtitle": "Divine Discourses from 1953 to 2010",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "description": "This Volumes’ of Sri Sathya Sai Speaks are compiled and offered at Bhagawan Sri Sathya Sai Baba’s Lotus Feet on His 97th Birthday as a reminder to all Spiritual Aspirants of Baba’s Love & Message Compilation of Discourses from 1953 to 2010 (1614 ...",
+    "pageCount": 8694,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.2.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=vPScEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=vPScEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vPScEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=vPScEAAAQBAJ&rdid=book-vPScEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sri_Sathya_Sai_Speaks_Volume_01_to_43-sample-pdf.acsm?id=vPScEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=vPScEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "vPScEAAAQBAJ",
+  "etag": "SLrPsJvgTmU",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/vPScEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.695Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.695Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653f7802fdc7f"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=QamYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=QamYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Bhagawan Sri Sathya Sai Baba"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sandeha Nivarini",
+    "subtitle": "Spiritual Q&A to Seekers",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "1992-01-01T00:00:00.000Z"
+    },
+    "description": "“I am the Sai Baba of Shirdi come again; then, I was mostly engaged in preparing the meal; now I have come to feed you all with the strengthening, purifying repast,” says Bhagavan Sri Sathya Sai Baba. He announced thus, in his fourteenth year ...",
+    "pageCount": 114,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=QamYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=QamYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=QamYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=QamYEAAAQBAJ&rdid=book-QamYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sandeha_Nivarini-sample-pdf.acsm?id=QamYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=QamYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "QamYEAAAQBAJ",
+  "etag": "HiQBnF++8Ss",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/QamYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.707Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.707Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765302f82fdc80"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=xaaYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=xaaYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "N Kasturi"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Bhagavatha Vahini",
+    "subtitle": "Bhagavata Purana - Srimad Bhagavatam",
+    "publisher": "Sri Sathya Sai Media Centre",
+    "publishedDate": {
+      "$date": "2010-07-08T00:00:00.000Z"
+    },
+    "description": "This Bhagavatha is a dialogue between a person under the sentence of death and a great saint, who prepared him to meet it. We’re all under a sentence of death; our hearts, like muffled drums, are beating funeral marches to the grave. Some reach ...",
+    "pageCount": 173,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=xaaYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=xaaYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=xaaYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=xaaYEAAAQBAJ&rdid=book-xaaYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Bhagavatha_Vahini-sample-pdf.acsm?id=xaaYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=xaaYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "xaaYEAAAQBAJ",
+  "etag": "W5CyH2SfkM8",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/xaaYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.721Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.721Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976534cb52fdc81"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=Bw6bEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=Bw6bEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 02 (1970 to 1979)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-09T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 2293,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=Bw6bEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=Bw6bEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Bw6bEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=Bw6bEAAAQBAJ&rdid=book-Bw6bEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_02_1970-sample-pdf.acsm?id=Bw6bEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=Bw6bEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "Bw6bEAAAQBAJ",
+  "etag": "vzjPk9GMwmk",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/Bw6bEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.730Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.730Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765357802fdc82"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=PamYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=PamYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Bhagawan Sri Sathya Sai Baba"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Jnana Vahini",
+    "subtitle": "Stream of Spiritual Wisdom",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "1992-01-01T00:00:00.000Z"
+    },
+    "description": "ous powers proclaim His omnipotence; His wisdom, His analysis of the ills of humanity, and His prescription for their cure reveal His omniscience. You have the unique chance of meeting Him, at the Abode of Peace (Prasanthi Nilayam), and receiving ...",
+    "pageCount": 51,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=PamYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=PamYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=PamYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=PamYEAAAQBAJ&rdid=book-PamYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Jnana_Vahini-sample-pdf.acsm?id=PamYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=PamYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "PamYEAAAQBAJ",
+  "etag": "MQE8Cj+yPzI",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/PamYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.739Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.739Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976536ac92fdc83"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=PhCcEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=PhCcEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Prema Vahini",
+    "subtitle": "Stream of Pure Love",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-15T00:00:00.000Z"
+    },
+    "description": "Addressing a mammoth gathering at Gudur some years ago, Bhagavan Sri Sathya Sai Baba said, “You will not be wrong to call Me Premaswarupa (Embodiment of Love).” In fact, Baba showers love (prema), seeks love, and establishes love in the heart of ...",
+    "pageCount": 65,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=PhCcEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=PhCcEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=PhCcEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=PhCcEAAAQBAJ&rdid=book-PhCcEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Prema_Vahini-sample-pdf.acsm?id=PhCcEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=PhCcEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "PhCcEAAAQBAJ",
+  "etag": "hzxLFBo+vKs",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/PhCcEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.749Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.749Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976531b842fdc84"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=vVebEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=vVebEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 04 (1990 to 1999)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-10T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 3144,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=vVebEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=vVebEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vVebEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=vVebEAAAQBAJ&rdid=book-vVebEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_04_1990-sample-pdf.acsm?id=vVebEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=vVebEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "vVebEAAAQBAJ",
+  "etag": "7ke/f/UfPY0",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/vVebEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.769Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.769Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653a5aa2fdc85"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=s_2cEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=s_2cEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "N Lakshmi Devamma"
+    ],
+    "categories": [
+      "Religion"
+    ],
+    "title": "Sri Sathya Sai The Divine Guardian",
+    "subtitle": "Bhaktoddharaka Sri Sathya Sai",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-21T00:00:00.000Z"
+    },
+    "description": "The vision, the words and the actions of Bhagawan Sri Sathya Sai Baba väru from His childhood are all in the nature of divine nectar touching the inner most corners of the heart with ecstasy. The uplifting miracle of a person from one elevated ...",
+    "pageCount": 128,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=s_2cEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=s_2cEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=s_2cEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=s_2cEAAAQBAJ&rdid=book-s_2cEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sri_Sathya_Sai_The_Divine_Guardian-sample-pdf.acsm?id=s_2cEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=s_2cEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "s_2cEAAAQBAJ",
+  "etag": "qiSWNtdGNro",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/s_2cEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.781Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.781Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653c8e72fdc86"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=4OSbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=4OSbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Vidya Vahini",
+    "subtitle": "Stream of Illuminating Knowledge",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-15T00:00:00.000Z"
+    },
+    "description": "Baba has clarified that the word vidya used for this vahini (stream), means “that which (ya) illumines (vidh)”. It is this sense that is highlighted in expressions like Atma-vidya, Brahma-vidya, and even the name Vidya\u0002giri (giri means hill or ...",
+    "pageCount": 67,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=4OSbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=4OSbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=4OSbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=4OSbEAAAQBAJ&rdid=book-4OSbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Vidya_Vahini-sample-pdf.acsm?id=4OSbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=4OSbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "4OSbEAAAQBAJ",
+  "etag": "OPavAN8mlFQ",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/4OSbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.794Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653b2a22fdc87"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=-vGcEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=-vGcEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Summer Showers In Brindavan 1972 to 2002",
+    "subtitle": "Discourses of Bhagawan Sri Sathya Sai Baba delivered during the summer courses",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-19T00:00:00.000Z"
+    },
+    "description": "Message from Bhagawan Sri Sathya Sai Baba Philosophy is the butter churned out of knowledge. But since human aspirations and ideals, which change from place to place and time to time, decide which aspects of knowledge are included in the churning ...",
+    "pageCount": 2599,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=-vGcEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=-vGcEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=-vGcEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=-vGcEAAAQBAJ&rdid=book--vGcEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Summer_Showers_In_Brindavan_1972_to_2002-sample-pdf.acsm?id=-vGcEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=-vGcEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "-vGcEAAAQBAJ",
+  "etag": "2T8iCWFadnc",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/-vGcEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.802Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.802Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765344772fdc88"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=1aaYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=1aaYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "N Kasturi"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Dharma Vahini",
+    "subtitle": "Fundamental Ideas Of Indian Culture",
+    "publisher": "Sri Sathya Sai Media Centre",
+    "publishedDate": {
+      "$date": "2010-07-01T00:00:00.000Z"
+    },
+    "description": "This little book contains the articles written by Bhagawan Sri Sathya Sai Baba in the series Dharma Vahini for the Sanathana Sarathi, the monthly journal published from Prasanthi Nilayam. They are given here in English; but, it must be said that ...",
+    "pageCount": 71,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=1aaYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=1aaYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=1aaYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=1aaYEAAAQBAJ&rdid=book-1aaYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Dharma_Vahini-sample-pdf.acsm?id=1aaYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=1aaYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "1aaYEAAAQBAJ",
+  "etag": "7N36m6Ab+9Y",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/1aaYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.810Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976539dbb2fdc89"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=IYmbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=IYmbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 05 (2000 to 2010)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-11T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 3952,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.0.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=IYmbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=IYmbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=IYmbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=IYmbEAAAQBAJ&rdid=book-IYmbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_05_2000-sample-pdf.acsm?id=IYmbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=IYmbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "IYmbEAAAQBAJ",
+  "etag": "7UUGK/gQRdo",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/IYmbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.820Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.820Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb39529765335062fdc8a"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=6uSbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=6uSbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sutra Vahini - Treatise on Bramha Sutras",
+    "subtitle": "Stream of Aphorisms on Brahman",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-15T00:00:00.000Z"
+    },
+    "description": "An aphorism (sutra) expresses the genus of its meaning in a few terse words. The Brahma Sutras systemati\u0002cally explain the basic principles of Vedanta, the science of Supreme Reality. When contemplated, they reveal the innermost metaphysical ...",
+    "pageCount": 58,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=6uSbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=6uSbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=6uSbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=6uSbEAAAQBAJ&rdid=book-6uSbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sutra_Vahini_Treatise_on_Bramha_Sutras-sample-pdf.acsm?id=6uSbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=6uSbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "6uSbEAAAQBAJ",
+  "etag": "878/TPK1hHs",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/6uSbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.827Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.827Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653c3c32fdc8b"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=QrGbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=QrGbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 07 (2012 - 2021)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-12T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 4302,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.0.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=QrGbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=QrGbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=QrGbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=QrGbEAAAQBAJ&rdid=book-QrGbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_07_2012-sample-pdf.acsm?id=QrGbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=QrGbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "QrGbEAAAQBAJ",
+  "etag": "MoyuysiQpI4",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/QrGbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.836Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.836Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976530bd82fdc8c"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=3OSbEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=3OSbEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi Telugu 2011 to 2020",
+    "subtitle": "సనాతన సారథి నవంబర్ 2011 to జూలై 2020",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-15T00:00:00.000Z"
+    },
+    "description": "Sanathana Sarathi Telugu November 2011 to July 2020 సనాతన సారథి నవంబర్ 2011 to జూలై 2020 Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four ...",
+    "pageCount": 4543,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.1.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=3OSbEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=3OSbEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=3OSbEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=3OSbEAAAQBAJ&rdid=book-3OSbEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_Telugu_2011_to_2020-sample-pdf.acsm?id=3OSbEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=3OSbEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "3OSbEAAAQBAJ",
+  "etag": "JDBk3GRKXN8",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/3OSbEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.847Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.847Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653ff262fdc8d"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=7vScEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=7vScEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Religion"
+    ],
+    "title": "Prasanthi Vahini",
+    "subtitle": "Stream Of Supreme Peace",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-20T00:00:00.000Z"
+    },
+    "description": "Bhagawan Sri Sathya Sai Baba explains the key to the treasure house Prasanthi (or supreme peace), which Srimad Bhagavad Gita mentions as the goal of human endeavor",
+    "pageCount": 50,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=7vScEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=7vScEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=7vScEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=7vScEAAAQBAJ&rdid=book-7vScEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Prasanthi_Vahini-sample-pdf.acsm?id=7vScEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=7vScEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "7vScEAAAQBAJ",
+  "etag": "I9ZcmxxHhvk",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/7vScEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.859Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.859Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb395297653dfc52fdc8e"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=J6mYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=J6mYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Bhagawan Sri Sathya Sai Baba"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Prasnothara Vahini",
+    "subtitle": "Answers to Spiritual Questions",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "1997-02-28T00:00:00.000Z"
+    },
+    "description": "Prasna means “question”, Uttara means “answer”, and Vahini indicates “a stream”. This book is the stream of the questions that have evoked answers from Bhagawan Sri Sathya Sai Baba. Among the tasks that Bhagawan has assumed while incarnating, He ...",
+    "pageCount": 54,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=J6mYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=J6mYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=J6mYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=J6mYEAAAQBAJ&rdid=book-J6mYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Prasnothara_Vahini-sample-pdf.acsm?id=J6mYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=J6mYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "J6mYEAAAQBAJ",
+  "etag": "aeqvpHXjdps",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/J6mYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.867Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.867Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976538ab22fdc8f"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=hOKfEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=hOKfEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Self-Help"
+    ],
+    "title": "The Healing Touch",
+    "subtitle": "Service To Man is Service To God",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-12-06T00:00:00.000Z"
+    },
+    "description": "This edition of Healing Touch is compilation of real-life experiences of Health Care Professionals and Patients of Sri Sathya Sai Institute Of Higher Medical Sciences. Healing Touch contains true experiences and stories of patients and health ...",
+    "pageCount": 860,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=hOKfEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=hOKfEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=hOKfEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=hOKfEAAAQBAJ&rdid=book-hOKfEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/The_Healing_Touch-sample-pdf.acsm?id=hOKfEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=hOKfEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "hOKfEAAAQBAJ",
+  "etag": "4AFkk2WFlRY",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/hOKfEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.875Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.875Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976537b3a2fdc90"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=G6mYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=G6mYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Leela Kaivalya Vahini",
+    "subtitle": "Stream of Divine Cosmic Play",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2012-07-01T00:00:00.000Z"
+    },
+    "description": "The Vedas originated from the breath of God, and each syllable is sacred. Each word is a mantra. It exhorts all men to pursue the same holy desire. All hearts must be charged with the same good urge; all thoughts must be directed by noble motives ...",
+    "pageCount": 29,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "preview-1.0.0",
+    "previewLink": "http://books.google.co.in/books?id=G6mYEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=G6mYEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=G6mYEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=G6mYEAAAQBAJ&rdid=book-G6mYEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Leela_Kaivalya_Vahini-sample-pdf.acsm?id=G6mYEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "ALL_PAGES",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=G6mYEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "G6mYEAAAQBAJ",
+  "etag": "dKSwHyKjzLY",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/G6mYEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.887Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.887Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "638eb3952976530d092fdc91"
+  },
+  "volumeInfo": {
+    "readingModes": {
+      "text": false,
+      "image": true
+    },
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=ItOaEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=ItOaEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "authors": [
+      "Sri Sathya Sai Media Centre"
+    ],
+    "categories": [
+      "Body, Mind & Spirit"
+    ],
+    "title": "Sanathana Sarathi English Volume 01 (1958 to 1969)",
+    "subtitle": "The Eternal Charioteer",
+    "publisher": "Sri Sathya Sai Media Centre ",
+    "publishedDate": {
+      "$date": "2022-11-08T00:00:00.000Z"
+    },
+    "description": "Started in 1958, Sanathana Sarathi is a monthly magazine devoted to Sathya (Truth), Dharma (Righteousness), Shanti (Peace) and Prema (Love) - the four cardinal principles of Bhagawan Baba's philosophy. It is published from Prasanthi Nilayam (the ...",
+    "pageCount": 1763,
+    "printType": "BOOK",
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "previewLink": "http://books.google.co.in/books?id=ItOaEAAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=ItOaEAAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ItOaEAAAQBAJ"
+  },
+  "saleInfo": {
+    "listPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "retailPrice": {
+      "amount": 0,
+      "currencyCode": "INR"
+    },
+    "country": "IN",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "buyLink": "https://play.google.com/store/books/details?id=ItOaEAAAQBAJ&rdid=book-ItOaEAAAQBAJ&rdot=1&source=gbs_api"
+  },
+  "accessInfo": {
+    "epub": {
+      "isAvailable": false
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.co.in/books/download/Sanathana_Sarathi_English_Volume_01_1958-sample-pdf.acsm?id=ItOaEAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "country": "IN",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "webReaderLink": "http://play.google.com/books/reader?id=ItOaEAAAQBAJ&hl=&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "kind": "books#volume",
+  "id": "ItOaEAAAQBAJ",
+  "etag": "njlitG5hJJg",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/ItOaEAAAQBAJ",
+  "createdAt": {
+    "$date": "2022-12-06T03:14:29.896Z"
+  },
+  "updatedAt": {
+    "$date": "2022-12-06T03:14:29.896Z"
+  },
+  "__v": 0
+}]

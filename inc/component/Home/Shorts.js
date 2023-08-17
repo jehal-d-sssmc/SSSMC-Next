@@ -31,9 +31,9 @@ export default function Shorts(props) {
               {
                 item.featuredUrl !== undefined && 
                 <>
-                <SwiperSlide key={i}>
-                  <div className="shortsItem" style={{maxWidth:"320px"}}>
-                    <div className="shortsImg ratio ratio-9x16" >
+                <SwiperSlide key={i} className='effect2'>
+                  <div className="shortsItem " style={{maxWidth:"320px"}}>
+                    <div className="shortsImg ratio ratio-9x16 shadow-1" >
                       <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
                       <img
                         class="d-block w-100"
