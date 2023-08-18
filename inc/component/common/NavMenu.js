@@ -1,6 +1,13 @@
 import react from "react";
 
 class NavMenu extends react.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      showMenu: false
+    }
+  }
   componentDidMount(){
     console.log(this.props);
     this.forceUpdate()
@@ -11,10 +18,17 @@ class NavMenu extends react.Component {
   render() {
     return (
       <>
-        <div className="mobile-menu">
-          <i className="fa fa-bars fa-3x js-menu-icon"></i>
+        <div className="mobile-menu" onClick={()=>{
+          
+          this.setState({
+            showMenu: !this.state.showMenu
+          }, ()=>{
+            this.forceUpdate()
+          })
+        }}>
+          <i className={`${this.state.showMenu ? 'fa fa-close ' : "fa fa-bars "}fa-3x js-menu-icon`}></i>
         </div>
-        <nav className="mynavbar js-mynavbar">
+        <nav className={`mynavbar js-mynavbar${this.state.showMenu ? ' show' : ""}`}>
           <ul className="menu m-0">
             <li>
               <a className="hasDropdown" href="#" onClick={()=>{

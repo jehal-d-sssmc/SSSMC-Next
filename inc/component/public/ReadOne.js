@@ -75,7 +75,7 @@ export default class Read extends React.Component {
                       <button
                         onClick={this.handleClick}
                         type="button"
-                        class="btn btn-danger"
+                        class="mt-2 btn btn-danger"
                       >
                         Back to Articles
                       </button>

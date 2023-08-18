@@ -4,15 +4,12 @@ export default class CardMusic extends react.Component {
     constructor(props){
         super(props);
         this.state = {
-            index: 3,
+            index: 0,
             currentTime: '0:00',
-            musicList: [{name:'Nice piano and ukulele', author: 'Royalty', img: 'https://www.bensound.com/bensound-img/buddy.jpg', audio:'https://www.bensound.com/bensound-music/bensound-buddy.mp3', duration: '2:02'}, 
-              {name:'Gentle acoustic', author: 'Acoustic', img: 'https://www.bensound.com/bensound-img/sunny.jpg', audio:'https://www.bensound.com//bensound-music/bensound-sunny.mp3', duration: '2:20'},
-              {name:'Corporate motivational', author: 'Corporate', img: 'https://www.bensound.com/bensound-img/energy.jpg', audio:'https://www.bensound.com/bensound-music/bensound-energy.mp3', duration: '2:59'},
-              {name:'Slow cinematic', author: 'Royalty', img: 'https://www.bensound.com/bensound-img/slowmotion.jpg', audio:'https://www.bensound.com/bensound-music/bensound-slowmotion.mp3', duration: '3:26'}],
+            musicList: [{name:'Sai Gayathri', author: 'Sai Gayathri Stream', img: '/default-music.png', audio:'https://stream.sssmediacentre.org:8443/saigayathri', duration: '0:00'}],
             pause: false,
         };
-    }
+    } 
     
     __ = (url) => {
         try {
@@ -24,6 +21,7 @@ export default class CardMusic extends react.Component {
       }
     
   
+
    async componentDidMount() {
      this.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
      this.playerRef.addEventListener("ended", this.nextSong, false);
@@ -35,23 +33,32 @@ export default class CardMusic extends react.Component {
             createdAt: -1
         }
     });
+
+
+    
+
     let musicList = featuredItems.data.map((x)=>{
         return {
             name: x.title,
-            author: x.album_name,
-            img: x.file_identifier_thumb !== undefined ? this.__(x.file_identifier_thumb) : 'https://www.bensound.com/bensound-img/buddy.jpg',
+            author: x.category,
+            img: x.file_identifier_thumb !== undefined ? this.__(x.file_identifier_thumb) : '/default-music.png',
             audio:this.__(x.file_identifier),
             duration: x.duration
         }
     });
     console.log(musicList)
     this.setState({
-        index: 3,
-        currentTime: '0:00',
-        musicList: musicList,
-        pause: false
-    })
+       index: 1,
+       currentTime: '0:00',
+       musicList: musicList,
+       pause: false
+    }, ()=> {
+
+      //this.forceUpdate();
+    })//
    }
+
+   //shouldComponentUpdate = () => false;
   
     componentWillUnmount() {
       this.playerRef.removeEventListener("timeupdate", this.timeUpdate);
@@ -185,64 +192,78 @@ export default class CardMusic extends react.Component {
       const currentSong = musicList[index];
       return (
         <div className="music">
-            <div className="card">
-          <div className="current-song">
-            <audio ref={ref => this.playerRef = ref}>
-              <source src={ currentSong.audio } type="audio/ogg"/>
-                Your browser does not support the audio element.
-            </audio>
-            <div className="img-wrap">
-              <img src={ currentSong.img }/>
-             </div>
-            <span className="song-name">{ currentSong.name }</span>
-            <span className="song-autor">{ currentSong.author }</span>
-            
-            <div className="time">
-              <div className="current-time">{ currentTime }</div>
-              <div className="end-time">{ currentSong.duration }</div>
+          <div className="card">
+            <div className="row" style={{width:"100vw"}}>
+            <div className="col-md-6 align-self-center text-center" style={{justifyContent:"center"}}>
+              <div className="current-song">
+                <audio ref={ref => this.playerRef = ref}>
+                  <source src={ currentSong.audio } type="audio/ogg"/>
+                    Your browser does not support the audio element.
+                </audio>
+                <div className="img-wrap">
+                  <img src={ currentSong.img }/>
+                </div>
+              <div className="song-desc">
+                <span className="song-name">{ currentSong.name }</span>
+                <span className="song-autor">{ currentSong.author }</span>
+                
+              </div>
+              <div className="timetrack">
+              <div className="time">
+                  <div className="current-time">{ currentTime }</div>
+                  <div className="end-time">{ currentSong.duration }</div>
+                </div>
+                
+                <div ref={ref => this.timelineRef = ref} id="timeline">
+                  <div ref={ref => this.playheadRef = ref} id="playhead"></div>
+                  <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
+                </div>
+              </div>
+                
+                <div className="controls">
+                  <button onClick={this.prevSong} className="prev prev-next current-btn"><i className="fas fa-backward"></i></button>
+                  
+                  <button onClick={this.playOrPause} className="play current-btn">
+                    {
+                      (!pause) ? <i className="fas fa-play"></i>
+                      :<i className="fas fa-pause"></i>
+                    }
+                  </button>
+                  <button onClick={this.nextSong} className="next prev-next current-btn"><i className="fas fa-forward"></i></button>
+                </div>
+                
+              </div>                  
+                  </div>
+            <div className="col-md-6 align-self-center">
+            <div className="play-list" >
+                
+                <div className="hidePlaylist">HIDE</div>
+                <div className="tracklist effect8">
+                {musicList.map( (music, key=0) =>
+                    <div key={key} 
+                        onClick={()=>this.clickAudio(key)}
+                        className={"track " + 
+                        (index === key && !pause ?'current-audio':'') + 
+                        (index === key && pause ?'play-now':'')} >
+                        
+                        <img className="track-img" src={music.img}/>
+                        <div className="track-discr" >
+                        <span className="track-name" >{music.name}</span>
+                        <span className="track-author" >{music.author}</span>
+                        </div>
+                        <span className="track-duration" >
+                        {(index === key)
+                            ?currentTime
+                            :music.duration
+                        }
+                        </span>
+                    </div>
+                )}
+                </div>
+              </div>
             </div>
-            
-            <div ref={ref => this.timelineRef = ref} id="timeline">
-              <div ref={ref => this.playheadRef = ref} id="playhead"></div>
-              <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
-            </div>
-            
-            <div className="controls">
-              <button onClick={this.prevSong} className="prev prev-next current-btn"><i className="fas fa-backward"></i></button>
-              
-              <button onClick={this.playOrPause} className="play current-btn">
-                {
-                  (!pause) ? <i className="fas fa-play"></i>
-                  :<i className="fas fa-pause"></i>
-                }
-              </button>
-              <button onClick={this.nextSong} className="next prev-next current-btn"><i className="fas fa-forward"></i></button>
-            </div>
-            
+            </div>    
           </div>
-          <div className="play-list" >
-            {musicList.map( (music, key=0) =>
-                           <div key={key} 
-                             onClick={()=>this.clickAudio(key)}
-                             className={"track " + 
-                               (index === key && !pause ?'current-audio':'') + 
-                               (index === key && pause ?'play-now':'')} >
-                             
-                             <img className="track-img" src={music.img}/>
-                             <div className="track-discr" >
-                               <span className="track-name" >{music.name}</span>
-                               <span className="track-author" >{music.author}</span>
-                             </div>
-                             <span className="track-duration" >
-                               {(index === key)
-                                 ?currentTime
-                                 :music.duration
-                               }
-                             </span>
-                           </div>
-                          )}
-          </div>
-        </div>
         </div>
       )
     }

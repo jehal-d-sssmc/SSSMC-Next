@@ -20,7 +20,7 @@ export default function Shorts(props) {
         }}
         loop={true}
         modules={[Pagination]}
-        className="shorts"
+        className="shorts gold"
       >
         {props.shorts.type !== "success" ? (
           <div className="alert alert-error">{props.shorts.msg}</div>
@@ -31,7 +31,7 @@ export default function Shorts(props) {
               {
                 item.featuredUrl !== undefined && 
                 <>
-                <SwiperSlide key={i} className='effect2'>
+                <SwiperSlide key={i} className='effect2 glowing'>
                   <div className="shortsItem " style={{maxWidth:"320px"}}>
                     <div className="shortsImg ratio ratio-9x16 shadow-1" >
                       <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>

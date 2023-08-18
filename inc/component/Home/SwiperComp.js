@@ -15,13 +15,13 @@ export default function SwiperComp(props) {
     <>
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={5}
+        spaceBetween={18}
         pagination={{
           clickable: true,
         }}
         loop={true}
         modules={[Pagination]}
-        className={props.classname === undefined ? "vslider" : `vslider ${props.classname}`}
+        className={props.classname === undefined ? "vslider gold" : `vslider gold ${props.classname}`}
       >
         {props.featuredItems.type !== "success" ? (
           <div className="alert alert-error">{props.featuredItems.msg}</div>
@@ -32,7 +32,7 @@ export default function SwiperComp(props) {
               {
                 item.featuredUrl !== undefined && 
                 <>
-                <SwiperSlide key={i} className='effect2'>
+                <SwiperSlide key={i} className='glowing'>
                   <div className="featuredItem">
                     <div className="featuredImg">
                       <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>

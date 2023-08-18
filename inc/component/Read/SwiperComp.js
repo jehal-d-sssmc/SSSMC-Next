@@ -21,7 +21,11 @@ export default function SwiperComp(props) {
         }}
         loop={true}
         modules={[Pagination]}
-        className={props.classname === undefined ? "vslider" : `vslider ${props.classname}`}
+        className={
+          props.classname === undefined
+            ? "vslider"
+            : `vslider ${props.classname}`
+        }
       >
         {props.featuredItems.map((item, i) => {
           return (
@@ -32,10 +36,10 @@ export default function SwiperComp(props) {
                     <div className="featuredItem">
                       <div className="featuredImg">
                         <a
-                          href={item}
-                          class="fancybox"
-                          data-fancybox="true"
-                          flink="f_videos"
+                          href={`#`}
+                          onClick={() => {
+                            props.redirect(`/read/${item._id}`);
+                          }}
                           data-caption={item.title}
                         >
                           <img
@@ -46,8 +50,8 @@ export default function SwiperComp(props) {
                           />
                         </a>
                       </div>
-                      <div className="featuredItemTitle text-start pt -2">
-                        <h5>{item.title}</h5>
+                      <div className="featuredItemTitle text-start pt-1 pb-1">
+                        <p>{item.title}</p>
                       </div>
                     </div>
                   </SwiperSlide>
