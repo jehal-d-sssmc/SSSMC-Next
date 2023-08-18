@@ -191,15 +191,17 @@ export default class CardMusic extends react.Component {
       const { musicList, index, currentTime, pause } = this.state;
       const currentSong = musicList[index];
       return (
+       <>
+        <audio ref={ref => this.playerRef = ref}>
+                  <source src={ currentSong.audio } type="audio/ogg"/>
+                    Your browser does not support the audio element.
+        </audio>
         <div className="music">
           <div className="card">
             <div className="row" style={{width:"100vw"}}>
             <div className="col-md-6 align-self-center text-center" style={{justifyContent:"center"}}>
               <div className="current-song">
-                <audio ref={ref => this.playerRef = ref}>
-                  <source src={ currentSong.audio } type="audio/ogg"/>
-                    Your browser does not support the audio element.
-                </audio>
+                
                 <div className="img-wrap">
                   <img src={ currentSong.img }/>
                 </div>
@@ -214,8 +216,8 @@ export default class CardMusic extends react.Component {
                   <div className="end-time">{ currentSong.duration }</div>
                 </div>
                 
-                <div ref={ref => this.timelineRef = ref} id="timeline">
-                  <div ref={ref => this.playheadRef = ref} id="playhead"></div>
+                <div ref={ref => this.timelineRef = ref} className="timeline">
+                  <div ref={ref => this.playheadRef = ref} className="playhead"></div>
                   <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
                 </div>
               </div>
@@ -265,6 +267,49 @@ export default class CardMusic extends react.Component {
             </div>    
           </div>
         </div>
+        <div className="musicband effect7">
+        <section id="bottomplayer" className="ply_bar p-2">
+          <div className="row" style={{width:"100%"}}>
+            <div className="col-md-6 d-flex align-self-center">
+              <div className="preview-img">
+                <img src={ currentSong.img }/>
+              </div>
+              <div className="song-desc align-self-center">
+                    <span className="song-name">{ currentSong.name }</span>
+                    <span className="song-autor">{ currentSong.author }</span>
+              </div>
+              
+            </div>
+            <div className="col-md-6 d-flex align-self-center" style={{justifyContent:"end"}}>
+              <div className="timetrack">
+                <div className="time">
+                    <div className="current-time">{ currentTime }</div>
+                    <div className="end-time">{ currentSong.duration }</div>
+                  </div>
+                  
+                  <div ref={ref => this.timelineRef = ref} className="timeline">
+                    <div ref={ref => this.playheadRef = ref} className="playhead"></div>
+                    <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
+                  </div>
+            </div>
+            <div className="controls">
+              <button onClick={this.prevSong} className="prev prev-next current-btn"><i className="fas fa-backward"></i></button>
+              
+              <button onClick={this.playOrPause} className="play current-btn">
+                {
+                  (!pause) ? <i className="fas fa-play"></i>
+                  :<i className="fas fa-pause"></i>
+                }
+              </button>
+              <button onClick={this.nextSong} className="next prev-next current-btn"><i className="fas fa-forward"></i></button>
+            </div>
+            </div>
+          </div>
+          
+        </section>
+
+        </div>
+       </>
       )
     }
   }
