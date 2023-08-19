@@ -9,7 +9,6 @@ import Read from "../inc/component/public/Read";
 export default class Watch extends react.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       user: undefined,
     };
@@ -25,7 +24,6 @@ export default class Watch extends react.Component {
   }
 
   shouldComponentUpdate = () => false;
-
 
   render() {
     return (

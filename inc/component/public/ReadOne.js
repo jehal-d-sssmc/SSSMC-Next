@@ -32,17 +32,11 @@ export default class Read extends React.Component {
         order: {},
       }
     );
-    console.log(articleData);
-    this.setState(
-      {
-        articleData: articleData.data,
-        articleId: articleId,
-        loading: false,
-      },
-      () => {
-        console.log(this.state.articleId, this.state.articleData);
-      }
-    );
+    this.setState({
+      articleData: articleData.data,
+      articleId: articleId,
+      loading: false,
+    });
     this.forceUpdate();
   }
 
@@ -61,6 +55,37 @@ export default class Read extends React.Component {
                   <>{this.props.loader}</>
                 ) : (
                   <>
+                    <div>
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb p-2">
+                          <>
+                            <li className="breadcrumb-item">
+                              <a
+                                onClick={() => {
+                                  this.props.redirect("/");
+                                }}
+                                href={"#"}
+                              >
+                                Home
+                              </a>
+                            </li>
+                            <li className="breadcrumb-item">
+                              <a
+                                onClick={() => {
+                                  this.props.redirect("/read");
+                                }}
+                                href={"#"}
+                              >
+                                Read
+                              </a>
+                            </li>
+                            <li className="breadcrumb-item active">
+                              <a href="#">{this.state.articleData.title}</a>
+                            </li>
+                          </>
+                        </ol>
+                      </nav>
+                    </div>
                     <div className="pt-5 text-xl-center">
                       <h1 className="fs-1">{this.state.articleData.title}</h1>
                     </div>

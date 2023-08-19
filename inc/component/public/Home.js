@@ -6,6 +6,7 @@ import Listen from "../Home/_Listen";
 import Read from "../Home/Read";
 
 import VideoPlayer from "react-background-video-player";
+import Streams from "../Home/Streams";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -146,155 +147,96 @@ export default class Home extends React.Component {
               id=""
               className="bg-light"
               style={{
-                padding: "45px 24px 45px 24px",
+                padding: "0 24px",
                 position: "relative",
+                height:"calc(100vh - 120px)",
+                display:"flex",
+                alignItems:"center"
               }}
             >
               <div className="videooverlay">
                 <VideoPlayer
                   className="video"
-                  src={"/bg2.mp4"}
+                  src={"/bg3.mp4"}
                   autoPlay={true}
                   muted={true}
                 />
+                
               </div>
-              <div className="p-2"></div>
-              <div style={{ margin: "0 15px" }}>
-                <SwiperComp featuredItems={this.state.featuredItems} />
+              <div className="imgOverlay">
+                <div className="container">
+                <Streams {...this.props} />
+                </div>
               </div>
-            </section>
-            
-            <section id="shorts" className="p-3">
-              <div className="" style={{ padding: "0px 15px" }}>
-               
-                <Shorts shorts={this.state.shorts} />
-              </div>
+              
+              
             </section>
 
-            <section id="streams" className="">
-            <div style={{ padding: "15px" }}>
-                <div className="section-header">
+            <section id="shorts" className="p-3 bg-white">
+              <div className="" style={{ padding: "0px 15px" }}>
+              <div className="section-header pb-3">
                   <div className="row">
-                    <div className="col-12 align-self-center text-white text-center">
-                      <h3 className="section-title text-white">Radio Streams</h3>
+                    <div className="col-12 align-self-center">
+                      <h3 className="section-title">Shorts</h3>
+                      
                     </div>
                   </div>
                 </div>
+                <Shorts shorts={this.state.shorts} />
               </div>
-              <div className="vscroller container">
-                    <div className="radio-grid">
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/morning_prayer.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/vedam.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/sai_gayatri.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/gayatri_mantra.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/shiv_panchakshari.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/prasanthi.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/bhajan.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/discourse.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="radio-grid-col">
-                        <div className="radio-circle">
-                          <a>
-                            <div className="radio-circle-img">
-                              <img src="//www.sssmediacentre.org/assets/images/radiostations/telugu.jpg" />
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </section>
-
-            <section id="" className="p-3 pb-0">
-              <div className="container" style={{ padding: "0px 15px" }}>
-                <div className="section-header">
+            </section>
+            
+            <section id="watch" className="bg-white p-3">
+              <div style={{ margin: "0 15px" }}>
+              <div className="section-header pb-3">
                   <div className="row">
-                    <div className="col-12 align-self-center text-center text-white">
-                      <h3 className="section-title text-white text-center">Listen</h3>
+                    <div className="col-12 align-self-center">
+                      <h3 className="section-title">Watch</h3>
                       &nbsp; &gt; &nbsp;<a href="#" className="text-danger">
                         View More
                       </a>
                     </div>
                   </div>
                 </div>
+                <SwiperComp featuredItems={this.state.featuredItems} />
+              </div>
+              </section>
+
+
+            
+
+           
+
+            <section id="" className="p-3 pb-0 bg-white">
+              <div className="" style={{ padding: "0px 15px" }}>
+                <div className="section-header">
+                  <div className="row">
+                    <div className="col-12 align-self-center">
+                      <h3 className="section-title">Listen</h3>
+                      &nbsp; &gt; &nbsp;<a href="#" className="text-danger">
+                        View More
+                      </a>
+                      <ul class="nav nav-tabs custom-tab">
+                        <li class="nav-item">
+                          <a class="nav-link active">
+                            <span>LATEST</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link">
+                            <span>POPULAR</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
                 <div className="p-2"></div>
                 <Listen listen={this.state.listen} />
 
-                <ul class="nav nav-tabs custom-tab">
-                  <li class="nav-item">
-                    <a class="nav-link active">
-                      <span>LATEST</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link">
-                      <span>POPULAR</span>
-                    </a>
-                  </li>
-                </ul>
+                
               </div>
             </section>
             <section id="" className="p-3 pb-0 bg-light">
@@ -327,6 +269,31 @@ export default class Home extends React.Component {
                             View More
                           </a>
                       </a>
+
+                      <ul class="nav nav-tabs custom-tab">
+                        <li class="nav-item">
+                          <a
+                            onClick={this.handleReadToggle}
+                            href={"#"}
+                            class={`nav-link ${
+                              this.state.readToggle === "LATEST" ? "active" : ""
+                            }`}
+                          >
+                            <span>LATEST</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            onClick={this.handleReadToggle}
+                            href={"#"}
+                            class={`nav-link ${
+                              this.state.readToggle === "FEATURED" ? "active" : ""
+                            }`}
+                          >
+                            <span>FEATURED</span>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                    
                   </div>
@@ -336,30 +303,7 @@ export default class Home extends React.Component {
                 ) : (
                   <Read {...this.props} read={this.state.readFeatured} />
                 )}
-                <ul class="nav nav-pills custom-tab">
-                  <li class="nav-item">
-                    <a
-                      onClick={this.handleReadToggle}
-                      href={"#"}
-                      class={`nav-link ${
-                        this.state.readToggle === "LATEST" ? "active" : ""
-                      }`}
-                    >
-                      <span>LATEST</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      onClick={this.handleReadToggle}
-                      href={"#"}
-                      class={`nav-link ${
-                        this.state.readToggle === "FEATURED" ? "active" : ""
-                      }`}
-                    >
-                      <span>FEATURED</span>
-                    </a>
-                  </li>
-                </ul>
+                
                 <div className="p-2"></div>
               </div>
             </section>

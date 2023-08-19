@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 
 
 import client from '../inc/client'
+import CardMusic from '../inc/component/common/CardMusic';
 
 function MyApp({ Component, pageProps, request }) {
   const loader = <div className='preloader'>
@@ -16,11 +17,40 @@ function MyApp({ Component, pageProps, request }) {
     <div className="line"></div>
   </div>
   const [app, setApp] = useState(null);
+  const [music, setMusic] = useState(null);
   const router = useRouter()
   const redirect = (path) => {
-      router.push(path,undefined,{shallow:true})
+      router.push(path, undefined, { shallow:true })
+  }
+
+  const togglePlaylist = (e) => {
+    console.log(music);
+    music.showlist = !music.showlist;
+
+    setMusic(music);
   }
   
+  const _setMusic = (_music = music, index = 0) => {
+    let mstate = music;
+    
+    if(_music !== undefined && _music.musicList !== undefined){
+        if(!Array.isArray(_music.musicList)){
+          mstate.musicList = _music.data.map((x)=>{
+              return {
+                  name: x.title,
+                  author: x.category,
+                  img: x.file_identifier_thumb !== undefined ? this.__(x.file_identifier_thumb) : '/default-music.png',
+                  audio:this.__(x.file_identifier),
+                  duration: x.duration
+              }
+          });
+        }
+        
+    }
+   // console.log(mstate)
+    setMusic(mstate);
+    
+  }
  // console.log("8.)",_client);
   useEffect(()=>{
     let _app = (new client());
@@ -28,6 +58,13 @@ function MyApp({ Component, pageProps, request }) {
       
       _app.helper = res;
       setApp(_app);
+      setMusic({
+        index: 0,
+        currentTime: '0:00',
+        musicList: [{name:'Asia Stream', author: 'Prasanthi Mandir', img: 'http://www.sssmediacentre.org/assets/images/radiostations/prasanthi.jpg', audio:'https://stream.sssmediacentre.org:8443/asia', duration: '0:00'}],
+        pause: false,
+        showlist: false
+      })
     })
     
   },[app])
@@ -39,7 +76,10 @@ function MyApp({ Component, pageProps, request }) {
     <>
     {loader}
     </> :
-    <Component {...{attr: pageProps, app: app, loader: loader, router: router, redirect: redirect}} /> 
+    <>
+     <Component {...{attr: pageProps, app: app, loader: loader, router: router, redirect: redirect, setMusic: setMusic, getMusic: music, togglePlaylist: togglePlaylist}} /> 
+     <CardMusic {...{setMusic: _setMusic, getMusic: music, togglePlaylist: togglePlaylist}} />
+    </>
   }
   </>
 }

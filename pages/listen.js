@@ -9,7 +9,6 @@ import CardMusic from "../inc/component/common/CardMusic";
 export default class Watch extends react.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       user: undefined,
     };
@@ -26,16 +25,13 @@ export default class Watch extends react.Component {
 
   shouldComponentUpdate = () => false;
 
-
   render() {
     return (
       <>
         <Header {...this.props} />
 
         <main className="p-1">
-          <div className="musicplayer-box">
-          {<CardMusic {...this.props} />}
-          </div>
+          <div className="musicplayer-box"></div>
         </main>
 
         <Footer {...this.props} />

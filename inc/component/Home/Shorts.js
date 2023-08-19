@@ -14,13 +14,13 @@ export default function Shorts(props) {
     <>
       <Swiper
         slidesPerView={'auto'}
-        spaceBetween={9}
+        spaceBetween={18}
         pagination={{
           clickable: true,
         }}
         loop={true}
         modules={[Pagination]}
-        className="shorts gold"
+        className="shorts"
       >
         {props.shorts.type !== "success" ? (
           <div className="alert alert-error">{props.shorts.msg}</div>
@@ -31,7 +31,7 @@ export default function Shorts(props) {
               {
                 item.featuredUrl !== undefined && 
                 <>
-                <SwiperSlide key={i} className='effect2 glowing'>
+                <SwiperSlide key={i} className='effect6'>
                   <div className="shortsItem " style={{maxWidth:"320px"}}>
                     <div className="shortsImg ratio ratio-9x16 shadow-1" >
                       <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>

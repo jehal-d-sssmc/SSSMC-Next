@@ -46,24 +46,17 @@ export default class Read extends React.Component {
           skip: this.state.readIndex * 15,
         }
       );
-      console.log(extraReadItems);
 
       let curItems = this.state.readItems;
       let curIndex = this.state.readIndex;
       curIndex++;
-      console.log(curItems);
       extraReadItems.data.forEach((item) => {
         curItems.push(item);
       });
-      this.setState(
-        {
-          readItems: curItems,
-          readIndex: curIndex,
-        },
-        () => {
-          console.log(this.state.readItems, this.state.readIndex);
-        }
-      );
+      this.setState({
+        readItems: curItems,
+        readIndex: curIndex,
+      });
       this.forceUpdate();
 
       if (extraReadItems.data.length < 15) {
@@ -89,7 +82,6 @@ export default class Read extends React.Component {
           skip: this.state.selectedReadIndex * 15,
         }
       );
-      console.log(extraReadItems);
 
       let curSelIndex = this.state.selectedReadIndex;
       let curSelItems = this.state.selectedReadItems;
@@ -97,18 +89,10 @@ export default class Read extends React.Component {
       extraReadItems.data.forEach((item) => {
         curSelItems.push(item);
       });
-      this.setState(
-        {
-          selectedReadItems: curSelItems,
-          selectedReadIndex: curSelIndex,
-        },
-        () => {
-          console.log(
-            this.state.selectedReadItems,
-            this.state.selectedReadIndex
-          );
-        }
-      );
+      this.setState({
+        selectedReadItems: curSelItems,
+        selectedReadIndex: curSelIndex,
+      });
       this.forceUpdate();
 
       if (extraReadItems.data.length < 15) {
@@ -123,12 +107,12 @@ export default class Read extends React.Component {
 
   handleCatClick = async (e) => {
     e.preventDefault();
-    console.log(e.target.text);
     await this.setState({
       categoryEmpty: false,
       selectedReadItems: [],
       selectedReadIndex: 0,
       selectedCategory: e.target.text,
+      viewMoreDisabledState: false,
     });
 
     if (this.state.selectedCategory === "All") {
@@ -154,7 +138,6 @@ export default class Read extends React.Component {
         skip: this.state.selectedReadIndex * 15,
       }
     );
-    console.log(selReadItems);
 
     if (selReadItems.data.length === 0) {
       this.setState({
@@ -170,15 +153,10 @@ export default class Read extends React.Component {
     selReadItems.data.forEach((item) => {
       curSelItems.push(item);
     });
-    this.setState(
-      {
-        selectedReadItems: curSelItems,
-        selectedReadIndex: curSelIndex,
-      },
-      () => {
-        console.log(this.state.selectedReadItems, this.state.selectedReadIndex);
-      }
-    );
+    this.setState({
+      selectedReadItems: curSelItems,
+      selectedReadIndex: curSelIndex,
+    });
     this.forceUpdate();
   };
 
@@ -197,14 +175,9 @@ export default class Read extends React.Component {
         limit: 7,
       }
     );
-    this.setState(
-      {
-        featuredReadItems: featuredReadItems.data,
-      },
-      () => {
-        console.log(this.state.featuredReadItems);
-      }
-    );
+    this.setState({
+      featuredReadItems: featuredReadItems.data,
+    });
     this.forceUpdate();
 
     let readItems = await this.props.app.db(
@@ -219,16 +192,10 @@ export default class Read extends React.Component {
         limit: 15,
       }
     );
-    console.log(readItems);
-    this.setState(
-      {
-        readItems: readItems.data,
-        readIndex: 1,
-      },
-      () => {
-        console.log(this.state.readItems);
-      }
-    );
+    this.setState({
+      readItems: readItems.data,
+      readIndex: 1,
+    });
     this.forceUpdate();
 
     let readCategories = await this.props.app.db(
@@ -238,15 +205,9 @@ export default class Read extends React.Component {
       {},
       {}
     );
-    console.log(readCategories.data);
-    this.setState(
-      {
-        readCategories: readCategories.data,
-      },
-      () => {
-        console.log(this.state.readCategories);
-      }
-    );
+    this.setState({
+      readCategories: readCategories.data,
+    });
     this.forceUpdate();
 
     this.setState({

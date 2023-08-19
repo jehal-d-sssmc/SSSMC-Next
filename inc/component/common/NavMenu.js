@@ -1,70 +1,96 @@
 import react from "react";
 
 class NavMenu extends react.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      showMenu: false
-    }
+      showMenu: false,
+    };
   }
-  componentDidMount(){
-    console.log(this.props);
-    this.forceUpdate()
-  } 
+  componentDidMount() {
+    this.forceUpdate();
+  }
 
-  shouldComponentUpdate = () => false
+  shouldComponentUpdate = () => false;
 
   render() {
     return (
       <>
-        <div className="mobile-menu" onClick={()=>{
-          
-          this.setState({
-            showMenu: !this.state.showMenu
-          }, ()=>{
-            this.forceUpdate()
-          })
-        }}>
-          <i className={`${this.state.showMenu ? 'fa fa-close ' : "fa fa-bars "}fa-3x js-menu-icon`}></i>
+        <div
+          className="mobile-menu"
+          onClick={() => {
+            this.setState(
+              {
+                showMenu: !this.state.showMenu,
+              },
+              () => {
+                this.forceUpdate();
+              }
+            );
+          }}
+        >
+          <i
+            className={`${
+              this.state.showMenu ? "fa fa-close " : "fa fa-bars "
+            }fa-3x js-menu-icon`}
+          ></i>
         </div>
-        <nav className={`mynavbar js-mynavbar${this.state.showMenu ? ' show' : ""}`}>
+        <nav
+          className={`mynavbar js-mynavbar${
+            this.state.showMenu ? " show" : ""
+          }`}
+        >
           <ul className="menu m-0">
             <li>
-              <a className="hasDropdown" href="#" onClick={()=>{
-                this.props.redirect('/watch');
-              }}>
+              <a
+                className="hasDropdown"
+                href="#"
+                onClick={() => {
+                  this.props.redirect("/watch");
+                }}
+              >
                 <i className="fa-solid fa-photo-film"></i>&nbsp;Watch
               </a>
 
-              <ul className="mycontainer has-multi">
+              {/* <ul className="mycontainer has-multi">
                 <div className="mycontainer__list">
                   <div className="mycontainer__listItem">
-                    <div onClick={()=>{
-                this.props.redirect('/watch');
-                }}>Televisions</div>
+                    <div
+                      onClick={() => {
+                        this.props.redirect("/watch");
+                      }}
+                    >
+                      Televisions
+                    </div>
                   </div>
                 </div>
-              </ul>
+              </ul> */}
             </li>
             <li>
-              <a className="hasDropdown" href="#" onClick={()=>{
-                this.props.redirect('/listen');
-              }}>
+              <a
+                className="hasDropdown"
+                href="#"
+                onClick={() => {
+                  this.props.redirect("/listen");
+                }}
+              >
                 <i className="fa-solid fa-headphones"></i>&nbsp;Listen
               </a>
-              <ul className="mycontainer has-multi">
+              {/* <ul className="mycontainer has-multi">
                 <div className="mycontainer__list mycontainer__list-multi">
                   <div className="mycontainer__listItem">
                     <div>Televisions</div>
                   </div>
                 </div>
-              </ul>
+              </ul> */}
             </li>
             <li>
-              <a href="#" onClick={()=>{
-                this.props.redirect('/read');
-              }}>
+              <a
+                href="#"
+                onClick={() => {
+                  this.props.redirect("/read");
+                }}
+              >
                 <i className="fa-brands fa-readme"></i>&nbsp;Read
               </a>
             </li>
@@ -74,7 +100,12 @@ class NavMenu extends react.Component {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="#"
+                onClick={() => {
+                  this.props.redirect("/sai-inspires");
+                }}
+              >
                 <i className="fa-regular fa-face-grin-wide"></i>&nbsp;Sai
                 Inspires
               </a>
@@ -116,4 +147,4 @@ class NavMenu extends react.Component {
   }
 }
 
-export default (NavMenu)
+export default NavMenu;

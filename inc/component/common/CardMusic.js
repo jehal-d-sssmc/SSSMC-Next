@@ -3,12 +3,8 @@ export default class CardMusic extends react.Component {
 
     constructor(props){
         super(props);
-        this.state = {
-            index: 0,
-            currentTime: '0:00',
-            musicList: [{name:'Sai Gayathri', author: 'Sai Gayathri Stream', img: '/default-music.png', audio:'https://stream.sssmediacentre.org:8443/saigayathri', duration: '0:00'}],
-            pause: false,
-        };
+        this.state = this.props.getMusic;
+        console.log(this.props.getMusic);
     } 
     
     __ = (url) => {
@@ -20,7 +16,10 @@ export default class CardMusic extends react.Component {
         }
       }
     
-  
+  togglePlaylist = (e) => {
+    console.log(this.props)
+    this.props.togglePlaylist(e)
+  }
 
    async componentDidMount() {
      this.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
@@ -28,35 +27,13 @@ export default class CardMusic extends react.Component {
      this.timelineRef.addEventListener("click", this.changeCurrentTime, false);
      this.timelineRef.addEventListener("mousemove", this.hoverTimeLine, false);
      this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);
-     let featuredItems = await this.props.app.db('GET', 'find', 'audios', {}, {
+     /*let featuredItems = await this.props.app.db('GET', 'find', 'audios', {}, {
         order: {
             createdAt: -1
         }
-    });
-
-
-    
-
-    let musicList = featuredItems.data.map((x)=>{
-        return {
-            name: x.title,
-            author: x.category,
-            img: x.file_identifier_thumb !== undefined ? this.__(x.file_identifier_thumb) : '/default-music.png',
-            audio:this.__(x.file_identifier),
-            duration: x.duration
-        }
-    });
-    console.log(musicList)
-    this.setState({
-       index: 1,
-       currentTime: '0:00',
-       musicList: musicList,
-       pause: false
-    }, ()=> {
-
-      //this.forceUpdate();
-    })//
+    });*/
    }
+
 
    //shouldComponentUpdate = () => false;
   
@@ -78,7 +55,10 @@ export default class CardMusic extends react.Component {
     const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
   
     this.playheadRef.style.width = userClickWidhtInPercent + "%";
-    this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
+    if(duration.toString() !== 'Infinity'){
+      this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
+
+    }
   }
   
   hoverTimeLine = (e) => {
@@ -113,6 +93,8 @@ export default class CardMusic extends react.Component {
     const currentTime = this.formatTime(parseInt(this.playerRef.currentTime));  
     this.setState({ 
       currentTime 
+    }, ()=> {
+     
     });
   }
   
@@ -128,17 +110,22 @@ export default class CardMusic extends react.Component {
     }
   
     updatePlayer = () =>{
-      const { musicList, index } = this.state;
+      const { musicList, index, pause } = this.props.getMusic;
       const currentSong = musicList[index];
       const audio = new Audio(currentSong.audio);
       this.playerRef.load();
+      if(!pause){
+        this.playOrPause()
+      }
     }
     
     nextSong = () => {
-      const { musicList, index, pause } = this.state;
+      const { musicList, index, pause } = this.props.getMusic;
     
       this.setState({ 
         index: (index + 1) % musicList.length
+      }, ()=> {
+       
       });
       this.updatePlayer();
       if(pause){
@@ -147,10 +134,12 @@ export default class CardMusic extends react.Component {
     };
   
     prevSong = () => {
-      const { musicList, index, pause } = this.state;  
+      const { musicList, index, pause } = this.props.getMusic;  
       
       this.setState({ 
         index: (index + musicList.length - 1) % musicList.length
+      }, ()=> {
+        
       });
       this.updatePlayer();
       if(pause){
@@ -160,24 +149,31 @@ export default class CardMusic extends react.Component {
      
   
     playOrPause = () =>{
-      const { musicList, index, pause } = this.state;
+     
+      const { musicList, index, pause } = this.props.getMusic;
       const currentSong = musicList[index];
       const audio = new Audio(currentSong.audio);
-      if( !this.state.pause ){
+      if( !pause ){
         this.playerRef.play();
       }else{
         this.playerRef.pause();
       }
       this.setState({
         pause: !pause
+      }, ()=> {
+       
       })
     }
     
     clickAudio = (key) =>{
-      const { pause } = this.state;
       
+      const { pause } = this.props.getMusic;
+      this.props.setMusic({index: key})
+      console.log(key, this.props.getMusic)
       this.setState({
         index: key
+      }, ()=> {
+       
       });
       
       this.updatePlayer();
@@ -188,7 +184,7 @@ export default class CardMusic extends react.Component {
   
     
     render() {
-      const { musicList, index, currentTime, pause } = this.state;
+      const { musicList, index, currentTime, pause, showlist } = this.props.getMusic;
       const currentSong = musicList[index];
       return (
        <>
@@ -196,10 +192,10 @@ export default class CardMusic extends react.Component {
                   <source src={ currentSong.audio } type="audio/ogg"/>
                     Your browser does not support the audio element.
         </audio>
-        <div className="music">
-          <div className="card">
+        <div className={`music${showlist ? "" : " d-none"}`}>
+          <div className="card" style={{border:"none"}}>
             <div className="row" style={{width:"100vw"}}>
-            <div className="col-md-6 align-self-center text-center" style={{justifyContent:"center"}}>
+            <div className="col-md-6 align-self-center text-center" style={{alignItems:"center", height:"calc(100vh - 130px)"}}>
               <div className="current-song">
                 
                 <div className="img-wrap">
@@ -213,13 +209,19 @@ export default class CardMusic extends react.Component {
               <div className="timetrack">
               <div className="time">
                   <div className="current-time">{ currentTime }</div>
-                  <div className="end-time">{ currentSong.duration }</div>
+                  <div className="end-time">{ currentSong.duration === '-0.00' ? <i className="fa-solid fa-infinity"></i> : currentSong.duration }</div>
                 </div>
                 
-                <div ref={ref => this.timelineRef = ref} className="timeline">
+                <div ref={ref => this.timelineRef = ref} className={`timeline${currentSong.duration === '-0.00'? ' d-none':''}`}>
                   <div ref={ref => this.playheadRef = ref} className="playhead"></div>
                   <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
                 </div>
+                {
+                    currentSong.duration === '-0.00' &&
+                    <div className="progress" style={{height:"5px"}}>
+                        <div className={`progress-bar progress-bar-striped bg-danger${(!pause) ? '' : ' progress-bar-animated'}`} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                }
               </div>
                 
                 <div className="controls">
@@ -239,9 +241,9 @@ export default class CardMusic extends react.Component {
             <div className="col-md-6 align-self-center">
             <div className="play-list" >
                 
-                <div className="hidePlaylist">HIDE</div>
-                <div className="tracklist effect8">
-                {musicList.map( (music, key=0) =>
+                <div className="hidePlaylist" onClick={this.togglePlaylist}><i className="fa-solid fa-xmark"></i></div>
+                <div className="tracklist p-2">
+                {this.props.getMusic.musicList.map( (music, key=0) =>
                     <div key={key} 
                         onClick={()=>this.clickAudio(key)}
                         className={"track " + 
@@ -256,7 +258,7 @@ export default class CardMusic extends react.Component {
                         <span className="track-duration" >
                         {(index === key)
                             ?currentTime
-                            :music.duration
+                            :music.duration === '-0.00' ? 'Stream' : music.duration
                         }
                         </span>
                     </div>
@@ -267,10 +269,10 @@ export default class CardMusic extends react.Component {
             </div>    
           </div>
         </div>
-        <div className="musicband effect7">
+        <div className="musicband">
         <section id="bottomplayer" className="ply_bar p-2">
           <div className="row" style={{width:"100%"}}>
-            <div className="col-md-6 d-flex align-self-center">
+            <div className="col-md-10 col-12 d-flex align-self-center" style={{alignItems:"center"}}>
               <div className="preview-img">
                 <img src={ currentSong.img }/>
               </div>
@@ -278,30 +280,53 @@ export default class CardMusic extends react.Component {
                     <span className="song-name">{ currentSong.name }</span>
                     <span className="song-autor">{ currentSong.author }</span>
               </div>
-              
-            </div>
-            <div className="col-md-6 d-flex align-self-center" style={{justifyContent:"end"}}>
-              <div className="timetrack">
+              <div className="timetrack d-none d-md-block">
                 <div className="time">
                     <div className="current-time">{ currentTime }</div>
-                    <div className="end-time">{ currentSong.duration }</div>
+                    <div className="end-time">{ currentSong.duration === '-0.00' ? <i className="fa-solid fa-infinity"></i> : currentSong.duration  }</div>
                   </div>
+                  {
+                    currentSong.duration === '-0.00' ? 
+                    <div className="progress" style={{height:"5px"}}>
+                        <div className={`progress-bar progress-bar-striped bg-danger${(!pause) ? '' : ' progress-bar-animated'}`} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> :
+                    <div ref={ref => this.timelineRef = ref} className="timeline">
+                      <div ref={ref => this.playheadRef = ref} className="playhead"></div>
+                      <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
+                    </div>
+                  }
                   
-                  <div ref={ref => this.timelineRef = ref} className="timeline">
-                    <div ref={ref => this.playheadRef = ref} className="playhead"></div>
-                    <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
-                  </div>
-            </div>
-            <div className="controls">
-              <button onClick={this.prevSong} className="prev prev-next current-btn"><i className="fas fa-backward"></i></button>
+              </div>
+             
+              <div className="controls d-flex">
+              <button onClick={this.prevSong} className="prev prev-next current-btn d-none d-md-flex"><i className="fas fa-backward"></i></button>
+                
+                <button onClick={this.playOrPause} className="play current-btn">
+                  {
+                    (!pause) ? <i className="fas fa-play"></i>
+                    :<i className="fas fa-pause"></i>
+                  }
+                </button>
+                <button onClick={this.nextSong} className="next prev-next current-btn d-none d-md-flex"><i className="fas fa-forward"></i></button>
+                <button onClick={this.togglePlaylist} className="play current-playlist d-block d-md-none">
+                  {
+                    (!showlist) ? <i className="fa-solid fa-arrow-up"></i>
+                    : <i className="fa-solid fa-arrow-down"></i>
+                  }
+                </button>
+              </div>
               
-              <button onClick={this.playOrPause} className="play current-btn">
+            </div>
+            <div className="col-md-2 align-self-center d-none d-md-flex" style={{justifyContent:"end", alignItems: "center"}}>
+             
+            <div className="controls">
+              
+              <button onClick={this.togglePlaylist} className="play current-playlist">
                 {
-                  (!pause) ? <i className="fas fa-play"></i>
-                  :<i className="fas fa-pause"></i>
+                  (!showlist) ? <i className="fa-solid fa-arrow-up"></i>
+                  : <i className="fa-solid fa-arrow-down"></i>
                 }
               </button>
-              <button onClick={this.nextSong} className="next prev-next current-btn"><i className="fas fa-forward"></i></button>
             </div>
             </div>
           </div>

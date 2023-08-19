@@ -8,7 +8,6 @@ import WatchComp from "../inc/component/public/Watch";
 export default class Watch extends react.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       user: undefined,
     };
@@ -21,7 +20,7 @@ export default class Watch extends react.Component {
       this.setState({
         user: this.props.app.helper.user,
       });
-      this.forceUpdate()
+      this.forceUpdate();
     }, 1000);
   }
 

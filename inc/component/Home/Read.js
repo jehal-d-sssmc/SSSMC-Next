@@ -31,7 +31,7 @@ export default function Read(props) {
               <>
                 {item.thumbPath !== undefined && (
                   <>
-                    <SwiperSlide key={i} className="effect2">
+                    <SwiperSlide key={i} className="">
                       <div className="featuredItem">
                         <div className="featuredImg">
                           <a
@@ -51,7 +51,10 @@ export default function Read(props) {
                           </a>
                         </div>
                         <div className="featuredContent">
-                          <h5>{item.title}</h5>
+                          <h5 style={{cursor:"pointer"}} onClick={() => {
+                              props.redirect(`/read/${item._id}`);
+                            }}>{item.title}</h5>
+                          <div className=""><span className="badge bg-secondary">{item.categoryName}</span></div>
                         </div>
                       </div>
                     </SwiperSlide>
