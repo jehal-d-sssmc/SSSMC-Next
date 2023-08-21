@@ -4,32 +4,23 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import {  Pagination } from 'swiper/modules';
 
 export default function Listen(props) {
   return (
     <>
       <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
+        slidesPerView={"auto"}
+        spaceBetween={9}
+        pagination={{
+          clickable: true,
         }}
-        pagination={false}
-        modules={[EffectCoverflow, Pagination]}
-        className="listen"
+        modules={[Pagination]}
+        className="listen align-self-center"
       >
         {props.listen.type !== "success" ? (
           <div className="alert alert-error">{props.listen.msg}</div>

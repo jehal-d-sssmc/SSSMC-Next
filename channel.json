@@ -1,0 +1,65 @@
+[
+    {
+        "audio": "https://content.sssmediacentre.org/gallery/uploads/128kbps_sai_vandanamp3__SPLIT__1655803449695.mp3",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/morning_prayer.jpg",
+        "name": "Morning Prayer",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/vedam",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/vedam.jpg",
+        "name": "Vedam",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/saigayathri",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/sai_gayatri.jpg",
+        "name": "Sai Gayathri",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/gayathri",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/gayatri_mantra.jpg",
+        "name": "Gayathri Mantra",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/shivapanchakshari",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/shiv_panchakshari.jpg",
+        "name": "Shiv Panchakshari",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/asia",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/prasanthi.jpg",
+        "name": "Prasanthi Asia | Ameri | Afri",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/bhajan",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/bhajan.jpg",
+        "name": "Bhajan",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/discourse",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/discourse.jpg",
+        "name": "Discourse",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    },
+    {
+        "audio": "https://stream.sssmediacentre.org:8443/telugu",
+        "img": "//www.sssmediacentre.org/assets/images/radiostations/telugu.jpg",
+        "name": "Telugu",
+        "duration": "-0.00",
+        "author": "Radio Stream"
+    }
+]

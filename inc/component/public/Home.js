@@ -2,7 +2,7 @@ import React from "react";
 import SwiperComp from "../Home/SwiperComp";
 import Shorts from "../Home/Shorts";
 import Watch from "../Home/Watch";
-import Listen from "../Home/_Listen";
+import Listen from "../Home/Listen";
 import Read from "../Home/Read";
 
 import VideoPlayer from "react-background-video-player";

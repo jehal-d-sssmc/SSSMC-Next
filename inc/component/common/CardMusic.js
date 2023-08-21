@@ -4,7 +4,7 @@ export default class CardMusic extends react.Component {
     constructor(props){
         super(props);
         this.state = this.props.getMusic;
-        console.log(this.props.getMusic);
+        console.log(this.props);
     } 
     
     __ = (url) => {
@@ -17,16 +17,32 @@ export default class CardMusic extends react.Component {
       }
     
   togglePlaylist = (e) => {
-    console.log(this.props)
-    this.props.togglePlaylist(e)
+    //console.log(this.props)
+    this.setState({
+      showlist: !this.state.showlist
+    }, ()=> {
+      this.props.togglePlaylist(e);
+    })
+   
+  }
+
+  closePlayer = (e) => {
+    this.setState({
+      player: !this.state.player
+    }, ()=> {
+      this.props.togglePlayer(e);
+    });
   }
 
    async componentDidMount() {
-     this.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
-     this.playerRef.addEventListener("ended", this.nextSong, false);
-     this.timelineRef.addEventListener("click", this.changeCurrentTime, false);
-     this.timelineRef.addEventListener("mousemove", this.hoverTimeLine, false);
-     this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);
+    if(this.state.player){
+      this.props.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
+      this.props.playerRef.addEventListener("ended", this.nextSong, false);
+      this.timelineRef.addEventListener("click", this.changeCurrentTime, false);
+      this.timelineRef.addEventListener("mousemove", this.hoverTimeLine, false);
+      this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);
+    }
+     
      /*let featuredItems = await this.props.app.db('GET', 'find', 'audios', {}, {
         order: {
             createdAt: -1
@@ -38,15 +54,18 @@ export default class CardMusic extends react.Component {
    //shouldComponentUpdate = () => false;
   
     componentWillUnmount() {
-      this.playerRef.removeEventListener("timeupdate", this.timeUpdate);
-      this.playerRef.removeEventListener("ended", this.nextSong);
-      this.timelineRef.removeEventListener("click", this.changeCurrentTime);
-      this.timelineRef.removeEventListener("mousemove", this.hoverTimeLine);
-      this.timelineRef.removeEventListener("mouseout", this.resetTimeLine);
+      if(this.state.player){
+        this.props.playerRef.removeEventListener("timeupdate", this.timeUpdate);
+        this.props.playerRef.removeEventListener("ended", this.nextSong);
+        this.timelineRef.removeEventListener("click", this.changeCurrentTime);
+        this.timelineRef.removeEventListener("mousemove", this.hoverTimeLine);
+        this.timelineRef.removeEventListener("mouseout", this.resetTimeLine);
+
+      }
     }
   
   changeCurrentTime = (e) => {
-    const duration = this.playerRef.duration;
+    const duration = this.props.playerRef.duration;
     
     const playheadWidth = this.timelineRef.offsetWidth;
     const offsetWidht = this.timelineRef.offsetLeft;
@@ -56,13 +75,13 @@ export default class CardMusic extends react.Component {
   
     this.playheadRef.style.width = userClickWidhtInPercent + "%";
     if(duration.toString() !== 'Infinity'){
-      this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
+      this.props.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
 
     }
   }
   
   hoverTimeLine = (e) => {
-    const duration = this.playerRef.duration;
+    const duration = this.props.playerRef.duration;
     
     const playheadWidth = this.timelineRef.offsetWidth
     
@@ -86,11 +105,11 @@ export default class CardMusic extends react.Component {
   }
   
   timeUpdate = () => {
-    const duration = this.playerRef.duration;
+    const duration = this.props.playerRef.duration;
     const timelineWidth = this.timelineRef.offsetWidth - this.playheadRef.offsetWidth;
-    const playPercent = 100 * (this.playerRef.currentTime / duration);
+    const playPercent = 100 * (this.props.playerRef.currentTime / duration);
       this.playheadRef.style.width = playPercent + "%";
-    const currentTime = this.formatTime(parseInt(this.playerRef.currentTime));  
+    const currentTime = this.formatTime(parseInt(this.props.playerRef.currentTime));  
     this.setState({ 
       currentTime 
     }, ()=> {
@@ -108,67 +127,54 @@ export default class CardMusic extends react.Component {
    
     return formatTime;
     }
-  
+  /*
     updatePlayer = () =>{
-      const { musicList, index, pause } = this.props.getMusic;
+      const { musicList, index, pause } = this.state;
       const currentSong = musicList[index];
       const audio = new Audio(currentSong.audio);
-      this.playerRef.load();
+      this.props.playerRef.load();
       if(!pause){
         this.playOrPause()
       }
-    }
+    }*/
     
     nextSong = () => {
-      const { musicList, index, pause } = this.props.getMusic;
+      const { musicList, index, pause } = this.state;
     
       this.setState({ 
         index: (index + 1) % musicList.length
       }, ()=> {
        
       });
-      this.updatePlayer();
+      this.props.updatePlayer();
       if(pause){
-        this.playerRef.play();
+        this.props.playerRef.play();
       }
     };
   
     prevSong = () => {
-      const { musicList, index, pause } = this.props.getMusic;  
+      const { musicList, index, pause } = this.state;  
       
       this.setState({ 
         index: (index + musicList.length - 1) % musicList.length
       }, ()=> {
         
       });
-      this.updatePlayer();
+      this.props.updatePlayer();
       if(pause){
-        this.playerRef.play();
+        this.props.playerRef.play();
       }
     };
      
   
     playOrPause = () =>{
-     
-      const { musicList, index, pause } = this.props.getMusic;
-      const currentSong = musicList[index];
-      const audio = new Audio(currentSong.audio);
-      if( !pause ){
-        this.playerRef.play();
-      }else{
-        this.playerRef.pause();
-      }
-      this.setState({
-        pause: !pause
-      }, ()=> {
-       
-      })
+      this.props.playOrPause();
     }
     
     clickAudio = (key) =>{
       
-      const { pause } = this.props.getMusic;
-      this.props.setMusic({index: key})
+      const { pause } = this.state;
+      this.props.setMusic(this.props.getMusic, key)
       console.log(key, this.props.getMusic)
       this.setState({
         index: key
@@ -176,9 +182,9 @@ export default class CardMusic extends react.Component {
        
       });
       
-      this.updatePlayer();
+      this.props.updatePlayer();
       if(pause){
-        this.playerRef.play();
+       this.props.playerRef.play();
       }
     }
   
@@ -188,10 +194,11 @@ export default class CardMusic extends react.Component {
       const currentSong = musicList[index];
       return (
        <>
-        <audio ref={ref => this.playerRef = ref}>
-                  <source src={ currentSong.audio } type="audio/ogg"/>
-                    Your browser does not support the audio element.
-        </audio>
+       {
+        this.props.getMusic.player &&
+        <>
+
+        
         <div className={`music${showlist ? "" : " d-none"}`}>
           <div className="card" style={{border:"none"}}>
             <div className="row" style={{width:"100vw"}}>
@@ -243,7 +250,7 @@ export default class CardMusic extends react.Component {
                 
                 <div className="hidePlaylist" onClick={this.togglePlaylist}><i className="fa-solid fa-xmark"></i></div>
                 <div className="tracklist p-2">
-                {this.props.getMusic.musicList.map( (music, key=0) =>
+                {this.state.musicList.map( (music, key) =>
                     <div key={key} 
                         onClick={()=>this.clickAudio(key)}
                         className={"track " + 
@@ -288,13 +295,13 @@ export default class CardMusic extends react.Component {
                   {
                     currentSong.duration === '-0.00' ? 
                     <div className="progress" style={{height:"5px"}}>
-                        <div className={`progress-bar progress-bar-striped bg-danger${(!pause) ? '' : ' progress-bar-animated'}`} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div className={`progress-bar progress-bar-striped${(!pause) ? ' bg-info' : ' bg-danger progress-bar-animated'}`} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> :
                     <div ref={ref => this.timelineRef = ref} className="timeline">
                       <div ref={ref => this.playheadRef = ref} className="playhead"></div>
                       <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
                     </div>
-                  }
+                  } 
                   
               </div>
              
@@ -327,6 +334,11 @@ export default class CardMusic extends react.Component {
                   : <i className="fa-solid fa-arrow-down"></i>
                 }
               </button>
+              <button onClick={this.closePlayer} className="play current-playlist">
+                {
+                  <i className="fa-solid fa-xmark"></i>
+                }
+              </button>
             </div>
             </div>
           </div>
@@ -334,6 +346,8 @@ export default class CardMusic extends react.Component {
         </section>
 
         </div>
+        </>
+       }
        </>
       )
     }

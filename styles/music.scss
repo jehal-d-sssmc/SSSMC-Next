@@ -57,6 +57,8 @@ $gold: #ffc561;
       justify-content: space-between;
       border-radius: 15px;
       margin: 10px auto;
+      position: sticky;
+      top: 0;
       audio{
         display: none;
       }
@@ -78,6 +80,7 @@ $gold: #ffc561;
         display: flex;
         margin-top: 30px;
         flex-direction: column;
+        width: 100%;
         max-width: 600px;
         .song-name{
           margin-top: 0px;
@@ -381,8 +384,8 @@ $gold: #ffc561;
       padding: 0px 15px;
       display: flex;
       flex-direction: column;
-      max-width: 600px;
-      
+      max-width: calc(100% - 372px);
+      width: 100%;
       .song-name{
         margin-top: 0px;
         font-size: 15px;
