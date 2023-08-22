@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
 import channels from '../../../channel.json'
 // Import Swiper styles
 import 'swiper/css';
@@ -21,13 +20,14 @@ export default class Streams extends react.Component {
         this.state = {
             music: this.props.music
         }
+        console.log([channels[0]]);
     }
 
     setMusic = (n) => {
         this.music = this.state.music;
-        this.music.musicList = channels;
+        this.music.musicList = [channels[n]];
        // this.music.player = true;
-        this.music.index = n;
+        this.music.index = 0;
         this.setState({
             music: this.music
         }, ()=> {

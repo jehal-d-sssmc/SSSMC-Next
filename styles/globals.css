@@ -37,6 +37,7 @@ a:hover{
 
 .logo {
   padding: 5px 15px;
+  min-width: 230px;
 }
 
 .logo img {
@@ -75,7 +76,11 @@ header.topnav {
 
 .mynavbar .menu {
   display: flex;
+  width: 100%;
 }
+
+
+
 
 .mynavbar .menu li {
   display: flex;
@@ -83,6 +88,27 @@ header.topnav {
   text-align: center;
   flex: 1;
   padding: 1px 3px 0px 5px;
+}
+
+.mynavbar .menu .overlay{
+  content: " ";
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 65px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+.mynavbar .menu li:hover ul, .mynavbar .menu li.show ul{
+ position: absolute;
+ z-index: 2;
 }
 
 .mynavbar .menu ul.mynav-inline {
@@ -95,7 +121,7 @@ header.topnav {
 }
 
 .mynavbar .menu li.mynav-inline-item {
-  width: 32% !important;
+  width: 21% !important;
   display: inline-block;
   margin: 0 0 10px 0;
 }
@@ -143,9 +169,13 @@ header.topnav {
   color: #d21d25;
 }
 
-.mynavbar .menu li:hover .mycontainer {
-  display: flex;
+
+.mynavbar .menu .mycontainer__list{
+  position: relative;
+  z-index: 3;
 }
+
+
 
 /* End Navigation Bar */
 
@@ -523,7 +553,7 @@ header.topnav {
 .mycontainer {
   position: absolute;
   z-index: 1;
-  top: 63px;
+  top: 60px;
   right: 0;
   left: 0;
   padding: 0;
@@ -531,10 +561,7 @@ header.topnav {
   margin: 3px 0;
   margin-bottom: 30px;
   text-align: left;
-  -webkit-backdrop-filter: saturate(63%) blur(9px);
-  backdrop-filter: saturate(63%) blur(9px);
-  background: hsla(0, 0%, 100%, 0.5);
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: #fff;
 }
 
 .mycontainer__list {
@@ -544,9 +571,6 @@ header.topnav {
   flex: 1;
   flex-wrap: wrap;
   justify-content: center;
-  -webkit-backdrop-filter: saturate(63%) blur(9px);
-  backdrop-filter: saturate(63%) blur(9px);
-  background: hsla(0, 0%, 100%, 0.5);
 }
 
 .mycontainer__listItem {
@@ -723,6 +747,24 @@ header.topnav {
   transition: 1s;
 }
 
+.mynav .vscroller{
+  width: 100%;
+}
+
+.mynav .vscroller .radio-grid{
+  padding: 0;
+  margin: 0;
+}
+
+.mynav .vscroller .radio-grid a{
+  margin: 0;
+  padding: 0;
+}
+
+.mynav .vscroller .radio-grid-col{
+  flex: 1 0 27%
+}
+
 section{
   position: relative;
 }
@@ -734,6 +776,8 @@ section{
   height: 100vh;
   z-index: 0;
 }
+
+
 
 .vscroller > .radio-grid {
   flex-wrap: wrap;
@@ -842,6 +886,18 @@ section{
 .listen .swiper-slide img {
   display: block;
   width: 100%;
+  transition: all 1s;
+}
+
+.listen .swiper-slide .listenImg {
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, .5); 
+}
+
+.listen .swiper-slide .listenImg:hover img {
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
 .stream .swiper {
@@ -922,11 +978,36 @@ footer {
 .copyright,
 .signature {
   color: rgb(164, 165, 173);
+  margin-top: 10px;
 }
-
 .copyright a,
 .signature a {
-  color: rgb(164, 165, 173);
+  color: #d35d25;
+  position: relative;
+}
+
+.copyright a .sssct-logo{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: calc(100% + 10px);
+  left: 0;
+  display: none;
+}
+
+.copyright .sssct-logo img{
+  border-radius: 50%;/* From https://css.glass */
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright a:hover .sssct-logo, .copyright a:focus .sssct-logo{
+  display: inline-block;
 }
 
 .bg-dark-0 {
@@ -974,6 +1055,14 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     cursor: pointer;
     font-size: 21px;
   }
+
+  .videooverlay video{
+    width: auto !important;
+    height: 100vh !important;
+    left: auto !important;
+    right: calc(100% - 180vw) !important;
+  }
+
   .mynavbar {
     display: none;
     position: absolute;

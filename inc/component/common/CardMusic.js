@@ -202,7 +202,7 @@ export default class CardMusic extends react.Component {
         <div className={`music${showlist ? "" : " d-none"}`}>
           <div className="card" style={{border:"none"}}>
             <div className="row" style={{width:"100vw"}}>
-            <div className="col-md-6 align-self-center text-center" style={{alignItems:"center", height:"calc(100vh - 130px)"}}>
+            <div className="col-md-6 text-center" style={{alignItems:"center", height:"calc(100vh - 130px)"}}>
               <div className="current-song">
                 
                 <div className="img-wrap">
@@ -211,10 +211,9 @@ export default class CardMusic extends react.Component {
               <div className="song-desc">
                 <span className="song-name">{ currentSong.name }</span>
                 <span className="song-autor">{ currentSong.author }</span>
-                
               </div>
               <div className="timetrack">
-              <div className="time">
+                <div className="time">
                   <div className="current-time">{ currentTime }</div>
                   <div className="end-time">{ currentSong.duration === '-0.00' ? <i className="fa-solid fa-infinity"></i> : currentSong.duration }</div>
                 </div>
@@ -250,7 +249,7 @@ export default class CardMusic extends react.Component {
                 
                 <div className="hidePlaylist" onClick={this.togglePlaylist}><i className="fa-solid fa-xmark"></i></div>
                 <div className="tracklist p-2">
-                {this.state.musicList.map( (music, key) =>
+                {this.props.getMusic.musicList.map( (music, key) =>
                     <div key={key} 
                         onClick={()=>this.clickAudio(key)}
                         className={"track " + 
@@ -287,7 +286,7 @@ export default class CardMusic extends react.Component {
                     <span className="song-name">{ currentSong.name }</span>
                     <span className="song-autor">{ currentSong.author }</span>
               </div>
-              <div className="timetrack d-none d-md-block">
+              <div className="timetrack d-none">
                 <div className="time">
                     <div className="current-time">{ currentTime }</div>
                     <div className="end-time">{ currentSong.duration === '-0.00' ? <i className="fa-solid fa-infinity"></i> : currentSong.duration  }</div>
@@ -327,7 +326,7 @@ export default class CardMusic extends react.Component {
             <div className="col-md-2 align-self-center d-none d-md-flex" style={{justifyContent:"end", alignItems: "center"}}>
              
             <div className="controls">
-              
+              <div className="disc"></div>
               <button onClick={this.togglePlaylist} className="play current-playlist">
                 {
                   (!showlist) ? <i className="fa-solid fa-arrow-up"></i>

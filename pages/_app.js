@@ -4,8 +4,6 @@ import React, { useEffect, useState } from 'react'
 import '../styles/globals.css';
 import '../styles/globals.scss';
 import  '../styles/music.scss';
-import { withRouter } from "next/router";
-
 
 
 import client from '../inc/client'
@@ -27,10 +25,11 @@ class MyApp extends React.Component{
       <img src='/loading.gif' alt='loader' />
       <div className="line"></div>
     </div>
-    console.log(this.props)
+    console.log(this.props.request)
     this.state = {
       loader: true,
       app: null,
+      url: this.props.request.ref,
       music: {
         index: 0,
         currentTime: '0:00',
@@ -41,14 +40,16 @@ class MyApp extends React.Component{
       }
     }
   }
+  
 
   redirect = (path) => {
+    this.togglePlaylist({}, false);
       this.props.router.push(path, undefined, { shallow:true })
   }
 
-  togglePlaylist = (e) => {
+  togglePlaylist = (e, hide = null) => {
     let music = this.state.music;
-     music.showlist = !music.showlist;
+     music.showlist = hide === null ? !music.showlist : hide;
     this.setState({
       music: music
     })
@@ -93,11 +94,17 @@ class MyApp extends React.Component{
 
    togglePlayer = (e) => {
     let music = this.state.music;
-    console.log(music);
+    
      music.player = e === true ? e : !music.player;
+     music.pause = music.player;
      this.setState({
       music: music
     }, () => {
+      console.log(music);
+      if(!music.player){
+        this.playerRef.pause();
+        this.togglePlaylist({}, false);
+      }
       this.updatePlayer();
     })
     // console.log(music);
@@ -121,7 +128,8 @@ class MyApp extends React.Component{
     }
     _music.index = index;
     _music.player = true;
-    // console.log(mstate)
+    _music.pause = false;
+    console.log(_music)
     this.setState({
       music: _music
     }, () => {
@@ -149,15 +157,22 @@ class MyApp extends React.Component{
       <Head>
         <meta name="viewport" content={`width=device-width, initial-scale=1`} />
         <title>Sri Sathya Sai Media Centre</title>
+        <script>
+           
+        </script>
       </Head>
       {
         this.state.app === null ?
         <>{this.loader}</>:
         <>
-        <audio ref={ref => this.playerRef = ref}>
-                  <source src={ currentSong.audio } type="audio/ogg"/>
-                    Your browser does not support the audio element.
-        </audio>
+        {
+          
+          <audio ref={ref => this.playerRef = ref}>
+                    <source src={ this.state.music.player ? currentSong.audio : "" } type="audio/ogg"/>
+                      Your browser does not support the audio element.
+          </audio>
+
+        }
         <Component {...{attr: this.props.pageProps, app: this.state.app, loader: this.loader, router: this.props.router, redirect: this.redirect, setMusic: this.setMusic, music: this.state.music, togglePlayer: this.togglePlayer}} /> 
         <CardMusic {...{setMusic: this.setMusic, getMusic: this.state.music, togglePlaylist: this.togglePlaylist, togglePlayer: this.togglePlayer, playerRef: this.playerRef, updatePlayer: this.updatePlayer, playOrPause: this.playOrPause}} />
         </>

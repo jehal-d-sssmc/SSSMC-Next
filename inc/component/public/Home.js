@@ -234,7 +234,7 @@ export default class Home extends React.Component {
                   
                 </div>
                 <div className="p-2"></div>
-                <Listen listen={this.state.listen} />
+                <Listen {...this.props} listen={this.state.listen} />
 
                 
               </div>

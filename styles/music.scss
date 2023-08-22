@@ -26,8 +26,9 @@ $gold: #ffc561;
   position: fixed;
   left: 0;
   top: 0px;
-  background-color: $white;
   z-index: 99;
+  /* From https://css.glass */
+  background-color: $white;
   h1{
     font-size: 36px;
     margin-bottom: 0;
@@ -35,7 +36,7 @@ $gold: #ffc561;
   .card{
     display: flex;
     overflow-y: auto;
-    overflow-x: none;
+    overflow-x: hidden;
     align-items: center;
     /*border-radius: $border-radius;*/
     color: $white;
@@ -58,7 +59,7 @@ $gold: #ffc561;
       border-radius: 15px;
       margin: 10px auto;
       position: sticky;
-      top: 0;
+      top: 18vh;
       audio{
         display: none;
       }
@@ -275,18 +276,7 @@ $gold: #ffc561;
           position: relative;
           padding: 5px;
           
-        &:after{
-          content: '';
-          display: none;
-          position: absolute;
-          right: 9px;
-          width: 57px;
-          height: 57px;
-          border-radius: calc( #{$border-radius} - 10px);
-          font-size: 16px;
-          animation: play 2s linear infinite;
-          background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 56 56' style='enable-background:new 0 0 56 56;' xml:space='preserve'%3E%3Cpath style='fill:%23071739;' d='M47.799,8.201c-10.935-10.935-28.663-10.935-39.598,0c-10.935,10.935-10.935,28.663,0,39.598 c10.935,10.935,28.663,10.935,39.598,0C58.734,36.864,58.734,19.136,47.799,8.201z M32.95,32.95c-2.734,2.734-7.166,2.734-9.899,0 c-2.734-2.734-2.734-7.166,0-9.899s7.166-2.734,9.899,0S35.683,30.216,32.95,32.95z'/%3E%3Cpath style='fill:%23E7ECED;' d='M35.778,20.222c-4.296-4.296-11.261-4.296-15.556,0c-4.296,4.296-4.296,11.261,0,15.556 c4.296,4.296,11.261,4.296,15.556,0C40.074,31.482,40.074,24.518,35.778,20.222z M30.121,30.121c-1.172,1.172-3.071,1.172-4.243,0 s-1.172-3.071,0-4.243s3.071-1.172,4.243,0S31.293,28.95,30.121,30.121z'/%3E%3Cg%3E%3Cpath style='fill:%23709fdc;' d='M35.778,35.778c-0.76,0.76-1.607,1.378-2.504,1.87l8.157,14.92c2.284-1.25,4.434-2.835,6.368-4.769 c1.934-1.934,3.519-4.084,4.769-6.368l-14.92-8.157C37.157,34.172,36.538,35.018,35.778,35.778z'/%3E%3Cpath style='fill:%23709fdc;' d='M20.222,20.222c0.76-0.76,1.607-1.378,2.504-1.87l-8.157-14.92c-2.284,1.25-4.434,2.835-6.368,4.769 s-3.519,4.084-4.769,6.368l14.92,8.157C18.843,21.828,19.462,20.982,20.222,20.222z'/%3E%3C/g%3E%3C/svg%3E");
-        }
+       
         .track-img{
           filter: opacity(70%);
         }
@@ -355,7 +345,12 @@ $gold: #ffc561;
   bottom: 0;
   left: 0;
   padding: 0 20px;
-  background-color: $white;
+    /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 14px;
   &::after{
     content: "";
@@ -366,20 +361,12 @@ $gold: #ffc561;
     left: 0;
     background-color: $base;
   }
-  &::before{
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    width: 100%;
-    height: 5px;
-    left: 0;
-    background-color: $gold;
-  }
   .ply_bar{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
+    
     .song-desc{
       padding: 0px 15px;
       display: flex;
@@ -425,6 +412,7 @@ $gold: #ffc561;
           }
         }
       }
+      
       .playhead{
         position: relative;
         z-index: 2;
@@ -470,11 +458,25 @@ $gold: #ffc561;
         }
       }
     }
-    
+    .disc{
+      
+        content: '';
+        position: relative;
+        right: 9px;
+        float: left;
+        display: none;
+        width: 36px;
+        height: 36px;
+        border-radius: calc( #{$border-radius} - 10px);
+        font-size: 16px;
+        animation: play 2s linear infinite;
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 56 56' style='enable-background:new 0 0 56 56;' xml:space='preserve'%3E%3Cpath style='fill:%23071739;' d='M47.799,8.201c-10.935-10.935-28.663-10.935-39.598,0c-10.935,10.935-10.935,28.663,0,39.598 c10.935,10.935,28.663,10.935,39.598,0C58.734,36.864,58.734,19.136,47.799,8.201z M32.95,32.95c-2.734,2.734-7.166,2.734-9.899,0 c-2.734-2.734-2.734-7.166,0-9.899s7.166-2.734,9.899,0S35.683,30.216,32.95,32.95z'/%3E%3Cpath style='fill:%23E7ECED;' d='M35.778,20.222c-4.296-4.296-11.261-4.296-15.556,0c-4.296,4.296-4.296,11.261,0,15.556 c4.296,4.296,11.261,4.296,15.556,0C40.074,31.482,40.074,24.518,35.778,20.222z M30.121,30.121c-1.172,1.172-3.071,1.172-4.243,0 s-1.172-3.071,0-4.243s3.071-1.172,4.243,0S31.293,28.95,30.121,30.121z'/%3E%3Cg%3E%3Cpath style='fill:%23709fdc;' d='M35.778,35.778c-0.76,0.76-1.607,1.378-2.504,1.87l8.157,14.92c2.284-1.25,4.434-2.835,6.368-4.769 c1.934-1.934,3.519-4.084,4.769-6.368l-14.92-8.157C37.157,34.172,36.538,35.018,35.778,35.778z'/%3E%3Cpath style='fill:%23709fdc;' d='M20.222,20.222c0.76-0.76,1.607-1.378,2.504-1.87l-8.157-14.92c-2.284,1.25-4.434,2.835-6.368,4.769 s-3.519,4.084-4.769,6.368l14.92,8.157C18.843,21.828,19.462,20.982,20.222,20.222z'/%3E%3C/g%3E%3C/svg%3E");
+      
+    }
     .controls{
       margin-top: 0px;
       text-align: center;
-      
+      position: relative;
       align-items: center;
       button{
         color: $white;
@@ -517,7 +519,7 @@ $gold: #ffc561;
     }
   }
   .preview-img img{
-    max-width: 63px;
+    max-width: 45px;
     border-radius: 10px;
   }
 }
