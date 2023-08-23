@@ -50,7 +50,7 @@ export default class Streams extends react.Component {
                         {
                             item.img !== undefined && 
                             <>
-                            <div key={i} class="radio-grid-col">
+                            <div key={i} class="radio-grid-col effect8">
                                 <div class="radio-circle">
                                 <a>
                                 <div class="radio-circle-img">

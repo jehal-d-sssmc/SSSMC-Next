@@ -10,20 +10,21 @@ import 'swiper/css/pagination';
 // import required modules
 import {  Pagination } from 'swiper/modules';
 
-export default class Listen extends React.Component {
+export default class Album extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       music: this.props.music
     }
+    console.log(this.props)
   }
 
   loadrelated = async(album) => {
     let listen = await this.props.app.db(
       "GET",
       "find",
-      "audio",
-      {"album_name": album},
+      "audios",
+      {"category": album},
       {
         order: {
           createdAt: -1,
@@ -36,10 +37,11 @@ export default class Listen extends React.Component {
   }
 
   setMusic = async(attr = {}) => {
-      this.music = this.state.music;
+    let related = await this.loadrelated(attr.category);
+    console.log(related)
+      /*this.music = this.state.music;
       this.music.musicList = [attr];
-      let related = await this.loadrelated(attr.group);
-      console.log(related)
+      
     // this.music.player = true;
       this.music.index = 0;
       this.setState({
@@ -47,7 +49,7 @@ export default class Listen extends React.Component {
       }, ()=> {
           this.props.togglePlayer(true);
         // this.props.setMusic(this.music, n);
-      })
+      })*/
       
   }
 
@@ -71,25 +73,23 @@ export default class Listen extends React.Component {
             return (
               <>
               {
-                item.file_identifier_thumb !== undefined && 
+                item.thumbnail !== undefined && 
                 <>
                 <SwiperSlide key={i} className='effect2'>
                   <div className="listenItem">
+                    
                     <div className="listenImg" onClick={()=>{
                         this.setMusic({
-                          name: `${item.title} | ${item.audioType}`,
-                          author: item.album_name,
-                          img: `https://content.sssmediacentre.org/${item.file_identifier_thumb}`,
-                          audio: `https://content.sssmediacentre.org/${item.file_identifier}`,
-                          duration: item.duration,
-                          group: item.grouping
+                          name: `${item.title}`,
+                          category: `${item.playlistCondition.category[0]}`
                         });
+                        this.props.redirect('/album/' + item._id)
                         return false;
                       }} style={{cursor:"pointer"}}>
                       
                       <img
                         class="d-block w-100"
-                        src={`https://content.sssmediacentre.org/${item.file_identifier_thumb}`}
+                        src={`https://content.sssmediacentre.org/${item.featureThumb}`}
                         alt={item.title}
                         style={{ width: "100%" }}
                       />
@@ -97,14 +97,9 @@ export default class Listen extends React.Component {
                     <div className='desc p-3'>
                       <div className='controls'>
                         <div className='row'>
-                          <div className='col-2 text-start align-self-center play-control'>
-                            <span><i className="fa-solid fa-circle-play"></i></span>
-                          </div>
-                          <div className='col-8 text-center'>
+                          
+                          <div className='col-12 text-center'>
                             {item.title}
-                          </div>
-                          <div className='col-2 text-end align-self-center playlist-control'>
-                            <span>+<i class="fa-solid fa-music"></i></span>
                           </div>
                         </div>
                       </div>

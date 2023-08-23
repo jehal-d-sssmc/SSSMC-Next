@@ -7,18 +7,21 @@ import Read from "../Home/Read";
 
 import VideoPlayer from "react-background-video-player";
 import Streams from "../Home/Streams";
+import Album from "../Home/Album";
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
+      loaded: false,
       featuredItems: [],
       shorts: [],
       listen: [],
       readToggle: "LATEST",
       readLatest: [],
       readFeatured: [],
+      album: []
     };
   }
 
@@ -53,6 +56,7 @@ export default class Home extends React.Component {
     //if(featuredItems.type === success){
     this.setState({
       featuredItems: featuredItems,
+      loading: false
     });
     //}
 
@@ -87,9 +91,21 @@ export default class Home extends React.Component {
         },
       }
     );
+    let album = await this.props.app.db(
+      "GET",
+      "find",
+      "audioplaylists",
+      { isFeatureActive: true },
+      {
+        order: {
+          createdAt: -1,
+        },
+      }
+    );
     // console.log(listen);
     this.setState({
       listen: listen,
+      album: album
     });
 
     let readLatest = await this.props.app.db(
@@ -129,7 +145,7 @@ export default class Home extends React.Component {
     console.log(readFeatured);
     this.setState({
       readFeatured: readFeatured,
-      loading: false,
+      loaded: true,
     });
     this.forceUpdate();
   }
@@ -138,7 +154,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <main>
+      <main style={{padding:"0"}}>
         {this.state.loading ? (
           <>{this.props.loader}</>
         ) : (
@@ -154,15 +170,20 @@ export default class Home extends React.Component {
                 alignItems:"center"
               }}
             >
-              <div className="videooverlay">
-                <VideoPlayer
-                  className="video"
-                  src={"/bg3.mp4"}
-                  autoPlay={true}
-                  muted={true}
-                />
-                
-              </div>
+              {
+                this.state.loaded ?
+                <div className="videooverlay">
+                  <VideoPlayer
+                    className="video"
+                    src={"/bg3.mp4"}
+                    autoPlay={true}
+                    muted={true}
+                  />
+                  
+                </div> : 
+                <div className="videooverlay novideo" style={{backgroundImage:"url('/stupa2.jpg')"}}>
+                </div>
+              }
               <div className="imgOverlay">
                 <div className="container">
                 <Streams {...this.props} />
@@ -204,9 +225,6 @@ export default class Home extends React.Component {
 
 
             
-
-           
-
             <section id="" className="p-3 pb-0 bg-white">
               <div className="" style={{ padding: "0px 15px" }}>
                 <div className="section-header">
@@ -235,6 +253,42 @@ export default class Home extends React.Component {
                 </div>
                 <div className="p-2"></div>
                 <Listen {...this.props} listen={this.state.listen} />
+
+                
+              </div>
+            </section>
+           
+
+            <section id="" className="p-3 pb-0 bg-white">
+              <div className="" style={{ padding: "0px 15px" }}>
+                <div className="section-header">
+                  <div className="row">
+                    <div className="col-12 align-self-center">
+                      <h3 className="section-title">Album</h3>
+                      &nbsp; &gt; &nbsp;<a href="#" onClick={()=>{
+                        this.props.redirect('/albums')
+                      }} className="text-danger">
+                        View More
+                      </a>
+                      <ul class="nav nav-tabs custom-tab">
+                        <li class="nav-item">
+                          <a class="nav-link active">
+                            <span>LATEST</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link">
+                            <span>POPULAR</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+                <div className="p-2"></div>
+                <Album {...this.props} listen={this.state.album} />
 
                 
               </div>

@@ -35,6 +35,10 @@ a:hover{
   box-sizing: border-box;
 }
 
+main{
+  padding: 30px 0;
+}
+
 .logo {
   padding: 5px 15px;
   min-width: 230px;
@@ -109,6 +113,36 @@ header.topnav {
 .mynavbar .menu li:hover ul, .mynavbar .menu li.show ul{
  position: absolute;
  z-index: 2;
+}
+
+
+.mynavbar .menu li:hover ul.submenu, .mynavbar .menu li.show ul.submenu{
+  position: relative;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: left;
+}
+
+.mynavbar .menu li:hover ul.submenu li, .mynavbar .menu li.show ul.submenu li{
+  flex: 0 1 18%;
+  text-align: left;
+  justify-content: left;
+}
+
+.mynavbar .menu li:hover ul.submenu li a, .mynavbar .menu li.show ul.submenu li a{
+  padding: 5px;
+  text-align: left;
+  justify-content: left;
+  transition: 1s all;
+}
+
+
+.mynavbar .menu li:hover ul li a:hover, .mynavbar .menu li.show ul li a:hover{
+  color: #004071;
+  transition: 1s all;
+  transform: scale(1.1);
 }
 
 .mynavbar .menu ul.mynav-inline {
@@ -777,7 +811,23 @@ section{
   z-index: 0;
 }
 
-
+.videooverlay.novideo{
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+}
+.videooverlay.novideo::after{
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top:0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .vscroller > .radio-grid {
   flex-wrap: wrap;
@@ -786,6 +836,29 @@ section{
   position: relative;
   width: 72%;
   margin: 0vh auto auto auto;
+}
+
+.albumlist{
+  display: flex;
+  list-style: none;
+  padding: 0; 
+  margin: auto; 
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.albumlist li.listenItem{
+  flex: 0 0 30%;
+  position: relative;
+  margin: 10px;
+}
+.albumlist li.listenItem .listenImg{
+  overflow: hidden;
+  border-radius: 15px;
+}
+.albumlist li.listenItem .listenImg img{
+  transform: scale(1.1);
 }
 
 
@@ -852,6 +925,7 @@ section{
 
 .my-masonry-grid .featuredContent h5{
   color: #cc470e;
+  word-break: break-all;
   padding: 10px 0;
   margin: 0;
 }
@@ -887,6 +961,38 @@ section{
   display: block;
   width: 100%;
   transition: all 1s;
+}
+
+
+
+.listen .listenItem .desc{
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  bottom: 0%;
+  display: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 12px;
+}
+
+.listen .listenItem .controls{
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.listenItem:hover .controls, .listenItem:hover .desc,
+.listen .listenItem:focus .controls, .listen .listenItem:focus .desc{
+  display: block;
+}
+
+
+
+.listen .controls .row{
+  height: 100%;
 }
 
 .listen .swiper-slide .listenImg {
@@ -975,6 +1081,10 @@ footer {
   background-color: #f9f6ef;
 }
 
+.footer-menu li{
+  padding: 5px 10px;
+}
+
 .copyright,
 .signature {
   color: rgb(164, 165, 173);
@@ -1045,12 +1155,20 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   background-color: #d21d25;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .mobile-menu {
     display: block;
     margin: 20px;
     text-align: right;
   }
+
+
+  .footer-menu li{
+    padding: 5px 10px;
+    width: 100%;
+    text-decoration: underline;
+  }
+
   .mobile-menu > i {
     cursor: pointer;
     font-size: 21px;
@@ -1082,6 +1200,7 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     flex-direction: column;
     padding: 0;
   }
+
   .mynavbar .menu li {
     position: relative;
     flex-direction: column;
