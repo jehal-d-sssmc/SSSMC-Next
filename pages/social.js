@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../inc/component/common/Header";
 import Footer from "../inc/component/common/Footer";
 import Login from "../inc/component/common/Login";
+import SocialLinks from "../inc/component/public/SocialLinks";
 
 export default class Social extends react.Component {
   constructor(props) {
@@ -27,8 +28,7 @@ export default class Social extends react.Component {
     return (
       <>
         <Header {...this.props} />
-        
-
+        <SocialLinks {...this.props} />
         <Footer {...this.props} />
       </>
     );

@@ -28,7 +28,7 @@ export default class Albums extends React.Component {
       selectedCategory: "All",
       categoryEmpty: false,
       viewMoreDisabledState: false,
-      music: this.props.music
+      music: this.props.app.musicRef.getMusic()
     };
   }
 
@@ -247,7 +247,7 @@ export default class Albums extends React.Component {
     this.setState({
         music: this.music
     }, ()=> {
-        this.props.togglePlayer(true);
+        this.props.app.musicRef.togglePlayer(true);
       // this.props.setMusic(this.music, n);
     })
     

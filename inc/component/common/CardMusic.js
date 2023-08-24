@@ -3,7 +3,7 @@ export default class CardMusic extends react.Component {
 
     constructor(props){
         super(props);
-        this.state = this.props.getMusic;
+        this.state = this.props.app.musicRef.getMusic();
         console.log(this.props);
     } 
     
@@ -21,7 +21,7 @@ export default class CardMusic extends react.Component {
     this.setState({
       showlist: !this.state.showlist
     }, ()=> {
-      this.props.togglePlaylist(e);
+      this.props.app.musicRef.togglePlaylist(e);
     })
    
   }
@@ -30,17 +30,17 @@ export default class CardMusic extends react.Component {
     this.setState({
       player: !this.state.player
     }, ()=> {
-      this.props.togglePlayer(e);
+      this.props.app.musicRef.togglePlayer(e);
     });
   }
 
    async componentDidMount() {
     if(this.state.player){
-      this.props.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
+      /*this.props.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
       this.props.playerRef.addEventListener("ended", this.nextSong, false);
       this.timelineRef.addEventListener("click", this.changeCurrentTime, false);
       this.timelineRef.addEventListener("mousemove", this.hoverTimeLine, false);
-      this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);
+      this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);*/
     }
      
      /*let featuredItems = await this.props.app.db('GET', 'find', 'audios', {}, {
@@ -146,7 +146,7 @@ export default class CardMusic extends react.Component {
       }, ()=> {
        
       });
-      this.props.updatePlayer();
+      this.props.app.musicRef.updatePlayer();
       if(pause){
         this.props.playerRef.play();
       }
@@ -160,7 +160,7 @@ export default class CardMusic extends react.Component {
       }, ()=> {
         
       });
-      this.props.updatePlayer();
+      this.props.app.musicRef.updatePlayer();
       if(pause){
         this.props.playerRef.play();
       }
@@ -168,14 +168,14 @@ export default class CardMusic extends react.Component {
      
   
     playOrPause = () =>{
-      this.props.playOrPause();
+      this.props.app.musicRef.playOrPause();
     }
     
     clickAudio = (key) =>{
       
       const { pause } = this.state;
-      this.props.setMusic(this.props.getMusic, key)
-      console.log(key, this.props.getMusic)
+      this.props.setMusic(this.props.app.musicRef.getMusic(), key)
+    //  console.log(key, this.props.getMusic)
       this.setState({
         index: key
       }, ()=> {
@@ -190,12 +190,12 @@ export default class CardMusic extends react.Component {
   
     
     render() {
-      const { musicList, index, currentTime, pause, showlist } = this.props.getMusic;
+      const { musicList, index, currentTime, pause, showlist } = this.props.app.musicRef.getMusic();
       const currentSong = musicList[index];
       return (
        <>
        {
-        this.props.getMusic.player &&
+        this.props.app.musicRef.getMusic().player &&
         <>
 
         
@@ -249,7 +249,7 @@ export default class CardMusic extends react.Component {
                 
                 <div className="hidePlaylist" onClick={this.togglePlaylist}><i className="fa-solid fa-xmark"></i></div>
                 <div className="tracklist p-2">
-                {this.props.getMusic.musicList.map( (music, key) =>
+                {this.props.app.musicRef.getMusic().musicList.map( (music, key) =>
                     <div key={key} 
                         onClick={()=>this.clickAudio(key)}
                         className={"track " + 

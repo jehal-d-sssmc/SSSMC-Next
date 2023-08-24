@@ -48,7 +48,20 @@ main{
   max-width: 54px;
   margin-right: 5px;
 }
+.voicecontrol {
+  position: fixed;
+  bottom: 81px;
+  right: 18px;
+  z-index: 99;
+  color: #fff;
+  background-color: #004071;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
 
+.voicecontrol.active {
+  background-color: #d21d25;
+}
 .logo span {
   color: #d21d25;
   font-size: 18px;
@@ -101,9 +114,7 @@ header.topnav {
   position: absolute;
   left: 0;
   top: 65px;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.1);
-  
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -203,13 +214,22 @@ header.topnav {
   color: #d21d25;
 }
 
-
 .mynavbar .menu .mycontainer__list{
   position: relative;
   z-index: 3;
 }
 
+.mynavbar .menu .mycontainer__list .submenu-title{
+  padding:0px 3px 0px 10px;
+  font-weight: bold;
+  min-width: 10%;
+  font-size: 14px;
+}
 
+.mynavbar .menu .mycontainer__list .submenu-title::after{
+  content: " ";
+  clear: both;
+}
 
 /* End Navigation Bar */
 
@@ -595,7 +615,6 @@ header.topnav {
   margin: 3px 0;
   margin-bottom: 30px;
   text-align: left;
-  background: #fff;
 }
 
 .mycontainer__list {
@@ -613,6 +632,68 @@ header.topnav {
   text-overflow: ellipsis;
   flex: 0 0 25%;
   color: #004071;
+  background-color: #fff;
+}
+
+.mycontainer__searchItem {
+  padding: 0px 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #004071;
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 30px 0;
+  width: 100%;
+}
+
+.searchForm{
+  position: relative;
+}
+
+
+.searchForm input[type='text'].form-control{
+  border: none;
+  border-bottom: 1px solid #004071;
+  border-radius: 0;
+  font-size: 18px;
+}
+
+.searchForm input[type='text'].form-control:focus{ 
+  outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.searchForm .controls {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  padding: 5px;
+}
+
+
+.searchForm .controls button{
+  margin: 0 0px;
+  background: none;
+  border: none;
+  transition: 1s all;
+}
+
+.searchForm .controls button:hover{
+  transition: 1s all;
+  transform: scale(1.5);
+}
+
+
+.searchForm .controls button.btn-voice{
+  color: #004071;
+}
+.searchForm .controls button.btn-search{
+  color: #d21d25;
 }
 
 .mycontainer__list a{
@@ -796,7 +877,7 @@ header.topnav {
 }
 
 .mynav .vscroller .radio-grid-col{
-  flex: 1 0 27%
+  flex: 1 0 9%
 }
 
 section{
@@ -1155,7 +1236,10 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   background-color: #d21d25;
 }
 
+
+
 @media only screen and (max-width: 767px) {
+  
   .mobile-menu {
     display: block;
     margin: 20px;
@@ -1199,10 +1283,13 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   .mynavbar .menu {
     flex-direction: column;
     padding: 0;
+    height: calc(100vh - 130px);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .mynavbar .menu li {
-    position: relative;
+    position: static;
     flex-direction: column;
     transition: initial;
   }
@@ -1221,7 +1308,15 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     margin-bottom: 0;
     transition: all 0.3s ease;
   }
-
+  .mycontainer.open{
+    position: fixed;
+    top: 65px;
+    left: 0;
+    height: calc(100vh - 65px);
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
   .radio-grid-col {
       margin: 1px;
       flex: 1 0 27%;

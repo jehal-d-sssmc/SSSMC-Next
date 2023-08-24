@@ -16,6 +16,8 @@ import { getDatabase } from "firebase/database";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import helper from "./helper";
+import music from "./module/music";
+import voice from "./module/voice";
 
 class client {
   init = async (req, window = undefined) => {
@@ -111,6 +113,14 @@ class client {
       return response;
     }
   };
+
+  music = (player, state) => {
+    return new music(player, state);
+  }
+
+  voice = (is) => {
+    return new voice(is);
+  }
 
   dbset = async (req, col, data, qry = "", params = {}) => {
     /*

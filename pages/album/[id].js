@@ -29,7 +29,7 @@ export default class Album extends react.Component {
         <Header {...this.props} />
 
         {<Albumlist {...this.props} />}
-
+        
         <Footer {...this.props} />
       </>
     );

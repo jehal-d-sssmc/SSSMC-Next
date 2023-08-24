@@ -18,7 +18,7 @@ export default class Streams extends react.Component {
     constructor(props){
         super(props);
         this.state = {
-            music: this.props.music
+            music: this.props.app.musicRef.getMusic()
         }
         console.log([channels[0]]);
     }
@@ -31,7 +31,7 @@ export default class Streams extends react.Component {
         this.setState({
             music: this.music
         }, ()=> {
-            this.props.togglePlayer(true);
+            this.props.app.musicRef.togglePlayer(true);
            // this.props.setMusic(this.music, n);
         })
         

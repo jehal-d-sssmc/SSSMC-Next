@@ -14,7 +14,7 @@ export default class Listen extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      music: this.props.music
+      music: this.props.app.musicRef.getMusic()
     }
   }
 
@@ -45,7 +45,7 @@ export default class Listen extends React.Component {
       this.setState({
           music: this.music
       }, ()=> {
-          this.props.togglePlayer(true);
+        this.props.app.musicRef.togglePlayer(true);
         // this.props.setMusic(this.music, n);
       })
       

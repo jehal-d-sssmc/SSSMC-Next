@@ -2,6 +2,7 @@ import react from "react";
 import jQuery from "jquery";
 
 import Streams from "../Home/Streams";
+import SearchForm from "./SearchForm";
 
 
 class NavMenu extends react.Component {
@@ -9,6 +10,7 @@ class NavMenu extends react.Component {
     super(props);
     this.state = {
       showMenu: false,
+      voice: this.props.app.voiceRef.get()
     };
     
   }
@@ -48,6 +50,7 @@ class NavMenu extends react.Component {
    /* $(window).on('blur', function(){
       alert( 'Are you sure you want to leave?');
     });*/
+    
     this.forceUpdate();
   }
 
@@ -75,6 +78,8 @@ class NavMenu extends react.Component {
             }fa-3x js-menu-icon`}
           ></i>
         </div>
+        
+        
         <nav
           className={`mynavbar js-mynavbar${
             this.state.showMenu ? " show" : ""
@@ -88,7 +93,7 @@ class NavMenu extends react.Component {
                 className="hasDropdown"
                 href="#"
                 onClick={() => {
-                  this.props.redirect("/watch");
+                  //this.props.redirect("/watch");
                 }}
               >
                 <i className="fa-solid fa-photo-film"></i>&nbsp;Watch
@@ -102,6 +107,7 @@ class NavMenu extends react.Component {
                        
                         <div className="multi-sub-holder" >
                           <div className="container">
+                          <h5 className="submenu-title text-start">Video</h5>
                             <ul className="submenu" >
                               <li>
                                 <a
@@ -284,18 +290,12 @@ class NavMenu extends react.Component {
               <ul className="mycontainer has-multi">
                 <div className="mycontainer__list mycontainer__list-multi">
                   <div className="mycontainer__listItem">
+                    <div className="container">
                     <div className="row">
-                      <div className="col-md-3 text-start">
-                        <h5 className="section-title">Radio Stream</h5>
-                        <hr />
-                        <div className="mynav">
-                        <Streams {...this.props} />
-                        </div>
-                      </div>
-                      <div className="col-md-9 text-start">
-                        <h5 className="section-title">Audio</h5>
-                        <hr />
-                        <div className="container">
+                      
+                      <div className="col-md-12 text-start">
+                      <h5 className="submenu-title">Audio</h5>
+                        <div className="containerx">
                           <ul className="submenu">
                             
                             <li>
@@ -412,7 +412,15 @@ class NavMenu extends react.Component {
                             </li>
                           </ul>
                         </div>
+                        <hr />
                       </div>
+                      <div className="col-md-12 text-start">
+                        <h5 className="submenu-title">Streams</h5>
+                        <div className="mynav">
+                        <Streams {...this.props} />
+                        </div>
+                      </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -435,6 +443,7 @@ class NavMenu extends react.Component {
                       <div className="col-md-12">
                         <div className="multi-sub-holder">
                           <div className="container">
+                          <h5 className="submenu-title text-start">Article</h5>
                             <ul className="submenu">
                               <li>
                               <a
@@ -523,6 +532,7 @@ class NavMenu extends react.Component {
                         
                         <div className="multi-sub-holder">
                           <div className="container">
+                          <h5 className="submenu-title text-start">Photo</h5>
                             <ul className="submenu">
                               <li>
                               <a
@@ -622,13 +632,51 @@ class NavMenu extends react.Component {
             </li>
             <li>
               <a className="hasDropdown" href="#" onClick={() => {
-                  this.props.redirect("/search");
+                  
                 }}>
                 <i className="fa-solid fa-magnifying-glass"></i>&nbsp;Search
               </a>
+              <div className="mycontainer has-multi" style={this.state.searchmode ? {display: "flex"} : {}}>
+                <div className="mycontainer__list">
+                  <div className="mycontainer__searchItem">
+                    <div className="row h-100">
+                      <div className="col-md-12 text-start align-self-center">
+                        
+                        <div className="multi-sub-holder">
+                          <div className="container">
+                            <SearchForm {...this.props} state={this.state} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li className="d-none">
+            <a className={`vc${this.props.app.voiceRef.get('searchmode') ? ' active' : ''}`} onClick={()=>{
+              this.setState({
+                searchmode: !this.state.searchmode
+              }, ()=>{
+                this.props.app.voiceRef.toggleVC();
+                console.log(this.state.searchmode);
+                if(this.state.searchmode){
+                  document.querySelector('#btnVoice').click();
+                }
+                this.forceUpdate()
+              })
+            }}>
+              {
+                this.props.app.voiceRef.get('searchmode') ? 
+                <i className="fa-solid fa-microphone-slash"></i> :
+                <i className="fa-solid fa-microphone"></i> 
+              }
+              
+            </a>
             </li>
           </ul>
         </nav>
+       
       </>
     );
   }

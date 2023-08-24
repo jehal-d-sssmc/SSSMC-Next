@@ -14,7 +14,7 @@ export default class Album extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      music: this.props.music
+      music: this.props.app.musicRef.getMusic()
     }
     console.log(this.props)
   }
