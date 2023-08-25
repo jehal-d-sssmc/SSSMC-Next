@@ -99,15 +99,21 @@ this.forceUpdate()
 
 detectType = (transcript) => {
   if(['any','all','anything'].some(str => transcript.toLowerCase().trim().split(' ').includes(str)) ){
-      document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption, #searchOption`).click();
+    this.props.search({text: transcript, type: ''})
+   //   document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption`).click();
   }else if(['video','videos','youtube'].some(str => transcript.toLowerCase().trim().split(' ').includes(str)) ){
-    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption1, #searchOption1`).click();
+    this.props.search({text: transcript, type: 'video'})
+    //document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption1`).click();
   }else if(['audio','audios','discourse'].some(str => transcript.toLowerCase().trim().split(' ').includes(str))){
-    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption2, #searchOption2`).click();
+    this.props.search({text: transcript, type: 'audio'})
+    //document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption2`).click();
   }else if(['article','text','articles','book','books'].some(str => transcript.toLowerCase().trim().split(' ').includes(str))){
-    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption3, #searchOption3`).click();
+   // document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption3`).click();
+   this.props.search({text: transcript, type: 'article'})
+
   }else if(['download','photo','photos'].some(str => transcript.toLowerCase().trim().split(' ').includes(str))){
-    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption4, #searchOption4`).click();
+   // document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption4`).click();
+   this.props.search({text: transcript, type: 'download'})
   }
 return transcript 
 
@@ -148,21 +154,19 @@ else {
   }
 }
 
-console.log(transcript);
+//console.log(res, this.props.state.search);
   this.forceUpdate();
-  this.props.search(res, this.props.state.search.type);
-  this.setState({
-    result: res
-  }, () => {
-      if(['find','search','get'].some(str => this.state.result.toLowerCase().trim().split(' ').includes(str))){
-        const btn = document.querySelector(`#${this.props.query !== undefined ? 's_' :''}btnSearch`);
-        if(btn !== null){
-          btn.click();
-        }
+  this.props.search({text: transcript, type: this.props.state.search.type}, ()=>{
+    console.log(this.props.state.search)
+    if(['find','search','get'].some(str => this.props.state.search.text.toLowerCase().trim().split(' ').includes(str))){
+      const btn = document.querySelector(`#${this.props.query !== undefined ? 's_' :''}btnSearch`);
+      if(btn !== null){
+        btn.click();
       }
-  // console.log(this.state.result)
+    }
   });
-this.forceUpdate();
+  
+  this.forceUpdate();
 }
 
 toggleVC = () => {

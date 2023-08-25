@@ -14,6 +14,12 @@ export default class FooterMenu extends react.Component {
                 this.props.redirect('/sri-sathya-sai')
               }} href="/#/sri-Sathya-Sai">About Us</a>
             </li>
+
+            <li className="list-inline-item">
+              <a href="https://careers.sssmediacentre.org" target="_blank" rel={'noreferrer'}>
+                Careers
+              </a>
+            </li>
             <li className="list-inline-item">
               <a href="https://content.sssmediacentre.org/websiteasset/trademark/pdf/trademark.pdf" target="_blank" rel={'noreferrer'}>
                 TradeMark

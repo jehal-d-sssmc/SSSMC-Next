@@ -42,10 +42,10 @@ class MyApp extends React.Component{
     }
   }
 
-  search = (find = {text: '', type: ''}) => {
+  search = (find = {text: '', type: ''}, cb = () => {}) => {
     this.setState({
       search: find
-    })
+    }, cb)
   }
 
   _setState = (obj, cb = () => {}) => {

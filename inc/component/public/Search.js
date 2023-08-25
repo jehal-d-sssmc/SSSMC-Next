@@ -55,12 +55,19 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {description: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {meaning: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {lyrics: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {grouping: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {artiste: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {album_name: { $regex: `.*${s}.*`, $options: 'i' }}
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           )
                     }
@@ -77,12 +84,14 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {description: { $regex: `.*${s}.*`, $options: 'i' }},
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           )
                     }
@@ -99,12 +108,14 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {customTemplate: { $regex: `.*${s}.*`, $options: 'i' }},
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           )
                     }
@@ -121,12 +132,14 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {description: { $regex: `.*${s}.*`, $options: 'i' }},
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           )
                     }
@@ -143,12 +156,14 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {description: { $regex: `.*${s}.*`, $options: 'i' }},
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           ),
                         audios: await this.props.app.db(
@@ -159,12 +174,19 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {description: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {meaning: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {lyrics: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {grouping: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {artiste: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {album_name: { $regex: `.*${s}.*`, $options: 'i' }}
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           ),
                         articles: await this.props.app.db(
@@ -175,12 +197,14 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {customTemplate: { $regex: `.*${s}.*`, $options: 'i' }},
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           ),
                         downloads: await this.props.app.db(
@@ -191,12 +215,14 @@ export default class Search extends React.Component {
                               $or: [
                                 {title: { $regex: `.*${s}.*`, $options: 'i' }},
                                 {category: { $regex: `.*${s}.*`, $options: 'i' }},
+                                {description: { $regex: `.*${s}.*`, $options: 'i' }},
                               ]
                             },
                             {
                               order: {
                                 createdAt: -1,
                               },
+                              limit: 16
                             }
                           )
                     }
@@ -265,12 +291,12 @@ export default class Search extends React.Component {
                                                         <a href={item.file_url} className="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
                                                             <img src={item.thumb_path} onError={(e)=>{
                                                                 e.target.onError = null;
-                                                                const urlSearchParams = new URL(item.file_url);
+                                                                const url = new URL(item.file_url);
                                                                 const params = url.searchParams !== undefined ? Array.from(url.searchParams.entries()) : [];
                                                                 if(params.v !== undefined){
                                                                     e.target.src = `https://img.youtube.com/vi/${params.v}/hqdefault.jpg`
                                                                 }else{
-                                                                    e.target.src = `https://picsum.photos/200/300`;
+                                                                    e.target.src = `https://picsum.photos/200/400`;
                                                                 }
                                                             }} alt={item.title} />
                                                         </a>
