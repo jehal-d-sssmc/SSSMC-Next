@@ -1,18 +1,272 @@
 import React from "react";
 import { AiFillYoutube, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
-import { BsFileMusicFill } from "react-icons/bs";
+import { FaPodcast } from "react-icons/fa";
+import { BsFileMusicFill, BsWhatsapp } from "react-icons/bs";
 import { BiLogoTelegram } from "react-icons/bi";
+import { IoShareSocialSharp } from "react-icons/io5";
 
 export default class SocialLinks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: false,
+      podcastHit: false,
+      iconHeadSize: 42,
+      iconItemSize: 14,
     };
+    this.podcastItems = [
+      <div className="col">
+        <h5 className="social-title">Sri Sathya Sai Speaks</h5>
+        <hr />
+        <ul>
+          <li>
+            <a
+              href="https://podcasts.apple.com/in/podcast/sri-sathya-sai-speaks/id1605915380"
+              target="_blank"
+            >
+              <p className="align-self-center">Apple Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://open.spotify.com/show/0AY7LicsnFz6rnsub2flWA?si=105c7cb74015438d&nd=1"
+              target="_blank"
+            >
+              <p>Spotify Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/groups/radiosaihindi/"
+              target="_blank"
+            >
+              <p>Amazon Music</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://srisathyasai.hubhopper.com/" target="_blank">
+              <p>Hubhopper</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://radiopublic.com/sri-sathya-sai-speaks-GOD307"
+              target="_blank"
+            >
+              <p>Radio Public</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://castbox.fm/channel/id4752289?utm_campaign=a_share_ch&utm_medium=dlink&utm_source=a_share&country=us"
+              target="_blank"
+            >
+              <p>Cast Box</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5odWJob3BwZXIuY29tL2YwMmFjN2JjMGE4MDM3ODU0ZjM2NjUwZjVjMjM2MzQ0LnJzcw"
+              target="_blank"
+            >
+              <p>Google Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.jiosaavn.com/shows/sri-sathya-sai-speaks/1/vGMXzi6vH4c_"
+              target="_blank"
+            >
+              <p>Jio Saavn Podcasts</p>
+            </a>
+          </li>
+        </ul>
+      </div>,
+      <div className="col">
+        <h5 className="social-title">Sri Sathya Sai Official</h5>
+        <hr />
+        <ul>
+          <li>
+            <a
+              href="https://podcasts.apple.com/in/podcast/sri-sathya-sai-podcast-official/id1577475301"
+              target="_blank"
+            >
+              <p className="align-self-center">Apple Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://open.spotify.com/show/3xK189Fcfk4dwmh4KzNnc4?si=9903288c44514886&nd=1"
+              target="_blank"
+            >
+              <p>Spotify Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://music.amazon.in/podcasts/97ea0ffc-0d63-4c74-8690-05f30acf5cea/sri-sathya-sai-podcast-official"
+              target="_blank"
+            >
+              <p>Amazon Music</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://radiopublic.com/sri-sathya-sai-podcast-official-WaoYKA"
+              target="_blank"
+            >
+              <p>Radio Public</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://castbox.fm/channel/id4513066?utm_campaign=a_share_ch&utm_medium=dlink&utm_source=a_share&country=us"
+              target="_blank"
+            >
+              <p>Cast Box</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82M2I3ODIzMC9wb2RjYXN0L3Jzcw"
+              target="_blank"
+            >
+              <p>Google Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.jiosaavn.com/shows/sri-sathya-sai-podcast-official/1/yaeu,iPSCHM_"
+              target="_blank"
+            >
+              <p>Jio Saavn Podcasts</p>
+            </a>
+          </li>
+        </ul>
+      </div>,
+      <div className="col">
+        <h5 className="social-title">Sri Sathya Sai Bhajans</h5>
+        <hr />
+        <ul>
+          <li>
+            <a
+              href="https://podcasts.apple.com/in/podcast/sri-sathya-sai-bhajans/id1605910315"
+              target="_blank"
+            >
+              <p className="align-self-center">Apple Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://music.amazon.in/podcasts/7ee03dba-b586-4bcf-99df-cecb6d9e8856/sri-sathya-sai-bhajans"
+              target="_blank"
+            >
+              <p>Amazon Music</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://radiosaisssmc.hubhopper.com/" target="_blank">
+              <p>Hubhopper</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://radiopublic.com/sri-sathya-sai-bhajans-G45JR7"
+              target="_blank"
+            >
+              <p>Radio Public</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://castbox.fm/channel/id4752284?utm_campaign=a_share_ch&utm_medium=dlink&utm_source=a_share&country=us"
+              target="_blank"
+            >
+              <p>Cast Box</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5odWJob3BwZXIuY29tLzZkYmU2ZjI2MzkxZDZkMzk4NzMxZTIzNTYzOTFlMzVmLnJzcw?sa=X&ved=0CAMQ4aUDahcKEwjwwIuNksj1AhUAAAAAHQAAAAAQbA"
+              target="_blank"
+            >
+              <p>Google Podcasts</p>
+            </a>
+          </li>
+        </ul>
+      </div>,
+      <div className="col">
+        <h5 className="social-title">Prasanthi Mandir Prayers</h5>
+        <hr />
+        <ul>
+          <li>
+            <a
+              href="https://podcasts.apple.com/in/podcast/prasanthi-mandir-prayers/id1605914389"
+              target="_blank"
+            >
+              <p className="align-self-center">Apple Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://open.spotify.com/show/64xc678CgGGPrCBj0YiEkl?si=c2b07a54b6fe41b8&nd=1"
+              target="_blank"
+            >
+              <p>Spotify Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://music.amazon.in/podcasts/52c5e895-4e21-45a2-8457-c0a3e6af197c/prasanthi-mandir-prayers"
+              target="_blank"
+            >
+              <p>Amazon Music</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://srisathyasai.hubhopper.com/" target="_blank">
+              <p>Hubhopper</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://radiopublic.com/prasanthi-mandir-prayers-8QA1NA"
+              target="_blank"
+            >
+              <p>Radio Public</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://castbox.fm/channel/id4752290?utm_campaign=a_share_ch&utm_medium=dlink&utm_source=a_share&country=us"
+              target="_blank"
+            >
+              <p>Cast Box</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5odWJob3BwZXIuY29tLzVlMDNmOGM0ZGNjZGY0N2Q2YzBmYmZmZDg2YjAzNmViLnJzcw"
+              target="_blank"
+            >
+              <p>Google Podcasts</p>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.jiosaavn.com/shows/prasanthi-mandir-prayers/1/NwsquLB4WyA_"
+              target="_blank"
+            >
+              <p>Jio Saavn Podcasts</p>
+            </a>
+          </li>
+        </ul>
+      </div>,
+    ];
     this.links = [
       {
         title: "Youtube - Main Channels",
-        icon: <AiFillYoutube size={42} />,
+        icon: <AiFillYoutube size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -20,7 +274,7 @@ export default class SocialLinks extends React.Component {
                 href="https://www.youtube.com/@SriSathyaSaiOfficial"
                 target="_blank"
               >
-                <p>Sri Sathya Sai Official</p>
+                <p className="align-self-center">Sri Sathya Sai Official</p>
               </a>
             </li>
             <li>
@@ -60,7 +314,7 @@ export default class SocialLinks extends React.Component {
       },
       {
         title: "Youtube - Sister Channels",
-        icon: <AiFillYoutube size={42} />,
+        icon: <AiFillYoutube size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -108,7 +362,7 @@ export default class SocialLinks extends React.Component {
       },
       {
         title: "Instagram Handles",
-        icon: <AiFillInstagram size={42} />,
+        icon: <AiFillInstagram size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -156,7 +410,7 @@ export default class SocialLinks extends React.Component {
       },
       {
         title: "Music Distribution Platforms",
-        icon: <BsFileMusicFill size={42} />,
+        icon: <BsFileMusicFill size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -199,10 +453,9 @@ export default class SocialLinks extends React.Component {
           </ul>
         ),
       },
-
       {
         title: "Facebook Profiles",
-        icon: <AiFillFacebook size={42} />,
+        icon: <AiFillFacebook size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -234,7 +487,7 @@ export default class SocialLinks extends React.Component {
       },
       {
         title: "Telegram Groups",
-        icon: <BiLogoTelegram size={42} />,
+        icon: <BiLogoTelegram size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -265,7 +518,7 @@ export default class SocialLinks extends React.Component {
       },
       {
         title: "Other Social Media Profiles",
-        icon: <AiFillYoutube size={42} />,
+        icon: <IoShareSocialSharp size={this.state.iconHeadSize} />,
         items: (
           <ul>
             <li>
@@ -325,26 +578,42 @@ export default class SocialLinks extends React.Component {
                       return (
                         <>
                           <div className="col-8 col-md-4">
-                            <div className="footer-title">
+                            <div className="social-title">
                               {x.title !== undefined && (
                                 <>
                                   {" "}
-                                  <div className="d-flex justify-content-between">
-                                    <h3 className="align-self-center mb-0">
-                                      {x.title}
-                                    </h3>
+                                  <div className="d-flex justify-content-start gap-3">
                                     <div className="align-self-center">
                                       {x.icon}
                                     </div>
+                                    <h3 className="align-self-center mb-0">
+                                      {x.title}
+                                    </h3>
                                   </div>
                                   <hr />
                                 </>
                               )}
                             </div>
-                            <div className="footer-content">{x.items}</div>
+                            <div className="social-content">{x.items}</div>
                           </div>
                         </>
                       );
+                    })}
+                  </div>
+                  <div className="row">
+                    <div className="social-title">
+                      <div className="d-flex justify-content-start gap-3">
+                        <div className="align-self-center">
+                          <FaPodcast size={this.state.iconHeadSize} />
+                        </div>
+                        <h3 className="align-self-center mb-0">Podcasts</h3>
+                      </div>
+                      <hr />
+                    </div>
+                  </div>
+                  <div className="row social-content">
+                    {this.podcastItems.map((podItem) => {
+                      return podItem;
                     })}
                   </div>
                 </div>

@@ -2,10 +2,15 @@ export default class voice{
 
   constructor(is){
     this.is = is;
+    this.state = is.state;
   }
 
-  get = (str = false) => {
-    return !str ? this.is.state : this.is.state[str];
+  _get = (name = false) => {
+    return !name ? this.state : this.state[name];
+  }
+
+  _set = (obj, callback) => {
+    this.is.setState(obj, callback);
   }
 
   detectVoiceControl = () =>{
@@ -61,7 +66,7 @@ export default class voice{
   startSpeechRecognition = () => {
       document.querySelector('#input-search').focus();
       console.log("Voice activated, SPEAK");
-      this.is.setState({
+      this._set({
         listenvoice: true
       })
       this.is.forceUpdate()
@@ -71,10 +76,10 @@ export default class voice{
            
     document.querySelector('#input-search').focus();
     console.log("Speech recognition service disconnected");
-    this.is.setState({
+    this._set({
       listenvoice: false
     })
-    this.forceUpdate()
+    this.is.forceUpdate()
   }
 
   detectType = (transcript) => {
@@ -99,7 +104,7 @@ export default class voice{
     let res = this.state.result;
     if(transcript.toLowerCase().trim()==="stop listening" || transcript.toLowerCase().trim()==="stop listen") {
       
-    this.is.setState({
+    this._set({
         searchmode: false
       }, ()=>{
         this.stoplisten()
@@ -127,10 +132,10 @@ export default class voice{
     }
 
     console.log(transcript);
-    this.setState({
+    this._set({
       result: res
     }, () => {
-        if(['find','search','get'].some(str => this.state.result.toLowerCase().trim().split(' ').includes(str))){
+        if(['find','search','get'].some(str => this.is.state.result.toLowerCase().trim().split(' ').includes(str))){
             document.querySelector('#btnSearch').click();
         }
      // console.log(this.state.result)
@@ -141,7 +146,7 @@ export default class voice{
   toggleVC = () => {
     console.log(this.recognition)
     if((this.recognition !== undefined) && typeof(this.recognition) === 'object'){
-        this.is.setState({
+        this._set({
         listenvoice: !this.state.listenvoice
       }, () => {
         if(this.state.listenvoice){

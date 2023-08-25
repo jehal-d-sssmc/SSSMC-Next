@@ -5,8 +5,9 @@ import Header from "../inc/component/common/Header";
 import Footer from "../inc/component/common/Footer";
 import Login from "../inc/component/common/Login";
 import Index from "../inc/component/public/Home";
+import Search from "../inc/component/public/Search";
 
-export default class Search extends react.Component {
+export default class search extends react.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,18 +20,18 @@ export default class Search extends react.Component {
       this.setState({
         user: this.props.app.helper.user,
       });
-      this.forceUpdate();
+    // this.forceUpdate();
     }, 1000);
   }
 
-  shouldComponentUpdate = () => false;
+ // shouldComponentUpdate = () => false;
 
   render() {
     return (
       <>
         <Header {...this.props} />
 
-        {<Index {...this.props} />}
+        {<Search {...this.props} />}
 
         <Footer {...this.props} />
       </>

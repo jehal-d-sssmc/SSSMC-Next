@@ -9,8 +9,7 @@ class NavMenu extends react.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showMenu: false,
-      voice: this.props.app.voiceRef.get()
+      showMenu: false
     };
     
   }
@@ -631,49 +630,13 @@ class NavMenu extends react.Component {
               </a>
             </li>
             <li>
-              <a className="hasDropdown" href="#" onClick={() => {
-                  
+              <a className="" href="#" onClick={() => {
+                  this.props.redirect('/search')
                 }}>
                 <i className="fa-solid fa-magnifying-glass"></i>&nbsp;Search
               </a>
-              <div className="mycontainer has-multi" style={this.state.searchmode ? {display: "flex"} : {}}>
-                <div className="mycontainer__list">
-                  <div className="mycontainer__searchItem">
-                    <div className="row h-100">
-                      <div className="col-md-12 text-start align-self-center">
-                        
-                        <div className="multi-sub-holder">
-                          <div className="container">
-                            <SearchForm {...this.props} state={this.state} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </li>
-            <li className="d-none">
-            <a className={`vc${this.props.app.voiceRef.get('searchmode') ? ' active' : ''}`} onClick={()=>{
-              this.setState({
-                searchmode: !this.state.searchmode
-              }, ()=>{
-                this.props.app.voiceRef.toggleVC();
-                console.log(this.state.searchmode);
-                if(this.state.searchmode){
-                  document.querySelector('#btnVoice').click();
-                }
-                this.forceUpdate()
-              })
-            }}>
-              {
-                this.props.app.voiceRef.get('searchmode') ? 
-                <i className="fa-solid fa-microphone-slash"></i> :
-                <i className="fa-solid fa-microphone"></i> 
-              }
-              
-            </a>
-            </li>
+            
           </ul>
         </nav>
        

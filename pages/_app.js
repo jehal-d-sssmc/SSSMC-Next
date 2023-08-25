@@ -29,19 +29,33 @@ class MyApp extends React.Component{
       loader: true,
       app: null,
       url: this.props.request.ref,
+      search: {text:"", type: ""},
       music: {
         index: 0,
         currentTime: '0:00',
         player: false,
         musicList: [{name:'Asia Stream', author: 'Prasanthi Mandir', img: 'http://www.sssmediacentre.org/assets/images/radiostations/prasanthi.jpg', audio:'https://stream.sssmediacentre.org:8443/asia', duration: '0:00'}],
         pause: false,
-        showlist: false,
-        voice: null,
-        listenvoice: false,
-        result: '',
-        searchmode: false
+        showlist: false
       }
+      
     }
+  }
+
+  search = (find = {text: '', type: ''}) => {
+    this.setState({
+      search: find
+    })
+  }
+
+  _setState = (obj, cb = () => {}) => {
+    let _state = this.state;
+    Object.entries(_state).forEach((x)=>{
+      //if(obj[x[0]] !== undefined){
+        obj[x[0]] = x[1];
+      //}
+    })
+    this.setState(obj, cb);
   }
   
 
@@ -96,7 +110,7 @@ class MyApp extends React.Component{
           </audio>
 
         }
-        <Component {...{attr: this.props.pageProps, app: this.state.app, loader: this.loader, router: this.props.router, redirect: this.redirect}} /> 
+        <Component {...{attr: this.props.pageProps, app: this.state.app, loader: this.loader, router: this.props.router, redirect: this.redirect, state: this.state, search: this.search}} /> 
         <CardMusic {...{app: this.state.app}} />
         </>
       }
