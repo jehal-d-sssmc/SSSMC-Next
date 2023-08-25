@@ -20,7 +20,12 @@ export default class SearchForm extends React.Component{
       text: this.query.s !== undefined ? this.query.s : '',
       type: this.query.o !== undefined ? this.query.o : ''
     }
-    this.props.search(this.search)
+    this.props.search(this.search);
+    const btn = document.querySelector(`#${this.props.query !== undefined ? 's_' :''}btnSearch`);
+    if(btn !== null){
+      btn.click();
+    }
+
 }
 
   startlisten = (resume = false) => {

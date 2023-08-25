@@ -1,5 +1,14 @@
 import React from "react";
 import SearchForm from "../common/SearchForm";
+import Masonry from "react-masonry-css";
+
+const breakpointColumnsObj = {
+  default: 5,
+  1400: 4,
+  1100: 3,
+  700: 2,
+  500: 1,
+};
 
 export default class Search extends React.Component {
 
@@ -225,39 +234,78 @@ export default class Search extends React.Component {
                         {
                             this.state.search.videos !== undefined && this.state.search.videos.data !== undefined && this.state.search.videos.data.length > 0 &&
                             <>
-                                <h5 className="section-title">Videos</h5>
+                                <div>
+                                    <h5 className="section-title">Videos</h5>
+                                    &nbsp; &gt; &nbsp;
+                                    <a
+                                    onClick={() => {
+                                        this.props.redirect("/videos");
+                                        this.forceUpdate();
+                                    }}
+                                    href={"#"}
+                                    className="text-danger"
+                                    >
+                                    View More
+                                    </a>
+                                </div>
+                                
                                 <hr />
-                                <div className="row">
+                                <Masonry
+                                    breakpointCols={breakpointColumnsObj}
+                                    className="my-masonry-grid"
+                                    columnClassName="my-masonry-grid_column"
+                                    >
                                     {
                                         this.state.search.videos.data.map((item,i)=>{
-                                            return <div className="col-md-3 col-sm-4 mb-2">
-                                                <div className="featuredItem ratio ratio-16x9">
-                                                    <div className="featuredImg">
-                                                    <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
-                                                        <img src={item.thumb_path} onError={(e)=>{
-                                                            e.target.onError = null;
-                                                            const urlSearchParams = new URL(item.file_url);
-                                                            const params = url.searchParams !== undefined ? Array.from(url.searchParams.entries()) : [];
-                                                            if(params.v !== undefined){
-                                                                e.target.src = `https://img.youtube.com/vi/${params.v}/hqdefault.jpg`
-                                                            }else{
-                                                                e.target.src = `https://picsum.photos/200/300`;
-                                                            }
-                                                        }} alt={item.title} />
-                                                    </a>
+                                            return (
+                                            <div className="card text-center my-masonry-grid_column p-2"
+                                                    style={{ borderRadius: "15px", border:"none" }}>
+                                                <div className="position-relative"><div className={`ratio ratio-${item.category.toLowerCase() === 'shorts' ? '9x16' : '4x3'}`}>
+                                                    <div className="stretch">
+                                                        <a href={item.file_url} className="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
+                                                            <img src={item.thumb_path} onError={(e)=>{
+                                                                e.target.onError = null;
+                                                                const urlSearchParams = new URL(item.file_url);
+                                                                const params = url.searchParams !== undefined ? Array.from(url.searchParams.entries()) : [];
+                                                                if(params.v !== undefined){
+                                                                    e.target.src = `https://img.youtube.com/vi/${params.v}/hqdefault.jpg`
+                                                                }else{
+                                                                    e.target.src = `https://picsum.photos/200/300`;
+                                                                }
+                                                            }} alt={item.title} />
+                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className="mb-2"></div>
+                                                <div className="featuredContent">
+                                                    <h5>{item.title}</h5>
+                                                    <span>{item.category}</span>
+                                                </div>
+                                                <div className="clearfix"></div>
+                                                </div>
                                             </div>
-                                        })
+                                        );
+                                                        })
                                     }
-                                </div>
+                                </Masonry>
                             </>
                         }
                         {
                             this.state.search.audios !== undefined && this.state.search.audios.data !== undefined && this.state.search.audios.data.length > 0 &&
                             <>
-                                <h5 className="section-title">Audios</h5>
+                                <div>
+                                    <h5 className="section-title">Audios</h5>
+                                    &nbsp; &gt; &nbsp;
+                                    <a
+                                    onClick={() => {
+                                        this.props.redirect("/audios");
+                                        this.forceUpdate();
+                                    }}
+                                    href={"#"}
+                                    className="text-danger"
+                                    >
+                                    View More
+                                    </a>
+                                </div>
                                 <hr />
 
                                 <div className="row">
@@ -277,12 +325,17 @@ export default class Search extends React.Component {
                                                     }}>
                                                     
                                                     <img
-                                                        class="d-block w-100"
+                                                        className="d-block w-100"
                                                         src={`https://content.sssmediacentre.org/${item.file_identifier_thumb}`}
                                                         alt={item.title}
                                                         style={{ width: "100%" }}
                                                     />
                                                     </div>
+                                                   
+                                                </div>
+                                                <div className="featuredContent">
+                                                        <h5>{item.title}</h5>
+                                                        <span>{item.category}</span>
                                                 </div>
                                                 <div className="mb-2"></div>
                                             </div>
@@ -294,7 +347,20 @@ export default class Search extends React.Component {
                         {
                             this.state.search.articles !== undefined && this.state.search.articles.data !== undefined && this.state.search.articles.data.length > 0 &&
                             <>
-                                <h5 className="section-title">Articles</h5>
+                                <div>
+                                    <h5 className="section-title">Articles</h5>
+                                    &nbsp; &gt; &nbsp;
+                                    <a
+                                    onClick={() => {
+                                        this.props.redirect("/read");
+                                        this.forceUpdate();
+                                    }}
+                                    href={"#"}
+                                    className="text-danger"
+                                    >
+                                    View More
+                                    </a>
+                                </div>
                                 <hr />
                                 <div className="row">
                                     {
@@ -307,13 +373,17 @@ export default class Search extends React.Component {
                                                         
                                                     }}>
                                                     <img
-                                                        class="d-block w-100"
+                                                        className="d-block w-100"
                                                         src={`https://content.sssmediacentre.org/${item.thumbPath}`}
                                                         alt={item.title}
                                                         style={{ width: "100%" }}
                                                         />
                                                     </a>
                                                     </div>
+                                                </div>
+                                                <div className="featuredContent">
+                                                        <h5>{item.title}</h5>
+                                                        <span>{item.category}</span>
                                                 </div>
                                                 <div className="mb-2"></div>
                                             </div>
@@ -325,7 +395,20 @@ export default class Search extends React.Component {
                         {
                             this.state.search.downloads !== undefined && this.state.search.downloads.data !== undefined && this.state.search.downloads.data.length > 0 &&
                             <>
-                                <h5 className="section-title">Downloads</h5>
+                                <div>
+                                    <h5 className="section-title">Downloads</h5>
+                                    &nbsp; &gt; &nbsp;
+                                    <a
+                                    onClick={() => {
+                                        this.props.redirect("/downloads");
+                                        this.forceUpdate();
+                                    }}
+                                    href={"#"}
+                                    className="text-danger"
+                                    >
+                                    View More
+                                    </a>
+                                </div>
                                 <hr />
                                 <div className="row">
                                     {
@@ -333,9 +416,9 @@ export default class Search extends React.Component {
                                             return <div className="col-md-3 col-sm-4 mb-2">
                                                 <div className="featuredItem ratio ratio-16x9">
                                                     <div className="featuredImg">
-                                                    <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
+                                                    <a href={item.file_url} className="fancybox" data-fancybox="true" flink="f_gallery" data-caption={item.title}>
                                                     <img
-                                                        class="d-block w-100"
+                                                        className="d-block w-100"
                                                         src={`https://content.sssmediacentre.org/${item.imagePath}`}
                                                         alt={item.title}
                                                         style={{ width: "100%" }}
@@ -343,6 +426,10 @@ export default class Search extends React.Component {
                                                     </a>
                                                     </div>
                                                 </div>
+                                                <div className="featuredContent">
+                                                        <h5>{item.title}</h5>
+                                                        <span>{item.category}</span>
+                                                    </div>
                                                 <div className="mb-2"></div>
                                             </div>
                                         })

@@ -1139,9 +1139,11 @@ section{
 }
 .ratio-9x16 > div.stretch{
   overflow: hidden;
+  
 }
 .ratio-9x16 > div.stretch img{
-  transform: scale(2.5,1);
+  transform: scale(2.5,1) translateX(-45px);
+  
 }
 
 div.stretch{
