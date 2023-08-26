@@ -99,20 +99,22 @@ this.forceUpdate()
 
 detectType = (transcript) => {
   if(['any','all','anything'].some(str => transcript.toLowerCase().trim().split(' ').includes(str)) ){
+    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption`).click();
     this.props.search({text: transcript, type: ''})
-   //   document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption`).click();
   }else if(['video','videos','youtube'].some(str => transcript.toLowerCase().trim().split(' ').includes(str)) ){
+    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption1`).click();
     this.props.search({text: transcript, type: 'video'})
-    //document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption1`).click();
+    
   }else if(['audio','audios','discourse'].some(str => transcript.toLowerCase().trim().split(' ').includes(str))){
+    document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption2`).click();
     this.props.search({text: transcript, type: 'audio'})
-    //document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption2`).click();
+    
   }else if(['article','text','articles','book','books'].some(str => transcript.toLowerCase().trim().split(' ').includes(str))){
-   // document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption3`).click();
+   document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption3`).click();
    this.props.search({text: transcript, type: 'article'})
 
   }else if(['download','photo','photos'].some(str => transcript.toLowerCase().trim().split(' ').includes(str))){
-   // document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption4`).click();
+   document.querySelector(`#${this.props.query !== undefined ? 's_' :''}searchOption4`).click();
    this.props.search({text: transcript, type: 'download'})
   }
 return transcript 
@@ -154,7 +156,7 @@ else {
   }
 }
 
-//console.log(res, this.props.state.search);
+console.log(res, this.props.state.search);
   this.forceUpdate();
   this.props.search({text: transcript, type: this.props.state.search.type}, ()=>{
     console.log(this.props.state.search)

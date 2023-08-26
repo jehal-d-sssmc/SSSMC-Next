@@ -5,12 +5,15 @@ import Header from "../inc/component/common/Header";
 import Footer from "../inc/component/common/Footer";
 import Login from "../inc/component/common/Login";
 import CardMusic from "../inc/component/common/CardMusic";
+import Listen from "../inc/component/public/Listen";
 
 export default class Watch extends react.Component {
   constructor(props) {
     super(props);
+    this.query = this.props.app.helper._query();
     this.state = {
       user: undefined,
+      category: this.query.cat,
     };
   }
 
@@ -30,9 +33,7 @@ export default class Watch extends react.Component {
       <>
         <Header {...this.props} />
 
-        <main className="p-1">
-          <div className="musicplayer-box"></div>
-        </main>
+        <Listen cat={this.state.category} {...this.props} />
 
         <Footer {...this.props} />
       </>

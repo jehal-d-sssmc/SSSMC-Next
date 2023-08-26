@@ -45,9 +45,10 @@ main{
 }
 
 .logo img {
-  max-width: 54px;
+  max-width: 45px;
   margin-right: 5px;
 }
+
 .voicecontrol {
   position: fixed;
   bottom: 81px;
@@ -81,6 +82,7 @@ header.topnav {
   display: flex;
   position: relative;
   z-index: 9999;
+  align-items: center;
 }
 
 .mynavbar {
@@ -94,6 +96,7 @@ header.topnav {
 .mynavbar .menu {
   display: flex;
   width: 100%;
+  padding: 0;
 }
 
 
@@ -113,7 +116,7 @@ header.topnav {
   height: 100vh;
   position: absolute;
   left: 0;
-  top: 65px;
+  top: 60px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -198,7 +201,7 @@ header.topnav {
 .mynavbar .menu a {
   position: relative;
   display: inline-flex;
-  padding: 20px;
+  padding: 15px;
   text-decoration: none;
   color: #004071;
   flex: 1;
@@ -607,7 +610,7 @@ header.topnav {
 .mycontainer {
   position: absolute;
   z-index: 1;
-  top: 60px;
+  top: 50px;
   right: 0;
   left: 0;
   padding: 0;
@@ -657,7 +660,8 @@ header.topnav {
   border: none;
   border-bottom: 1px solid #004071;
   border-radius: 0;
-  font-size: 18px;
+  font-size: 36px;
+  font-weight: 100;
 }
 
 .searchForm input[type='text'].form-control:focus{
@@ -1010,9 +1014,10 @@ section{
 
 .my-masonry-grid .featuredContent h5{
   color: #cc470e;
-  word-break: break-all;
+  word-break: keep-all;
   padding: 10px 0;
   margin: 0;
+  font-size: 14px;
 }
 
 .shorts .swiper-slide {
@@ -1250,8 +1255,28 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   color: #FF5A12;
 }
 
+.project-list {
+  display: flex;
+  padding: 15px;
+  justify-content: space-evenly;
+}
+.project-logo{
+  transition: 1s all;
+}
+.project-logo:hover{
+  transform: scale(1.2);
+}
+
+.footer-menu{
+  display: flex;
+  justify-content: center;
+}
 @media only screen and (max-width: 767px) {
 
+  .project-list {
+    flex-direction: column;
+    gap: 20px;
+  }
   .mobile-menu {
     display: block;
     margin: 20px;
@@ -1288,6 +1313,9 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   .mynavbar.show{
     display: block; background-color: #fff;
     width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .mynavbar--is-visible {
     top: 88px;
@@ -1298,12 +1326,36 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     height: calc(100vh - 130px);
     overflow-y: auto;
     overflow-x: hidden;
+    padding: 15px;
+    font-size: 18px;
   }
 
-  .mynavbar .menu li {
+  .mynavbar .menu > li {
     position: static;
-    flex-direction: column;
-    transition: initial;
+    display: block;
+    flex: 0;
+    text-align: left;
+    padding: 5px;
+  }
+  .mynavbar .menu > li a{
+    padding: 0;
+    display: inline-block;
+  }
+  .mynavbar .menu > li a span{
+
+    position: relative;
+  }
+  .mynavbar .menu > li a span::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #d21d25;
+    top: 100%;
+    left: 0px;
+    width: 90%;
+  }
+  .mynavbar .menu li i{
+    width: 24px;
+    text-align: center;
   }
   .mynavbar .menu li:hover {
     background-color: initial;
@@ -1312,22 +1364,63 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     position: relative;
     background-color: #8f3985;
   }
-  .mycontainer {
-    position: static;
-    display: flex;
-    overflow: hidden;
-    max-height: 0;
-    margin-bottom: 0;
-    transition: all 0.3s ease;
+  
+
+  .mynavbar .menu li .mycontainer {
+      position: absolute;
+      display: none;
+      top: 0px;
+      left: 0;
+      max-height: 0;
+      margin-bottom: 0;
+      transition: all 0.3s ease;
   }
-  .mycontainer.open{
-    position: fixed;
-    top: 65px;
-    left: 0;
-    height: calc(100vh - 65px);
-    width: 100%;
-    overflow-x: hidden;
+  .mynavbar .menu li.open .mycontainer{
+    display: block;
+    
+  }
+  .mynavbar .menu li .mycontainer__listItem {
+    flex-basis: 100%;
+    padding: 0;
+  }
+
+
+  .mynavbar .menu li .mycontainer__listItem > .row, .mynavbar .menu li .mycontainer__listItem .container > .row{
+    padding: 0 0 90px 0;
+  }
+  .mynavbar .menu li:hover ul.submenu, .mynavbar .menu li.show ul.submenu,
+  .mynavbar .menu li .mycontainer__listItem > .row .submenu{
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .mynavbar .menu li .mycontainer__listItem > .row .submenu li, .mynavbar .menu li .mycontainer__listItem .container > .row .submenu li{
+    text-align: left;
+    margin-bottom: 3px;
+  }
+  .mynavbar .menu li .mycontainer__listItem > .row .submenu li a, .mynavbar .menu li .mycontainer__listItem .container > .row .submenu li a{
+    display: inline-block;
+    position: relative;
+    flex: 0;
+    color: #004071;
+  }
+  .mynavbar .menu li:hover ul.submenu li a:hover, .mynavbar .menu li.show ul.submenu li a:hover{
+    margin-left: 15px;
+  }
+  .mynavbar .menu li .mycontainer__listItem > .row .submenu li a::after {
+    content: '';
+    position: absolute;
+    border: 1px solid #d21d25;
+    top: 100%;
+    left: 9px;
+    width: 90%;
+  }
+
+  .menu .mycontainer.has-multi .mycontainer__list {
+    margin-right: 0;
+    border-right: 0;
     overflow-y: auto;
+    overflow-x: hidden;
   }
   .radio-grid-col {
       margin: 1px;
@@ -1335,6 +1428,24 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
       flex-grow: 1;
   }
 
+  .mynavbar .menu .mycontainer__list .submenu-title{
+    padding: 0 0 0 5px;
+    color: #d21d25;
+    position: relative;
+  }
+
+  .mynavbar .menu .mycontainer__list .submenu-title .goback{
+    color: #004071;
+    margin-right: 5px;
+  }
+
+  .mynav .vscroller .radio-grid{
+    padding: 15px;
+    gap: 10px;
+  }
+  .mynav .vscroller .radio-grid-col{
+    flex: 1 0 27%;
+  }
   .mynavbar a.hasDropdown:after {
     display: none;
   }
@@ -1346,13 +1457,6 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   }
   .mycontainer.has-multi .mycontainer__list-multi:not(:first-child) {
     display: none;
-  }
-  .menu .mycontainer.has-multi .mycontainer__list {
-    margin-right: 0;
-    border-right: 0;
-  }
-  .mynavbar .menu li .mycontainer__listItem {
-    flex-basis: 100%;
   }
   .imgOverlay .container{
     width: 100%;
@@ -1387,5 +1491,8 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   }
   .watch .swiper-slide {
     width: 90%;
+  }
+  .footer-menu{
+    flex-direction: column;
   }
 }

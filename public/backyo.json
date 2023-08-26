@@ -1,10 +1,10 @@
 {
-  "environment": "dev",
-  "name":"Sri Sathya Sai Media Centre Dev",
+  "environment": "production",
+  "name":"Sri Sathya Sai Media Centre",
   "server":{
     "mongo": {
-      "url": "mongodb+srv://sssmc-beta:P869ml2ZArKjt3C0@sai-data-cluster.vnfsd.mongodb.net/sssmc-proddb",
-      "db": "sssmc-proddb",
+      "url": "mongodb+srv://developer:A2cxr4de0nAc8AU2@sssmcdev.ujtmysa.mongodb.net/",
+      "db": "sssmcdev",
       "prefix": ""
     },
     "firebase": {

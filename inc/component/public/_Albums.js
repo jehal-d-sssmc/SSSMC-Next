@@ -3,7 +3,6 @@ import React from "react";
 import Masonry from "react-masonry-css";
 import Shorts from "../Watch/Shorts";
 import SwiperComp from "../Watch/SwiperComp";
-import Album from "../Home/Album";
 import Listen from "../Home/Listen";
 
 const breakpointColumnsObj = {
@@ -267,7 +266,7 @@ export default class Albums extends React.Component {
                 <div className="p-4">
                   <Listen
                     {...this.props}
-                    listen={this.state.listen}
+                    listen={this.state.listen.data}
                   />
                 </div>
               </section>

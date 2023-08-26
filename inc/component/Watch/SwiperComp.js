@@ -10,6 +10,14 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 export default function SwiperComp(props) {
+  const __ = (url) => {
+    try {
+      let _url = new URL(url);
+      return url;
+    } catch (_) {
+      return `https://content.sssmediacentre.org/${url}`;
+    }
+  };
   return (
     <>
       <Swiper
@@ -43,7 +51,7 @@ export default function SwiperComp(props) {
                         >
                           <img
                             class="d-block w-100"
-                            src={`https://content.sssmediacentre.org/${item.featuredUrl}`}
+                            src={__(`${item.featuredUrl}`)}
                             alt={item.title}
                             style={{ width: "100%" }}
                           />

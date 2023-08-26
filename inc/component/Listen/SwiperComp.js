@@ -9,33 +9,36 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-export default function Read(props) {
+export default function SwiperComp(props) {
   return (
     <>
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={18}
+        spaceBetween={9}
         pagination={{
           clickable: true,
         }}
+        loop={true}
         modules={[Pagination]}
-        className="read align-self-center"
+        className={
+          props.classname === undefined
+            ? "vslider"
+            : `vslider ${props.classname}`
+        }
       >
-        {props.read.map((item, i) => {
-          console.log(item);
+        {props.featuredItems.map((item, i) => {
           return (
             <>
-              {item.thumbPath !== undefined && (
+              {item.featuredUrl !== undefined && (
                 <>
-                  <SwiperSlide key={i} className="">
+                  <SwiperSlide key={i}>
                     <div className="featuredItem">
                       <div className="featuredImg">
                         <a
+                          href={`#`}
                           onClick={() => {
                             props.redirect(`/read/${item._id}`);
                           }}
-                          href={"#"}
-                          flink="f_reads"
                           data-caption={item.title}
                         >
                           <img
@@ -46,20 +49,8 @@ export default function Read(props) {
                           />
                         </a>
                       </div>
-                      <div className="featuredContent">
-                        <h5
-                          style={{ cursor: "pointer" }}
-                          onClick={() => {
-                            props.redirect(`/read/${item._id}`);
-                          }}
-                        >
-                          {item.title}
-                        </h5>
-                        <div className="">
-                          <span className="badge bg-secondary">
-                            {item.categoryName}
-                          </span>
-                        </div>
+                      <div className="featuredItemTitle text-start pt-1 pb-1">
+                        <p>{item.title}</p>
                       </div>
                     </div>
                   </SwiperSlide>

@@ -1,12 +1,11 @@
 import react from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Header from "../inc/component/common/Header";
 import Footer from "../inc/component/common/Footer";
 import Login from "../inc/component/common/Login";
-import Index from "../inc/component/public/Home";
+import Contact from "../inc/component/public/Contact";
 
-export default class Contact extends react.Component {
+export default class contact extends react.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,7 +29,7 @@ export default class Contact extends react.Component {
       <>
         <Header {...this.props} />
 
-        {<Index {...this.props} />}
+        {<Contact {...this.props} />}
 
         <Footer {...this.props} />
       </>

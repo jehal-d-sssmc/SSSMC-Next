@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "../inc/component/common/Header";
 import Footer from "../inc/component/common/Footer";
 import Login from "../inc/component/common/Login";
-import Albums from "../inc/component/public/Albums";
 
 export default class Watch extends react.Component {
   constructor(props) {

@@ -1,13 +1,11 @@
 import React from "react";
 import SwiperComp from "../Home/SwiperComp";
 import Shorts from "../Home/Shorts";
-import Watch from "../Home/Watch";
 import Listen from "../Home/Listen";
 import Read from "../Home/Read";
 
 import VideoPlayer from "react-background-video-player";
 import Streams from "../Home/Streams";
-import Album from "../Home/Album";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -15,20 +13,26 @@ export default class Home extends React.Component {
     this.state = {
       loading: false,
       loaded: false,
-      featuredItems: [],
       shorts: [],
+      watchFeatured: [],
+      watchLatest: [],
       listenFeatured: [],
       listenLatest: [],
-      readLatest: [],
-      readFeatured: [],
       albumFeatured: [],
       albumLatest: [],
-      watchLatest: [],
+      readLatest: [],
+      readFeatured: [],
       readToggle: "LATEST",
       albumToggle: "LATEST",
       listenToggle: "LATEST",
       watchToggle: "LATEST",
     };
+    this.projects = [
+      {title: "Sri Sathya Sai Central Trust", logo: "/sssct.png", link: "https://www.srisathyasai.org"},
+      {title: "Sri Sathya Sai Global Council", logo: "/sssct.png", link: "https://www.srisathyasaiglobalcouncil.org/"},
+      {title: "Sri Sathya Sai Divyasmṛti", logo: "/sssds.png", link: "https://www.sssdivyasmrti.org", color: "rgb(54, 21, 0)"},
+      {title: "Sri Sathya Sai Prematharu", logo: "/sssprematharu.png", link: "https://sssprematharu.org/", color: "#084c1d"},
+    ]
   }
 
   handleReadToggle = async (e) => {
@@ -85,12 +89,16 @@ export default class Home extends React.Component {
 
   async componentDidMount() {
     console.log(this.props);
-    let featuredItems = await this.props.app.db(
+    this.setState({
+      loading: true,
+    });
+
+    let shorts = await this.props.app.db(
       "GET",
       "find",
       "videos",
       {
-        $and: [{ isFeatureActive: true }, { category: { $ne: "Shorts" } }],
+        category: "Shorts",
       },
       {
         order: {
@@ -113,19 +121,12 @@ export default class Home extends React.Component {
       }
     );
 
-    this.setState({
-      featuredItems: featuredItems,
-      watchLatest: watchLatest,
-      loading: false,
-    });
-    this.forceUpdate();
-
-    let shorts = await this.props.app.db(
+    let watchFeatured = await this.props.app.db(
       "GET",
       "find",
       "videos",
       {
-        category: "Shorts",
+        $and: [{ isFeatureActive: true }, { category: { $ne: "Shorts" } }],
       },
       {
         order: {
@@ -133,11 +134,6 @@ export default class Home extends React.Component {
         },
       }
     );
-
-    this.setState({
-      shorts: shorts,
-    });
-    this.forceUpdate();
 
     let listenLatest = await this.props.app.db(
       "GET",
@@ -187,13 +183,6 @@ export default class Home extends React.Component {
       }
     );
 
-    this.setState({
-      listenLatest: listenLatest,
-      albumLatest: albumLatest,
-      listenFeatured: listenFeatured,
-      albumFeatured: albumFeatured,
-    });
-
     let readLatest = await this.props.app.db(
       "GET",
       "find",
@@ -206,12 +195,6 @@ export default class Home extends React.Component {
         limit: 15,
       }
     );
-
-    this.setState({
-      readLatest: readLatest,
-      loading: false,
-    });
-    this.forceUpdate();
 
     let readFeatured = await this.props.app.db(
       "GET",
@@ -228,10 +211,25 @@ export default class Home extends React.Component {
       }
     );
 
-    this.setState({
-      readFeatured: readFeatured,
-      loaded: true,
-    });
+    this.setState(
+      {
+        shorts: shorts.data,
+        watchFeatured: watchFeatured.data,
+        watchLatest: watchLatest.data,
+        listenFeatured: listenFeatured.data,
+        listenLatest: listenLatest.data,
+        albumFeatured: albumFeatured.data,
+        albumLatest: albumLatest.data,
+        readFeatured: readFeatured.data,
+        readLatest: readLatest.data,
+        loading: false,
+        loaded: true,
+      },
+      () => {
+        console.log(albumFeatured);
+        console.log(albumLatest);
+      }
+    );
     this.forceUpdate();
   }
 
@@ -295,65 +293,18 @@ export default class Home extends React.Component {
                 <div className="section-header pb-3">
                   <div className="row">
                     <div className="col-12 align-self-center">
-                      <h3 className="section-title">Watch</h3>
-                      &nbsp; &gt; &nbsp;
-                      <a href="#" className="text-danger">
-                        View More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <SwiperComp featuredItems={this.state.featuredItems} />
-              </div>
-            </section>
-
-            <section id="" className="p-3 pb-0 bg-white">
-              <div className="" style={{ padding: "0px 15px" }}>
-                <div className="section-header">
-                  <div className="row">
-                    <div className="col-12 align-self-center">
-                      <h3 className="section-title">Listen</h3>
-                      &nbsp; &gt; &nbsp;
-                      <a href="#" className="text-danger">
-                        View More
-                      </a>
-                      <ul class="nav nav-tabs custom-tab">
-                        <li class="nav-item">
-                          <a class="nav-link active">
-                            <span>LATEST</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link">
-                            <span>POPULAR</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-2"></div>
-                <Listen {...this.props} listen={this.state.listen} />
-              </div>
-            </section>
-
-            <section id="" className="p-3 pb-0 bg-white">
-              <div className="" style={{ padding: "0px 15px" }}>
-                <div className="section-header">
-                  <div className="row">
-                    <div className="col-12 align-self-center">
                       <a
                         onClick={() => {
-                          this.props.redirect("/albums");
+                          this.props.redirect("/watch");
                           this.forceUpdate();
                         }}
                         href={"#"}
                       >
-                        <h3 className="section-title">Listen Playlists</h3>
+                        <h3 className="section-title">Watch</h3>
                         &nbsp; &gt; &nbsp;
                         <a
                           onClick={() => {
-                            this.props.redirect("/albums");
+                            this.props.redirect("/watch");
                             this.forceUpdate();
                           }}
                           href={"#"}
@@ -362,14 +313,15 @@ export default class Home extends React.Component {
                           View More
                         </a>
                       </a>
-
                       <ul class="nav nav-tabs custom-tab">
                         <li class="nav-item">
                           <a
-                            onClick={this.handleReadToggle}
+                            onClick={this.handleWatchToggle}
                             href={"#"}
                             class={`nav-link ${
-                              this.state.readToggle === "LATEST" ? "active" : ""
+                              this.state.watchToggle === "LATEST"
+                                ? "active"
+                                : ""
                             }`}
                           >
                             <span>LATEST</span>
@@ -377,10 +329,10 @@ export default class Home extends React.Component {
                         </li>
                         <li class="nav-item">
                           <a
-                            onClick={this.handleReadToggle}
+                            onClick={this.handleWatchToggle}
                             href={"#"}
                             class={`nav-link ${
-                              this.state.readToggle === "FEATURED"
+                              this.state.watchToggle === "FEATURED"
                                 ? "active"
                                 : ""
                             }`}
@@ -393,11 +345,94 @@ export default class Home extends React.Component {
                   </div>
                 </div>
                 <div className="p-2"></div>
-                <Album {...this.props} listen={this.state.album} />
+
+                {this.state.watchToggle === "LATEST" ? (
+                  <SwiperComp
+                    {...this.props}
+                    featuredItems={this.state.watchLatest}
+                  />
+                ) : (
+                  <SwiperComp
+                    {...this.props}
+                    featuredItems={this.state.watchFeatured}
+                  />
+                )}
+
+                <div className="p-2"></div>
               </div>
             </section>
 
-            <section id="" className="p-3 pb-0 bg-light">
+            <section id="listen" className="p-3 pb-0 bg-white">
+              <div className="" style={{ padding: "0px 15px" }}>
+                <div className="section-header">
+                  <div className="row">
+                    <div className="col-12 align-self-center">
+                      <a
+                        onClick={() => {
+                          this.props.redirect("/listen");
+                          this.forceUpdate();
+                        }}
+                        href={"#"}
+                      >
+                        <h3 className="section-title">Listen</h3>
+                        &nbsp; &gt; &nbsp;
+                        <a
+                          onClick={() => {
+                            this.props.redirect("/listen");
+                            this.forceUpdate();
+                          }}
+                          href={"#"}
+                          className="text-danger"
+                        >
+                          View More
+                        </a>
+                      </a>
+                      <ul class="nav nav-tabs custom-tab">
+                        <li class="nav-item">
+                          <a
+                            onClick={this.handleListenToggle}
+                            href={"#"}
+                            class={`nav-link ${
+                              this.state.listenToggle === "LATEST"
+                                ? "active"
+                                : ""
+                            }`}
+                          >
+                            <span>LATEST</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            onClick={this.handleListenToggle}
+                            href={"#"}
+                            class={`nav-link ${
+                              this.state.listenToggle === "FEATURED"
+                                ? "active"
+                                : ""
+                            }`}
+                          >
+                            <span>FEATURED</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-2"></div>
+
+                {this.state.listenToggle === "LATEST" ? (
+                  <Listen {...this.props} listen={this.state.listenLatest} />
+                ) : (
+                  <Listen {...this.props} listen={this.state.listenFeatured} />
+                )}
+
+                <div className="p-2"></div>
+              </div>
+            </section>
+
+            
+
+            <section id="read" className="p-3 pb-0 bg-light">
               <div style={{ padding: "0px 15px" }}>
                 <div className="section-header">
                   <div className="row">
@@ -452,6 +487,8 @@ export default class Home extends React.Component {
                     </div>
                   </div>
                 </div>
+                <div className="p-2"></div>
+
                 {this.state.readToggle === "LATEST" ? (
                   <Read {...this.props} read={this.state.readLatest} />
                 ) : (
@@ -460,6 +497,29 @@ export default class Home extends React.Component {
 
                 <div className="p-2"></div>
               </div>
+            </section>
+
+            <section id="projects" className="p-3 pb-0 bg-white">
+             
+            <div className="p-3"></div>
+              <div className="project-list">
+                  {
+                    this.projects.map((x)=>{
+                      return <div className="text-center">
+                        <a href={x.link} target="_blank" style={{color: x.color !== undefined ? x.color : "#d21d25"}} ref={'noreferrer'}>
+                          <div className="project-logo" style={{maxHeight:"90px", maxWidth:"90px", margin: "auto"}}>
+                            <img src={x.logo} alt={x.title} style={{maxWidth:"100%"}} />
+                          </div>
+                          
+                          <h5 className="project-title pt-3">
+                            {x.title}
+                          </h5>
+                        </a>
+                      </div>
+                    })
+                  }
+              </div>
+              <div className="p-3"></div>
             </section>
           </>
         )}

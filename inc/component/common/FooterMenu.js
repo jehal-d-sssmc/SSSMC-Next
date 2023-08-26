@@ -14,7 +14,14 @@ export default class FooterMenu extends react.Component {
                 this.props.redirect('/sri-sathya-sai')
               }} href="/#/sri-Sathya-Sai">About Us</a>
             </li>
-
+            <li className="list-inline-item">
+              <a href="/contact" onClick={(e)=>{
+                e.preventDefault();
+                this.props.redirect('/contact')
+              }}>
+                Contact Us
+              </a>
+            </li>
             <li className="list-inline-item">
               <a href="https://careers.sssmediacentre.org" target="_blank" rel={'noreferrer'}>
                 Careers
@@ -30,11 +37,7 @@ export default class FooterMenu extends react.Component {
                 SiteMap
               </a>
             </li>
-            <li className="list-inline-item">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDxlpml7NBDVbM6grIWBu-g3u13UiibpvmkcI4LGVXhLvCoQ/viewform" target="_blank" rel={'noreferrer'}>
-                FeedBack
-              </a>
-            </li>
+            
             <li className="list-inline-item">
               <a
                 href="https://archive.sssmediacentre.org"

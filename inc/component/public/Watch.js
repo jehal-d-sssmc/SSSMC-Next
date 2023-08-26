@@ -23,7 +23,7 @@ export default class Watch extends React.Component {
       watchIndex: 0,
       selectedWatchIndex: 0,
       watchCategories: [],
-      selectedCategory: "All",
+      selectedCategory: this.props.cat,
       categoryEmpty: false,
       viewMoreDisabledState: false,
     };
@@ -115,11 +115,34 @@ export default class Watch extends React.Component {
       viewMoreDisabledState: false,
       selectedCategory: e.target.text,
     });
-
-    if (this.state.selectedCategory === "All") {
+    console.log(this.state.selectedCategory);
+    if (e.target.text === "All") {
       this.setState({
-        selectedCategory: "All",
+        watchIndex: 0,
+        watchItems: [],
       });
+      let againWatchItems = await this.props.app.db(
+        "GET",
+        "find",
+        "videos",
+        {},
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 15,
+          skip: this.state.watchIndex * 15,
+        }
+      );
+      this.setState(
+        {
+          watchItems: againWatchItems.data,
+          watchIndex: 1,
+        },
+        () => {
+          console.log(this.state.watchItems);
+        }
+      );
       this.forceUpdate();
       return;
     }
@@ -188,23 +211,44 @@ export default class Watch extends React.Component {
       featuredWatchItems: featuredWatchItems.data,
     });
 
-    let watchItems = await this.props.app.db(
-      "GET",
-      "find",
-      "videos",
-      {
-        category: { $ne: "Shorts" },
-      },
-      {
-        order: {
-          createdAt: -1,
+    let WatchItems = {};
+
+    if (this.state.selectedCategory === "All") {
+      WatchItems = await this.props.app.db(
+        "GET",
+        "find",
+        "videos",
+        {},
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 18,
+        }
+      );
+    } else {
+      WatchItems = await this.props.app.db(
+        "GET",
+        "find",
+        "videos",
+        {
+          category: this.state.selectedCategory,
         },
-        limit: 18,
-      }
-    );
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 18,
+        }
+      );
+    }
+
     this.setState({
-      watchItems: watchItems.data,
+      watchItems: WatchItems.data,
+      selectedWatchItems: WatchItems.data,
     });
+
+    this.forceUpdate();
 
     let watchCategories = await this.props.app.db(
       "GET",
@@ -284,7 +328,7 @@ export default class Watch extends React.Component {
                                     this.setState({
                                       selectedCategory: "All",
                                     });
-                                    this.props.redirect("/watch");
+                                    this.props.redirect("/watch?cat=All");
                                     this.forceUpdate();
                                   }}
                                   href={"#"}
@@ -302,7 +346,7 @@ export default class Watch extends React.Component {
                     </div>
 
                     <div>
-                      <h1>Videos</h1>
+                      <h1>Watch</h1>
                     </div>
 
                     <div className="row">
@@ -421,19 +465,6 @@ export default class Watch extends React.Component {
                             maxHeight: "85vh",
                           }}
                         >
-                          <div className="card">
-                            <div className="card-header">
-                              <h5 className="m-0">Search</h5>
-                            </div>
-                            <div className="card-body">
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Search"
-                              />
-                            </div>
-                          </div>
-                          <div className="p-2"></div>
                           <div className="card">
                             <div className="card-header">
                               <h5 className="m-0">Categories</h5>

@@ -10,6 +10,14 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 export default function SwiperComp(props) {
+  const __ = (url) => {
+    try {
+      let _url = new URL(url);
+      return url;
+    } catch (_) {
+      return `https://content.sssmediacentre.org/${url}`;
+    }
+  };
   //console.log(props);
   return (
     <>
@@ -21,37 +29,42 @@ export default function SwiperComp(props) {
         }}
         loop={true}
         modules={[Pagination]}
-        className={props.classname === undefined ? "vslider" : `vslider ${props.classname}`}
+        className={
+          props.classname === undefined
+            ? "vslider"
+            : `vslider ${props.classname}`
+        }
       >
-        {props.featuredItems.type !== "success" ? (
-          <div className="alert alert-error">{props.featuredItems.msg}</div>
-        ) : (
-          props.featuredItems.data.map((item, i) => {
-            return (
-              <>
-              {
-                item.featuredUrl !== undefined && 
+        {props.featuredItems.map((item, i) => {
+          return (
+            <>
+              {item.featuredUrl !== undefined && (
                 <>
-                <SwiperSlide key={i} className='effect6'>
-                  <div className="featuredItem ratio ratio-16x9">
-                    <div className="featuredImg">
-                      <a href={item.file_url} class="fancybox" data-fancybox="true" flink="f_videos" data-caption={item.title}>
-                      <img
-                        class="d-block w-100"
-                        src={`https://content.sssmediacentre.org/${item.featuredUrl}`}
-                        alt={item.title}
-                        style={{ width: "100%" }}
-                      />
-                      </a>
+                  <SwiperSlide key={i} className="effect6">
+                    <div className="featuredItem ratio ratio-16x9">
+                      <div className="featuredImg">
+                        <a
+                          href={item.file_url}
+                          class="fancybox"
+                          data-fancybox="true"
+                          flink="f_videos"
+                          data-caption={item.title}
+                        >
+                          <img
+                            class="d-block w-100"
+                            src={`${__(item.thumb_path)}`}
+                            alt={item.title}
+                            style={{ width: "100%" }}
+                          />
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
                 </>
-              }
-              </>
-            );
-          })
-        )}
+              )}
+            </>
+          );
+        })}
       </Swiper>
     </>
   );
