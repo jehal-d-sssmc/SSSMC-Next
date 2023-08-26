@@ -1271,6 +1271,12 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   display: flex;
   justify-content: center;
 }
+
+.mynavbar .menu .mycontainer__list .submenu-title .goback{
+  display: none;
+}
+
+
 @media only screen and (max-width: 767px) {
 
   .project-list {
@@ -1432,6 +1438,11 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     padding: 0 0 0 5px;
     color: #d21d25;
     position: relative;
+  }
+
+  
+  .mynavbar .menu .mycontainer__list .submenu-title .goback{
+    display: inline-block;
   }
 
   .mynavbar .menu .mycontainer__list .submenu-title .goback{
