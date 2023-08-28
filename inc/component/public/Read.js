@@ -358,7 +358,7 @@ export default class Read extends React.Component {
                     </div>
 
                     <div className="row">
-                      <div className="col-md-8 col-lg-9">
+                      <div className="col-md-9 col-lg-10">
                         <div className="main-read-masonry">
                           {!this.state.categoryEmpty ? (
                             <Masonry
@@ -380,7 +380,7 @@ export default class Read extends React.Component {
                                           data-caption={item.title}
                                         >
                                           <div
-                                            className="card text-center my-masonry-grid_column p-2"
+                                            className="text-center my-masonry-grid_column p-2"
                                             style={{ borderRadius: "15px" }}
                                           >
                                             <div className="preview-img">
@@ -413,7 +413,7 @@ export default class Read extends React.Component {
                                         data-caption={item.title}
                                       >
                                         <div
-                                          className="card text-center my-masonry-grid_column p-2"
+                                          className="text-center my-masonry-grid_column p-2"
                                           style={{ borderRadius: "15px" }}
                                         >
                                           <div className="preview-img">
@@ -454,7 +454,7 @@ export default class Read extends React.Component {
                         </div>
                       </div>
 
-                      <div className="col-md-4 col-lg-3">
+                      <div className="col-md-3 col-lg-2">
                         <div
                           className="position-sticky"
                           style={{
@@ -463,24 +463,13 @@ export default class Read extends React.Component {
                             maxHeight: "85vh",
                           }}
                         >
-                          <div className="card">
-                            <div className="card-header">
-                              <h5 className="m-0">Search</h5>
-                            </div>
-                            <div className="card-body">
-                              <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Search"
-                              />
-                            </div>
-                          </div>
+                          
                           <div className="p-2"></div>
                           <div className="card">
                             <div className="card-header">
-                              <h5 className="m-0">Categories</h5>
+                              <h5 className="m-0 p-3 pb-0 pt-0">Categories</h5>
                             </div>
-                            <div className="card-body">
+                            <div className="card-body p-3">
                               <ul className="list-group">
                                 <li className="list-group-item">
                                   <a onClick={this.handleCatClick} href={`#`}>

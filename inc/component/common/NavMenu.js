@@ -99,7 +99,7 @@ class NavMenu extends react.Component {
       { nameTree: { $size: 0 } },
       {
         order: {},
-        limit: 10,
+        limit: 100,
       }
     );
 
@@ -121,7 +121,7 @@ class NavMenu extends react.Component {
       { nameTree: { $size: 0 } },
       {
         order: {},
-        limit: 10,
+        limit: 100,
       }
     );
 

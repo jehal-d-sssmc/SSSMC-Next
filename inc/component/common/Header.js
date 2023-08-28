@@ -1,5 +1,5 @@
 import React from "react";
-
+import jQuery from "jquery";
 import NavMenu from "./NavMenu";
 
 class Header extends React.Component {
@@ -10,8 +10,7 @@ class Header extends React.Component {
     return (
       <>
         <div
-          className="position-sticky header-container"
-          style={{ top: "0", zIndex: "999" }}
+          className={`position-fixed header-container${this.props.router.route === '/' ? ' transparent' : ''}`}
         >
           <header className="topnav">
             <div className="logo user-select-pointer">

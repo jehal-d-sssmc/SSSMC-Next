@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700;800&family=Merriweather:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700;800&family=Merriweather:wght@400;700;900&display=swap'); */
+ /* @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 :root {
   --glow-color: hsl(38, 100%, 69%);
 }
@@ -13,7 +13,12 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: 'Merriweather', serif;
   font-family: 'Almarai', sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+}
+
+table, iframe{
+  max-width: 100%;
 }
 
 img{
@@ -38,12 +43,20 @@ a:hover{
 
 main{
   padding: 30px 0;
+  font-size: 14px;
 }
 
 .logo {
   padding: 5px 15px;
   min-width: 230px;
 }
+
+.header-container{
+  top: 0;
+  z-index: 999;
+  width: 100%
+}
+
 
 .logo img {
   max-width: 45px;
@@ -792,7 +805,7 @@ header.topnav {
 }
 
 .vslider .swiper-slide {
-  width: 18%;
+  width: 25%;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -1024,6 +1037,10 @@ section{
   border-radius: 15px;
 }
 
+.my-masonry-grid .featuredContent{
+  margin: 5px 0;
+}
+
 .my-masonry-grid .featuredContent h5{
   color: #cc470e;
   word-break: keep-all;
@@ -1201,6 +1218,7 @@ footer {
   padding: 54px 0;
   border-top: 3px solid #fbc460;
   background-color: #f9f6ef;
+  font-size: 14px;
 }
 
 .footer-menu li{
@@ -1480,6 +1498,11 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     color: #004071;
     margin-right: 5px;
   }
+
+  .breadcrumb {
+    margin-top: 45px;
+  }
+
   ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab{
     font-size: 9px;
   }

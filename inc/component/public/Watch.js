@@ -118,7 +118,9 @@ class Watch extends React.Component {
       "GET",
       "find",
       "videocategories",
-      {},
+      {
+        nameTree: {$size: 0}
+      },
       {
         order: {},
         limit: 1000,
@@ -219,68 +221,70 @@ class Watch extends React.Component {
       selectedWatchIndex: 0,
       viewMoreDisabledState: false,
       selectedCategory: typeof e !== "string" ? e.target.text : e,
-    });
-
-    if (this.state.selectedCategory === "All") {
-      this.setState({
-        watchIndex: 0,
-        selectedWatchItemsItems: [],
-      });
-      let againReadItems = await this.props.app.db(
+    }, async() => {
+      if (this.state.selectedCategory === "All") {
+        this.setState({
+          watchIndex: 0,
+          selectedWatchItemsItems: [],
+        });
+        let againReadItems = await this.props.app.db(
+          "GET",
+          "find",
+          "articles",
+          {},
+          {
+            order: {
+              createdAt: -1,
+            },
+            limit: 15,
+            skip: this.state.watchIndex * 15,
+          }
+        );
+        this.setState({
+          watchItems: againReadItems.data,
+          watchIndex: 1,
+        });
+        this.forceUpdate();
+        return;
+      }
+  
+      let selWatchItems = await this.props.app.db(
         "GET",
         "find",
-        "articles",
-        {},
+        "videos",
+        {
+          category: this.state.selectedCategory,
+        },
         {
           order: {
             createdAt: -1,
           },
           limit: 15,
-          skip: this.state.watchIndex * 15,
+          skip: this.state.selectedWatchIndex * 15,
         }
       );
-      this.setState({
-        watchItems: againReadItems.data,
-        watchIndex: 1,
-      });
-      this.forceUpdate();
-      return;
-    }
-
-    let selWatchItems = await this.props.app.db(
-      "GET",
-      "find",
-      "videos",
-      {
-        category: this.state.selectedCategory,
-      },
-      {
-        order: {
-          createdAt: -1,
-        },
-        limit: 15,
-        skip: this.state.selectedWatchIndex * 15,
+      if (selWatchItems.data.length === 0) {
+        this.setState({
+          categoryEmpty: true,
+        });
+        this.forceUpdate();
+        return;
       }
-    );
-    if (selWatchItems.data.length === 0) {
+  
+      let curSelIndex = this.state.selectedWatchIndex;
+      let curSelItems = this.state.selectedWatchItems;
+      curSelIndex++;
+      selWatchItems.data.forEach((item) => {
+        curSelItems.push(item);
+      });
       this.setState({
-        categoryEmpty: true,
+        selectedWatchItems: curSelItems,
+        selectedWatchIndex: curSelIndex,
       });
       this.forceUpdate();
-      return;
-    }
+    });
 
-    let curSelIndex = this.state.selectedWatchIndex;
-    let curSelItems = this.state.selectedWatchItems;
-    curSelIndex++;
-    selWatchItems.data.forEach((item) => {
-      curSelItems.push(item);
-    });
-    this.setState({
-      selectedWatchItems: curSelItems,
-      selectedWatchIndex: curSelIndex,
-    });
-    this.forceUpdate();
+    
   };
 
   __ = (url) => {
@@ -299,6 +303,7 @@ class Watch extends React.Component {
           <>{this.props.loader}</>
         ) : (
           <>
+            <div className="p-3"></div>
             <div className="row">
               <section className="featured-watch">
                 <div className="p-2">
@@ -370,7 +375,7 @@ class Watch extends React.Component {
                     </div>
 
                     <div className="row">
-                      <div className="col-md-8 col-lg-9">
+                      <div className="col-md-8 col-lg-10">
                         <div className="main-watch-masonry">
                           {!this.state.categoryEmpty ? (
                             <Masonry
@@ -478,7 +483,7 @@ class Watch extends React.Component {
                         </div>
                       </div>
 
-                      <div className="col-md-4 col-lg-3">
+                      <div className="col-md-4 col-lg-2">
                         <div
                           className="position-sticky"
                           style={{

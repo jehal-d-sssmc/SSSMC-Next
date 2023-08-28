@@ -115,45 +115,47 @@ export default class Listen extends React.Component {
       selectedListenIndex: 0,
       selectedCategory: typeof(e) !== 'string' ? e.target.text : e,
       viewMoreDisabledState: false,
-    });
+    }, async() => {
 
 
-    let selListenItems = await this.props.app.db(
-      "GET",
-      "find",
-      "audios",
-      {
-        category: this.state.selectedCategory,
-      },
-      {
-        order: {
-          createdAt: -1,
+      let selListenItems = await this.props.app.db(
+        "GET",
+        "find",
+        "audios",
+        {
+          category: this.state.selectedCategory,
         },
-        limit: 15,
-        skip: this.state.selectedListenIndex * 15,
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 15,
+          skip: this.state.selectedListenIndex * 15,
+        }
+      );
+  
+      console.log(selListenItems.length);
+      if (selListenItems.data.length === 0) {
+        this.setState({
+          categoryEmpty: true,
+        });
+        this.forceUpdate();
+        return;
       }
-    );
-
-    console.log(selListenItems.length);
-    if (selListenItems.data.length === 0) {
+  
+      let curSelIndex = this.state.selectedListenIndex;
+      let curSelItems = this.state.selectedListenItems;
+      curSelIndex++;
+      selListenItems.data.forEach((item) => {
+        curSelItems.push(item);
+      });
       this.setState({
-        categoryEmpty: true,
+        selectedListenItems: curSelItems,
+        selectedListenIndex: curSelIndex,
       });
       this.forceUpdate();
-      return;
-    }
+    });
 
-    let curSelIndex = this.state.selectedListenIndex;
-    let curSelItems = this.state.selectedListenItems;
-    curSelIndex++;
-    selListenItems.data.forEach((item) => {
-      curSelItems.push(item);
-    });
-    this.setState({
-      selectedListenItems: curSelItems,
-      selectedListenIndex: curSelIndex,
-    });
-    this.forceUpdate();
   };
 
   __ = (url) => {
@@ -356,11 +358,11 @@ export default class Listen extends React.Component {
                                           <div className="featuredItem ratio ratio-4x3">
                                             <div
                                               className="stretch"
-                                              style={{ cursor: "zoom-in" }}
+                                              style={{ cursor: "pointer" }}
                                               onClick={() => {
                                                 this.setMusic({
-                                                  name: `${item.title} ${item.catogory !== undefined ? "| " + item.category : ""}`,
-                                                  author: item.album_name,
+                                                  name: `${item.title} ${item.catogory !== undefined ? "| " + item.category : ""}${item.album_name !== undefined ? " | " + item.album_name : ""}`,
+                                                  author: `${item.sub_category !== undefined ? "" + item.sub_category : ""} ${item.album_artiste !== undefined ? "| " + item.album_artiste : ""}`,
                                                   img: `https://content.sssmediacentre.org/${item.file_identifier_thumb}`,
                                                   audio: `https://content.sssmediacentre.org/${item.file_identifier}`,
                                                   duration: item.duration,
@@ -382,8 +384,8 @@ export default class Listen extends React.Component {
                                           </div>
                                           <div className="featuredContent">
                                             <h5>{item.title}</h5>
-                                            {item.catogory && <span>{item.catogory}</span>}
-                                            {item.category && <span>{item.sub_category}</span>}
+                                            {item.catogory && <span onClick={this.handleCatClick}>{item.catogory}</span>}
+                                            {item.category && <span onClick={this.handleCatClick}>{item.sub_category}</span>}
                                             {item.album_name && item.sub_category !== item.sub_category && <span>{item.album_name}</span>}
                                             {item.album_artiste && <span>{item.album_artiste}</span>}
                                           </div>
@@ -405,8 +407,8 @@ export default class Listen extends React.Component {
                                               style={{ cursor: "zoom-in" }}
                                               onClick={() => {
                                                 this.setMusic({
-                                                  name: `${item.title} | ${item.catogory}`,
-                                                  author: item.album_name,
+                                                  name: `${item.title} ${item.catogory !== undefined ? "| " + item.category : ""}${item.album_artiste !== undefined ? " | " + item.album_artiste : ""}`,
+                                                  author: `${item.sub_category !== undefined ? "| " + item.sub_category : ""}`,
                                                   img: `https://content.sssmediacentre.org/${item.file_identifier_thumb}`,
                                                   audio: `https://content.sssmediacentre.org/${item.file_identifier}`,
                                                   duration: item.duration,
@@ -433,8 +435,8 @@ export default class Listen extends React.Component {
                                             >
                                               {item.title}
                                             </h5>
-                                            {item.catogory && <span>{item.catogory}</span>}
-                                            {item.category && <span>{item.sub_category}</span>}
+                                            {item.catogory && <span onClick={this.handleCatClick}>{item.catogory}</span>}
+                                            {item.category && <span onClick={this.handleCatClick}>{item.sub_category}</span>}
                                             {item.album_name && item.sub_category !== item.sub_category && <span>{item.album_name}</span>}
                                             {item.album_artiste && <span>{item.album_artiste}</span>}
                                           </div>

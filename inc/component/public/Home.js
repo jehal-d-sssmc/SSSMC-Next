@@ -494,7 +494,7 @@ export default class Home extends React.Component {
             )}
 
             {this.state.readLatest.length > 0 && (
-              <section id="read" className="p-3 pb-0 bg-light">
+              <section id="read" className="p-3 pb-0 bg-white">
                 <div style={{ padding: "0px 15px" }}>
                   <div className="section-header">
                     <div className="row">
