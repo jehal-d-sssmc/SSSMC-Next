@@ -11,10 +11,11 @@ const breakpointColumnsObj = {
   500: 1,
 };
 
-export default class Watch extends React.Component {
+class Watch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      shorts: [],
       loading: true,
       extraLoading: false,
       featuredWatchItems: [],
@@ -23,11 +24,112 @@ export default class Watch extends React.Component {
       watchIndex: 0,
       selectedWatchIndex: 0,
       watchCategories: [],
-      selectedCategory: this.props.cat,
+      selectedCategory: "All",
       categoryEmpty: false,
       viewMoreDisabledState: false,
     };
   }
+
+  //^(*.)+[\?]
+  async componentDidMount() {
+    console.log(this.props);
+    const handleRouteChange = (url, { shallow }) => {
+      console.log(
+        `App is changing to ${url} ${
+          shallow ? "with" : "without"
+        } shallow routing`
+      );
+      this.setState(
+        {
+          selectedCategory: decodeURI(url.replace("/watch?cat=", "")),
+        },
+        async () => {
+          await this.handleCatClick(this.state.selectedCategory);
+        }
+      );
+      console.log(this.props.router.state);
+    };
+
+    this.props.router.events.on("routeChangeStart", handleRouteChange);
+    await this.loadData();
+    this.setState({
+      loading: false,
+    });
+    this.forceUpdate();
+  }
+
+  loadData = async () => {
+    let shorts = await this.props.app.db(
+      "GET",
+      "find",
+      "videos",
+      {
+        category: "Shorts",
+      },
+      {
+        order: {
+          createdAt: -1,
+        },
+      }
+    );
+
+    this.setState({
+      shorts: shorts.data,
+    });
+    this.forceUpdate();
+
+    let featuredWatchItems = await this.props.app.db(
+      "GET",
+      "find",
+      "videos",
+      {
+        $and: [{ isFeatureActive: true }, { category: { $ne: "Shorts" } }],
+      },
+      {
+        order: {
+          createdAt: -1,
+        },
+        limit: 12,
+      }
+    );
+    this.setState({
+      featuredWatchItems: featuredWatchItems.data,
+    });
+
+    let watchItems = await this.props.app.db(
+      "GET",
+      "find",
+      "videos",
+      {
+        category: { $ne: "Shorts" },
+      },
+      {
+        order: {
+          createdAt: -1,
+        },
+        limit: 18,
+      }
+    );
+    this.setState({
+      watchItems: watchItems.data,
+    });
+
+    let watchCategories = await this.props.app.db(
+      "GET",
+      "find",
+      "videocategories",
+      {},
+      {
+        order: {},
+        limit: 1000,
+      }
+    );
+    this.setState({
+      watchCategories: watchCategories.data,
+    });
+  };
+
+  shouldComponentUpdate = () => false;
 
   handleClick = async (e) => {
     e.preventDefault();
@@ -107,24 +209,27 @@ export default class Watch extends React.Component {
   };
 
   handleCatClick = async (e) => {
-    e.preventDefault();
-    await this.setState({
+    console.log(e.target);
+    if (typeof e !== "string") {
+      e.preventDefault();
+    }
+    this.setState({
       categoryEmpty: false,
       selectedWatchItems: [],
       selectedWatchIndex: 0,
       viewMoreDisabledState: false,
-      selectedCategory: e.target.text,
+      selectedCategory: typeof e !== "string" ? e.target.text : e,
     });
-    console.log(this.state.selectedCategory);
-    if (e.target.text === "All") {
+
+    if (this.state.selectedCategory === "All") {
       this.setState({
         watchIndex: 0,
-        watchItems: [],
+        selectedWatchItemsItems: [],
       });
-      let againWatchItems = await this.props.app.db(
+      let againReadItems = await this.props.app.db(
         "GET",
         "find",
-        "videos",
+        "articles",
         {},
         {
           order: {
@@ -134,15 +239,10 @@ export default class Watch extends React.Component {
           skip: this.state.watchIndex * 15,
         }
       );
-      this.setState(
-        {
-          watchItems: againWatchItems.data,
-          watchIndex: 1,
-        },
-        () => {
-          console.log(this.state.watchItems);
-        }
-      );
+      this.setState({
+        watchItems: againReadItems.data,
+        watchIndex: 1,
+      });
       this.forceUpdate();
       return;
     }
@@ -192,86 +292,6 @@ export default class Watch extends React.Component {
     }
   };
 
-  async componentDidMount() {
-    let featuredWatchItems = await this.props.app.db(
-      "GET",
-      "find",
-      "videos",
-      {
-        $and: [{ isFeatureActive: true }, { category: { $ne: "Shorts" } }],
-      },
-      {
-        order: {
-          createdAt: -1,
-        },
-        limit: 12,
-      }
-    );
-    this.setState({
-      featuredWatchItems: featuredWatchItems.data,
-    });
-
-    let WatchItems = {};
-
-    if (this.state.selectedCategory === "All") {
-      WatchItems = await this.props.app.db(
-        "GET",
-        "find",
-        "videos",
-        {},
-        {
-          order: {
-            createdAt: -1,
-          },
-          limit: 18,
-        }
-      );
-    } else {
-      WatchItems = await this.props.app.db(
-        "GET",
-        "find",
-        "videos",
-        {
-          category: this.state.selectedCategory,
-        },
-        {
-          order: {
-            createdAt: -1,
-          },
-          limit: 18,
-        }
-      );
-    }
-
-    this.setState({
-      watchItems: WatchItems.data,
-      selectedWatchItems: WatchItems.data,
-    });
-
-    this.forceUpdate();
-
-    let watchCategories = await this.props.app.db(
-      "GET",
-      "find",
-      "videocategories",
-      {},
-      {
-        order: {},
-        limit: 1000,
-      }
-    );
-    this.setState({
-      watchCategories: watchCategories.data,
-    });
-
-    this.setState({
-      loading: false,
-    });
-    this.forceUpdate();
-  }
-
-  shouldComponentUpdate = () => false;
-
   render() {
     return (
       <main>
@@ -281,7 +301,7 @@ export default class Watch extends React.Component {
           <>
             <div className="row">
               <section className="featured-watch">
-                <div className="p-4">
+                <div className="p-2">
                   <SwiperComp
                     {...this.props}
                     featuredItems={this.state.featuredWatchItems}
@@ -328,7 +348,7 @@ export default class Watch extends React.Component {
                                     this.setState({
                                       selectedCategory: "All",
                                     });
-                                    this.props.redirect("/watch?cat=All");
+                                    this.props.redirect("/watch");
                                     this.forceUpdate();
                                   }}
                                   href={"#"}
@@ -346,7 +366,7 @@ export default class Watch extends React.Component {
                     </div>
 
                     <div>
-                      <h1>Watch</h1>
+                      <h1>Videos</h1>
                     </div>
 
                     <div className="row">
@@ -362,20 +382,20 @@ export default class Watch extends React.Component {
                                 ? this.state.selectedWatchItems.map((item) => {
                                     return (
                                       <div
-                                        className="card text-center my-masonry-grid_column p-2"
+                                        className="text-center my-masonry-grid_column"
                                         style={{ borderRadius: "15px" }}
                                       >
                                         <div className="position-relative">
-                                          <div className="ratio ratio-4x3">
-                                            <div className="stretch">
-                                              {
-                                                <a
-                                                  href={item.file_url}
-                                                  class="fancybox"
-                                                  data-fancybox="true"
-                                                  flink="f_videos"
-                                                  data-caption={item.title}
-                                                >
+                                          <a
+                                            href={item.file_url}
+                                            class="fancybox"
+                                            data-fancybox="true"
+                                            flink="f_videos"
+                                            data-caption={item.title}
+                                          >
+                                            <div className="featuredItem ratio ratio-16x9">
+                                              <div className="stretch">
+                                                {
                                                   <img
                                                     class="d-block w-100"
                                                     src={this.__(
@@ -384,14 +404,14 @@ export default class Watch extends React.Component {
                                                     alt={item.title}
                                                     style={{ width: "100%" }}
                                                   />
-                                                </a>
-                                              }
+                                                }
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div className="featuredContent">
-                                            <h5>{item.title}</h5>
-                                            <span>{item.category}</span>
-                                          </div>
+                                            <div className="featuredContent">
+                                              <h5>{item.title}</h5>
+                                              <span>{item.category}</span>
+                                            </div>
+                                          </a>
                                           <div className="clearfix"></div>
                                         </div>
                                       </div>
@@ -400,36 +420,38 @@ export default class Watch extends React.Component {
                                 : this.state.watchItems.map((item) => {
                                     return (
                                       <div
-                                        className="card text-center my-masonry-grid_column p-2"
+                                        className="cardtext-center my-masonry-grid_column"
                                         style={{ borderRadius: "15px" }}
                                       >
                                         <div className="position-relative">
-                                          <div className="ratio ratio-4x3">
-                                            <div className="stretch">
-                                              {
-                                                <a
-                                                  href={item.file_url}
-                                                  class="fancybox"
-                                                  data-fancybox="true"
-                                                  flink="f_videos"
-                                                  data-caption={item.title}
-                                                >
+                                          <a
+                                            href={item.file_url}
+                                            class="fancybox"
+                                            data-fancybox="true"
+                                            flink="f_videos"
+                                            data-caption={item.title}
+                                          >
+                                            <div className="featuredItem ratio ratio-16x9">
+                                              <div className="stretch">
+                                                {
                                                   <img
                                                     class="d-block w-100"
                                                     src={this.__(
                                                       `${item.thumb_path}`
                                                     )}
                                                     alt={item.title}
-                                                    style={{ width: "100%" }}
+                                                    style={{
+                                                      width: "100%",
+                                                    }}
                                                   />
-                                                </a>
-                                              }
+                                                }
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div className="featuredContent">
-                                            <h5>{item.title}</h5>
-                                            <span>{item.category}</span>
-                                          </div>
+                                            <div className="featuredContent">
+                                              <h5>{item.title}</h5>
+                                              <span>{item.category}</span>
+                                            </div>
+                                          </a>
                                           <div className="clearfix"></div>
                                         </div>
                                       </div>
@@ -448,7 +470,7 @@ export default class Watch extends React.Component {
                               disabled={this.state.viewMoreDisabledState}
                               onClick={this.handleClick}
                               type="button"
-                              class="btn btn-secondary"
+                              class="btn btn-primary"
                             >
                               View More
                             </button>
@@ -504,3 +526,5 @@ export default class Watch extends React.Component {
     );
   }
 }
+
+export default Watch;

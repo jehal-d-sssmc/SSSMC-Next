@@ -22,7 +22,6 @@ export default function Read(props) {
         className="read align-self-center"
       >
         {props.read.map((item, i) => {
-          console.log(item);
           return (
             <>
               {item.thumbPath !== undefined && (

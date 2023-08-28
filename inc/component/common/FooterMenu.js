@@ -11,8 +11,8 @@ export default class FooterMenu extends react.Component {
           <ul className="footer-menu list-inline text-center">
             <li className="list-inline-item">
               <a onClick={()=>{
-                this.props.redirect('/sri-sathya-sai')
-              }} href="/#/sri-Sathya-Sai">About Us</a>
+                this.props.redirect('/page/sri-sathya-sai')
+              }} href="/page/sri-Sathya-Sai">About Us</a>
             </li>
             <li className="list-inline-item">
               <a href="/contact" onClick={(e)=>{
@@ -47,8 +47,8 @@ export default class FooterMenu extends react.Component {
               </a>
             </li>
             <li className="list-inline-item">
-              <a href="/#/privacy-policy" onClick={()=>{
-                this.props.redirect('/privacy-policy')
+              <a href="/page/privacy-policy" onClick={()=>{
+                this.props.redirect('/page/privacy-policy')
               }}>
                 Privacy Policy and Copyright
               </a>

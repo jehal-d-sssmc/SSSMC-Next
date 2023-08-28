@@ -13,6 +13,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: 'Merriweather', serif;
   font-family: 'Almarai', sans-serif;
+  overflow-x: hidden;
 }
 
 img{
@@ -713,6 +714,10 @@ header.topnav {
   padding: 30px 0;
 }
 
+.search-notice {
+  background: #ABD6FF;
+}
+
 /* End Single Section Menu */
 
 /* Start Multiple Section Menu */
@@ -1008,16 +1013,41 @@ section{
   margin-bottom: 5px;
 }
 
-.my-masonry-grid img {
+.my-masonry-grid .featuredItem {
+  border-radius: 15px;
+}
+
+.my-masonry-grid .stretch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
 }
 
 .my-masonry-grid .featuredContent h5{
   color: #cc470e;
   word-break: keep-all;
-  padding: 10px 0;
+  padding: 0;
   margin: 0;
   font-size: 14px;
+}
+
+
+.my-masonry-grid .featuredContent span{
+  font-size: 12px;
+  color: #004071;
+  display: inline-block;
+}
+
+.my-masonry-grid .featuredContent span::after{
+  content: " | ";
+  position: relative;
+  padding: 0 5px;
+
+}
+
+.my-masonry-grid .featuredContent span:last-child:after{
+  content: none;
 }
 
 .shorts .swiper-slide {
@@ -1144,11 +1174,11 @@ section{
 }
 .ratio-9x16 > div.stretch{
   overflow: hidden;
-  
+
 }
 .ratio-9x16 > div.stretch img{
   transform: scale(2.5,1) translateX(-45px);
-  
+
 }
 
 div.stretch{
@@ -1220,8 +1250,9 @@ footer {
 }
 
 ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
-    justify-content: center;
+    justify-content: right;
     border-bottom: none;
+    float: right;
 }
 
 .nav-pills .nav-tabs .nav-item .nav-link, .nav-pills .nav-tabs .nav-link{
@@ -1370,7 +1401,7 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     position: relative;
     background-color: #8f3985;
   }
-  
+
 
   .mynavbar .menu li .mycontainer {
       position: absolute;
@@ -1383,7 +1414,7 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   }
   .mynavbar .menu li.open .mycontainer{
     display: block;
-    
+
   }
   .mynavbar .menu li .mycontainer__listItem {
     flex-basis: 100%;
@@ -1392,7 +1423,7 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
 
 
   .mynavbar .menu li .mycontainer__listItem > .row, .mynavbar .menu li .mycontainer__listItem .container > .row{
-    padding: 0 0 90px 0;
+    padding: 0 0 180px 0;
   }
   .mynavbar .menu li:hover ul.submenu, .mynavbar .menu li.show ul.submenu,
   .mynavbar .menu li .mycontainer__listItem > .row .submenu{
@@ -1440,7 +1471,7 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     position: relative;
   }
 
-  
+
   .mynavbar .menu .mycontainer__list .submenu-title .goback{
     display: inline-block;
   }
@@ -1448,6 +1479,9 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
   .mynavbar .menu .mycontainer__list .submenu-title .goback{
     color: #004071;
     margin-right: 5px;
+  }
+  ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab{
+    font-size: 9px;
   }
 
   .mynav .vscroller .radio-grid{
@@ -1497,9 +1531,11 @@ ul.nav.nav-tabs.custom-tab, ul.nav.nav-pills.custom-tab {
     background-size: cover;
     width: 210px;
   }
-  .vslider .swiper-slide {
+  .vslider .swiper-slide, .listen .swiper-slide{
     width: 60%;
   }
+  .read .swiper-slide { width: 90%;}
+
   .watch .swiper-slide {
     width: 90%;
   }

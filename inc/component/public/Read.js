@@ -23,7 +23,7 @@ export default class Read extends React.Component {
       readIndex: 0,
       selectedReadIndex: 0,
       readCategories: [],
-      selectedCategory: "All",
+      selectedCategory: this.props.cat,
       categoryEmpty: false,
       viewMoreDisabledState: false,
     };
@@ -106,18 +106,39 @@ export default class Read extends React.Component {
   };
 
   handleCatClick = async (e) => {
-    e.preventDefault();
-    await this.setState({
+    if(typeof(e) !== 'string'){
+      e.preventDefault();
+
+    }
+    this.setState({
       categoryEmpty: false,
       selectedReadItems: [],
       selectedReadIndex: 0,
-      selectedCategory: e.target.text,
+      selectedCategory: typeof(e) !== 'string' ? e.target.text : e,
       viewMoreDisabledState: false,
     });
 
-    if (this.state.selectedCategory === "All") {
+    if (typeof(e) !== 'string' && e.target.text === "All") {
       this.setState({
-        selectedCategory: "All",
+        readIndex: 0,
+        readItems: [],
+      });
+      let againReadItems = await this.props.app.db(
+        "GET",
+        "find",
+        "articles",
+        {},
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 15,
+          skip: this.state.readIndex * 15,
+        }
+      );
+      this.setState({
+        readItems: againReadItems.data,
+        readIndex: 1,
       });
       this.forceUpdate();
       return;
@@ -161,6 +182,23 @@ export default class Read extends React.Component {
   };
 
   async componentDidMount() {
+    const handleRouteChange = (url, { shallow }) => {
+      console.log(
+        `App is changing to ${url} ${
+          shallow ? 'with' : 'without'
+        } shallow routing`
+      );
+      this.setState({
+        selectedCategory: decodeURI(url.replace('/read?cat=', ''))
+      }, async() => {
+      
+          await this.handleCatClick(this.state.selectedCategory);
+
+      })
+      console.log(this.props.router.state)
+    }
+ 
+    this.props.router.events.on('routeChangeStart', handleRouteChange)
     let featuredReadItems = await this.props.app.db(
       "GET",
       "find",
@@ -180,38 +218,62 @@ export default class Read extends React.Component {
     });
     this.forceUpdate();
 
-    let readItems = await this.props.app.db(
-      "GET",
-      "find",
-      "articles",
-      {},
-      {
-        order: {
-          createdAt: -1,
+    let ReadItems = {};
+    if (this.state.selectedCategory === "All") {
+      ReadItems = await this.props.app.db(
+        "GET",
+        "find",
+        "articles",
+        {},
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 18,
+        }
+      );
+      this.setState({
+        readItems: ReadItems.data,
+        readIndex: 1,
+      });
+      this.forceUpdate();
+    } else {
+      ReadItems = await this.props.app.db(
+        "GET",
+        "find",
+        "articles",
+        {
+          categoryName: this.state.selectedCategory,
         },
-        limit: 15,
-      }
-    );
-    this.setState({
-      readItems: readItems.data,
-      readIndex: 1,
-    });
-    this.forceUpdate();
+        {
+          order: {
+            createdAt: -1,
+          },
+          limit: 18,
+        }
+      );
+      this.setState({
+        selectedReadItems: ReadItems.data,
+        selectedReadIndex: 1,
+      });
+      this.forceUpdate();
+    }
 
     let readCategories = await this.props.app.db(
       "GET",
       "find",
       "articlecategories",
-      {},
-      {}
+      { nameTree: { $size: 0 } },
+      {
+        order: {},
+        limit: 8,
+      }
     );
-    this.setState({
-      readCategories: readCategories.data,
-    });
     this.forceUpdate();
 
     this.setState({
       loading: false,
+      readCategories: readCategories.data,
     });
     this.forceUpdate();
   }
@@ -274,7 +336,7 @@ export default class Read extends React.Component {
                                     this.setState({
                                       selectedCategory: "All",
                                     });
-                                    this.props.redirect("/read");
+                                    this.props.redirect("/read?cat=All");
                                     this.forceUpdate();
                                   }}
                                   href={"#"}

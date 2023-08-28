@@ -280,7 +280,7 @@ class Database {
       const result = await this.dbo
         .collection(this.config.prefix + col)
         .deleteOne(qry);
-      console.log(this.config.prefix + col);
+      //console.log(this.config.prefix + col);
       // db.close();
       this.dbclose();
       return result;
@@ -369,7 +369,7 @@ class Database {
     }
   ) {
     await this.connectDB();
-    console.log(this.config ,this.config.prefix + col, qry, attr);
+    //console.log(this.config ,this.config.prefix + col, qry, attr);
     try {
       const o =
         attr.order === undefined || typeof attr.order !== 'object'

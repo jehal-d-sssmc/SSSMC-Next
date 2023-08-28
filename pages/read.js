@@ -9,8 +9,10 @@ import Read from "../inc/component/public/Read";
 export default class Watch extends react.Component {
   constructor(props) {
     super(props);
+    this.query = this.props.app.helper._query();
     this.state = {
       user: undefined,
+      category: this.query.cat,
     };
   }
 
@@ -30,7 +32,7 @@ export default class Watch extends react.Component {
       <>
         <Header {...this.props} />
 
-        {<Read {...this.props} />}
+        {<Read cat={this.state.category} {...this.props} />}
 
         <Footer {...this.props} />
       </>

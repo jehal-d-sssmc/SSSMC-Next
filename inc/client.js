@@ -70,7 +70,7 @@ class client {
       attr.user === undefined
         ? this.helper.firebase.auth.currentUser
         : attr.user;
-    console.log(user);
+    // console.log(user);
     if (user !== null) {
       headers.authtoken = user.accessToken;
     }
@@ -116,11 +116,11 @@ class client {
 
   music = (player, state) => {
     return new music(player, state);
-  }
+  };
 
   voice = (is) => {
     return new voice(is);
-  }
+  };
 
   dbset = async (req, col, data, qry = "", params = {}) => {
     /*
@@ -234,7 +234,7 @@ class client {
             const token = credential.accessToken;
             // The signed-in user info.
             const user = result.user;
-            console.log(user);
+            // console.log(user);
             window.location.reload();
             return user;
             // IdP data available using getAdditionalUserInfo(result)

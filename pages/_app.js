@@ -66,7 +66,6 @@ class MyApp extends React.Component{
       app: this.app
     }, ()=>{
       this.props.router.push(path, undefined, { shallow:true })
-
     })
   }
 
@@ -77,13 +76,91 @@ class MyApp extends React.Component{
       _app.helper = res;
       _app.musicRef = _app.music(this);
       _app.voiceRef = _app.voice(this);
+      
+      
       this.setState({
         app: _app
       },()=>{
         this.app = this.state.app;
+        this.playerRef.addEventListener("timeupdate", this.timeUpdate, false);
+      this.playerRef.addEventListener("ended", this.nextSong, false);
+        this.timelineRef.addEventListener("click", this.changeCurrentTime, false);
+      this.timelineRef.addEventListener("mousemove", this.hoverTimeLine, false);
+      this.timelineRef.addEventListener("mouseout", this.resetTimeLine, false);
       })
+    });
+  }
+
+  componentWillUnmount(){
+    
+    this.timelineRef.removeEventListener("click", this.changeCurrentTime);
+    this.timelineRef.removeEventListener("mousemove", this.hoverTimeLine);
+    this.timelineRef.removeEventListener("mouseout", this.resetTimeLine);
+  }
+
+
+  changeCurrentTime = (e) => {
+    const duration = this.playerRef.duration;
+    
+    const playheadWidth = this.timelineRef.offsetWidth;
+    const offsetWidht = this.timelineRef.offsetLeft;
+    const userClickWidht = e.clientX - offsetWidht;
+    console.log(duration);
+    const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
+  
+    this.playheadRef.style.width = userClickWidhtInPercent + "%";
+    if(duration.toString() !== 'Infinity'){
+      this.playerRef.currentTime = (duration * userClickWidhtInPercent)/100;
+    }
+  }
+  
+  hoverTimeLine = (e) => {
+    const duration = this.playerRef.duration;
+    console.log(duration)
+    const playheadWidth = this.timelineRef.offsetWidth
+    
+    const offsetWidht = this.timelineRef.offsetLeft;
+    const userClickWidht = e.clientX - offsetWidht;
+    const userClickWidhtInPercent = (userClickWidht*100)/playheadWidth;
+  
+    if(userClickWidhtInPercent <= 100){
+      this.hoverPlayheadRef.style.width = userClickWidhtInPercent + "%";
+    }
+    
+    const time = (duration * userClickWidhtInPercent)/100;
+    
+    if( (time >=0) && (time <= duration)){
+      this.hoverPlayheadRef.dataset.content = this.formatTime(time);
+    }
+  }
+  
+  resetTimeLine = () => {
+    this.hoverPlayheadRef.style.width = 0;
+  }
+  
+  timeUpdate = () => {
+    const duration = this.playerRef.duration;
+    const timelineWidth = this.timelineRef.offsetWidth - this.playheadRef.offsetWidth;
+    const playPercent = 100 * (this.playerRef.currentTime / duration);
+      this.playheadRef.style.width = playPercent + "%";
+    const currentTime = this.formatTime(parseInt(this.playerRef.currentTime));  
+    this.music = this.state.music;
+    this.music.currentTime = currentTime;
+    this.setState(this.music, () => {
+     // console.log(this.state)
     })
   }
+  
+  formatTime = (currentTime) =>{
+    const minutes = Math.floor(currentTime / 60);
+    let seconds = Math.floor(currentTime % 60);
+  
+    seconds = (seconds >= 10) ? seconds : "0" + seconds % 60;
+    
+    const formatTime = minutes + ":" +  seconds
+   
+    return formatTime;
+    }
 
   render(){
     const Component = this.props.Component;
@@ -103,15 +180,33 @@ class MyApp extends React.Component{
         <>{this.loader}</>:
         <>
         {
-          
+          <>
           <audio ref={ref => this.playerRef = ref}>
                     <source src={ this.state.music.player ? currentSong.audio : "" } type="audio/ogg"/>
                       Your browser does not support the audio element.
           </audio>
+          <div className={`uni-timetrack${!this.state.music.player ? " d-none" : ""}`}>
+                <div className="time">
+                  <div className="current-time">{ currentTime }</div>
+                  <div className="end-time">{ currentSong.duration === '-0.00' ? <i className="fa-solid fa-infinity"></i> : currentSong.duration }</div>
+                </div>
+                
+                <div ref={ref => this.timelineRef = ref} className={`timeline${currentSong.duration === '-0.00'? ' d-none':''}`}>
+                  <div ref={ref => this.playheadRef = ref} className="playhead"></div>
+                  <div ref={ref => this.hoverPlayheadRef = ref} className="hover-playhead" data-content="0:00"></div>
+                </div>
+                {
+                    currentSong.duration === '-0.00' &&
+                    <div className="progress" style={{height:"5px"}}>
+                        <div className={`progress-bar progress-bar-striped bg-danger${(!pause) ? '' : ' progress-bar-animated'}`} role="progressbar" style={{width: "100%"}} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                }
+              </div>
+          </>
 
         }
         <Component {...{attr: this.props.pageProps, app: this.state.app, loader: this.loader, router: this.props.router, redirect: this.redirect, state: this.state, search: this.search}} /> 
-        <CardMusic {...{app: this.state.app}} />
+        <CardMusic {...{app: this.state.app}}   />
         </>
       }
       </>

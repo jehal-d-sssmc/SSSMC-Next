@@ -25,7 +25,7 @@ class NavMenu extends react.Component {
       $(".menu > li .hasDropdown,.menu > li .mycontainer").on(
         "mouseenter",
         function () {
-          console.log(this);
+          // console.log(this);
           $(".menu .overlay").fadeIn();
         }
       );
@@ -48,7 +48,7 @@ class NavMenu extends react.Component {
               visible++;
             }
           });
-        console.log(visible);
+        // console.log(visible);
         if (visible < 1) {
           $(this).parent().find(".overlay").fadeOut();
         }
@@ -62,9 +62,14 @@ class NavMenu extends react.Component {
       });
     } else {
       $(".mynavbar .menu > li a").on("click", function () {
-        console.log($(this));
+        // console.log($(this));
         $(this).parent().addClass("open");
+       // return false;
       });
+     /* $(".mynavbar .menu > li a.hasDropdown").on("click", function () {
+        // console.log($(this));
+        $(this).parent().addClass("open");
+      });*/
       $(".mynavbar .menu > li .goback").on("click", function () {
         $(this)
           .parents("li")
@@ -73,7 +78,16 @@ class NavMenu extends react.Component {
           });
       });
     }
-
+    this.setState({
+      width: $(window).width()
+    });
+    this.forceUpdate();
+    $(window).on("resize", ()=>{
+      this.setState({
+        width: $(window).width()
+      });
+      this.forceUpdate();
+    })
     /* $(window).on('blur', function(){
       alert( 'Are you sure you want to leave?');
     });*/
@@ -85,7 +99,7 @@ class NavMenu extends react.Component {
       { nameTree: { $size: 0 } },
       {
         order: {},
-        limit: 1000,
+        limit: 10,
       }
     );
 
@@ -96,7 +110,7 @@ class NavMenu extends react.Component {
       { nameTree: { $size: 0 } },
       {
         order: {},
-        limit: 1000,
+        limit: 8,
       }
     );
 
@@ -107,7 +121,7 @@ class NavMenu extends react.Component {
       { nameTree: { $size: 0 } },
       {
         order: {},
-        limit: 1000,
+        limit: 10,
       }
     );
 
@@ -156,7 +170,9 @@ class NavMenu extends react.Component {
                 className="hasDropdown"
                 href="#"
                 onClick={() => {
-                  /// this.props.redirect("/watch?cat=All");
+                  if(this.state.width >= 767){
+                //   this.props.redirect("/watch");
+                  }
                 }}
               >
                 <i className="fa-solid fa-photo-film"></i>&nbsp;
@@ -170,17 +186,28 @@ class NavMenu extends react.Component {
                       <div className="col-md-12">
                         <div className="multi-sub-holder">
                           <div className="container">
-                            <h5 className="submenu-title text-start">Video</h5>
+                            <h5 className="submenu-title text-start">Videos</h5>
                             <ul className="submenu">
+                              <li>
+                                <a
+                                  onClick={() => {
+                                    this.props.redirect(`/watch`);
+                                  }}
+                                  href="#"
+                                  className="dropdown-item ban-csr-pnt"
+                                >
+                                  All Videos
+                                </a>
+                              </li>
                               {this.state.watchCategories.map((item) => {
                                 return (
                                   <li>
                                     <a
                                       onClick={() => {
+                                        //this.props.redirect('/');
                                         this.props.redirect(
                                           `/watch?cat=${item.catogoryName}`
                                         );
-                                        this.forceUpdate();
                                       }}
                                       href="#"
                                       className="dropdown-item ban-csr-pnt"
@@ -204,7 +231,7 @@ class NavMenu extends react.Component {
                 className="hasDropdown"
                 href="#"
                 onClick={() => {
-                  // this.props.redirect("/listen");
+                  // this.props.redirect("/listen?cat=All");
                 }}
               >
                 <i className="fa-solid fa-headphones"></i>&nbsp;
@@ -219,6 +246,17 @@ class NavMenu extends react.Component {
                           <h5 className="submenu-title">Audio</h5>
                           <div className="containerx">
                             <ul className="submenu">
+                              <li>
+                                <a
+                                  onClick={() => {
+                                    this.props.redirect(`/listen`);
+                                  }}
+                                  href="#"
+                                  className="dropdown-item ban-csr-pnt"
+                                >
+                                  All Audio
+                                </a>
+                              </li>
                               {this.state.listenCategories.map((item) => {
                                 return (
                                   <li>
@@ -257,7 +295,7 @@ class NavMenu extends react.Component {
               <a
                 href="#"
                 onClick={() => {
-                  // this.props.redirect("/read");
+                  //  this.props.redirect("/read?cat=All");
                 }}
                 className="hasDropdown"
               >
@@ -276,68 +314,32 @@ class NavMenu extends react.Component {
                             <ul className="submenu">
                               <li>
                                 <a
-                                  href="#/article-list-page/header/Announcements/7c6f6a2f-11ff-4f12-9970-81d5f3d0afaf"
+                                  onClick={() => {
+                                    this.props.redirect(`/read`);
+                                  }}
+                                  href="#"
                                   className="dropdown-item ban-csr-pnt"
                                 >
-                                  Announcements
+                                  All Articles
                                 </a>
                               </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Lessons from Sai/5b2448a6-6248-48a6-b96b-ad1f0987ae2b"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Lessons from Sai
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Life of Sai/fef6c99d-f48b-4f22-88bb-11df2ea763fa"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Life of Sai
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Message of Sai/38e0a5f3-7987-45af-893f-bb81fe1f6bc3"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Message of Sai
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Moments with Sai/80acbf63-cb39-44a5-84d5-c0e491a67a0a"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Moments with Sai
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Play With Sai/0249037b-1a6c-49d0-8400-4399de99b8d3"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Play With Sai
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Projects of Sai/c4ed6fcd-eff8-49ac-a72e-4260e63fdbd6"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Projects of Sai
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  href="#/article-list-page/header/Seva for Sai/b984cf93-0ea1-4950-9567-04b380538ec2"
-                                  className="dropdown-item ban-csr-pnt"
-                                >
-                                  Seva for Sai
-                                </a>
-                              </li>
+                              {this.state.readCategories.map((item) => {
+                                return (
+                                  <li>
+                                    <a
+                                      onClick={() => {
+                                        this.props.redirect(
+                                          `/read?cat=${item.catogoryName}`
+                                        );
+                                      }}
+                                      href="#"
+                                      className="dropdown-item ban-csr-pnt"
+                                    >
+                                      {item.catogoryName}
+                                    </a>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           </div>
                         </div>
@@ -348,7 +350,13 @@ class NavMenu extends react.Component {
               </ul>
             </li>
             <li>
-              <a href="#" className="hasDropdown">
+              <a
+                className="hasDropdown"
+                href="#"
+                onClick={() => {
+                  //   this.props.redirect("/downloads");
+                }}
+              >
                 <i className="fa-solid fa-download"></i>&nbsp;
                 <span>Downloads</span>
               </a>

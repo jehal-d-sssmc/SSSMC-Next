@@ -105,45 +105,18 @@ export default class Listen extends React.Component {
   };
 
   handleCatClick = async (e) => {
-    e.preventDefault();
-    await this.setState({
+    if(typeof(e) !== 'string'){
+      e.preventDefault();
+
+    }
+    this.setState({
       categoryEmpty: false,
       selectedListenItems: [],
       selectedListenIndex: 0,
-      selectedCategory: e.target.text,
+      selectedCategory: typeof(e) !== 'string' ? e.target.text : e,
       viewMoreDisabledState: false,
     });
 
-    if (e.target.text === "All") {
-      this.setState({
-        listenIndex: 0,
-        listenItems: [],
-      });
-      let againListenItems = await this.props.app.db(
-        "GET",
-        "find",
-        "audios",
-        {},
-        {
-          order: {
-            createdAt: -1,
-          },
-          limit: 15,
-          skip: this.state.listenIndex * 15,
-        }
-      );
-      this.setState(
-        {
-          listenItems: againListenItems.data,
-          listenIndex: 1,
-        },
-        () => {
-          console.log(this.state.listenItems);
-        }
-      );
-      this.forceUpdate();
-      return;
-    }
 
     let selListenItems = await this.props.app.db(
       "GET",
@@ -193,6 +166,23 @@ export default class Listen extends React.Component {
   };
 
   async componentDidMount() {
+    const handleRouteChange = (url, { shallow }) => {
+      console.log(
+        `App is changing to ${url} ${
+          shallow ? 'with' : 'without'
+        } shallow routing`
+      );
+      this.setState({
+        selectedCategory:  decodeURI(url.replace('/listen?cat=', ''))
+      }, async() => {
+      
+          await this.handleCatClick(this.state.selectedCategory);
+
+      })
+      console.log(this.props.router.state)
+    }
+ 
+    this.props.router.events.on('routeChangeStart', handleRouteChange)
     this.forceUpdate();
     let ListenItems = {};
     if (this.state.selectedCategory === "All") {
@@ -241,7 +231,6 @@ export default class Listen extends React.Component {
       },
       {
         order: {},
-        limit: 1000,
       }
     );
 
@@ -360,17 +349,17 @@ export default class Listen extends React.Component {
                                 ? this.state.selectedListenItems.map((item) => {
                                     return (
                                       <div
-                                        className="text-center my-masonry-grid_column p-2"
+                                        className="my-masonry-grid_column p-2"
                                         style={{ borderRadius: "15px" }}
                                       >
                                         <div className="position-relative">
-                                          <div className="ratio ratio-4x3">
+                                          <div className="featuredItem ratio ratio-4x3">
                                             <div
                                               className="stretch"
                                               style={{ cursor: "zoom-in" }}
                                               onClick={() => {
                                                 this.setMusic({
-                                                  name: `${item.title} | ${item.catogory}`,
+                                                  name: `${item.title} ${item.catogory !== undefined ? "| " + item.category : ""}`,
                                                   author: item.album_name,
                                                   img: `https://content.sssmediacentre.org/${item.file_identifier_thumb}`,
                                                   audio: `https://content.sssmediacentre.org/${item.file_identifier}`,
@@ -393,7 +382,10 @@ export default class Listen extends React.Component {
                                           </div>
                                           <div className="featuredContent">
                                             <h5>{item.title}</h5>
-                                            <span>{item.catogory}</span>
+                                            {item.catogory && <span>{item.catogory}</span>}
+                                            {item.category && <span>{item.sub_category}</span>}
+                                            {item.album_name && item.sub_category !== item.sub_category && <span>{item.album_name}</span>}
+                                            {item.album_artiste && <span>{item.album_artiste}</span>}
                                           </div>
                                           <div className="clearfix"></div>
                                         </div>
@@ -403,11 +395,11 @@ export default class Listen extends React.Component {
                                 : this.state.listenItems.map((item) => {
                                     return (
                                       <div
-                                        className="text-center my-masonry-grid_column p-2"
+                                        className="my-masonry-grid_column p-2"
                                         style={{ borderRadius: "15px" }}
                                       >
                                         <div className="position-relative">
-                                          <div className="ratio ratio-4x3">
+                                          <div className="featuredItem ratio ratio-4x3">
                                             <div
                                               className="stretch"
                                               style={{ cursor: "zoom-in" }}
@@ -435,13 +427,16 @@ export default class Listen extends React.Component {
                                             </div>
                                           </div>
                                           <div className="featuredContent">
-                                            <h6
+                                            <h5
                                               className="badge text-dark"
                                               style={{ whiteSpace: "normal" }}
                                             >
                                               {item.title}
-                                            </h6>
-                                            <span>{item.catogory}</span>
+                                            </h5>
+                                            {item.catogory && <span>{item.catogory}</span>}
+                                            {item.category && <span>{item.sub_category}</span>}
+                                            {item.album_name && item.sub_category !== item.sub_category && <span>{item.album_name}</span>}
+                                            {item.album_artiste && <span>{item.album_artiste}</span>}
                                           </div>
                                           <div className="clearfix"></div>
                                         </div>

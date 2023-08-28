@@ -28,11 +28,29 @@ export default class Home extends React.Component {
       watchToggle: "LATEST",
     };
     this.projects = [
-      {title: "Sri Sathya Sai Central Trust", logo: "/sssct.png", link: "https://www.srisathyasai.org"},
-      {title: "Sri Sathya Sai Global Council", logo: "/sssct.png", link: "https://www.srisathyasaiglobalcouncil.org/"},
-      {title: "Sri Sathya Sai Divyasmṛti", logo: "/sssds.png", link: "https://www.sssdivyasmrti.org", color: "rgb(54, 21, 0)"},
-      {title: "Sri Sathya Sai Prematharu", logo: "/sssprematharu.png", link: "https://sssprematharu.org/", color: "#084c1d"},
-    ]
+      {
+        title: "Sri Sathya Sai Central Trust",
+        logo: "/sssct.png",
+        link: "https://www.srisathyasai.org",
+      },
+      {
+        title: "Sri Sathya Sai Global Council",
+        logo: "/sssct.png",
+        link: "https://www.srisathyasaiglobalcouncil.org/",
+      },
+      {
+        title: "Sri Sathya Sai Divyasmṛti",
+        logo: "/sssds.png",
+        link: "https://www.sssdivyasmrti.org",
+        color: "rgb(54, 21, 0)",
+      },
+      {
+        title: "Sri Sathya Sai Prematharu",
+        logo: "/sssprematharu.png",
+        link: "https://sssprematharu.org/",
+        color: "#084c1d",
+      },
+    ];
   }
 
   handleReadToggle = async (e) => {
@@ -88,10 +106,16 @@ export default class Home extends React.Component {
   };
 
   async componentDidMount() {
-    console.log(this.props);
+    // console.log(this.props);
     this.setState({
       loading: true,
     });
+    if(this.state.shorts.length < 1){
+      await this.loaddata();
+    }
+  }
+
+  loaddata = async () => {
 
     let shorts = await this.props.app.db(
       "GET",
@@ -107,6 +131,11 @@ export default class Home extends React.Component {
       }
     );
 
+    this.setState({
+      shorts: shorts.data,
+    });
+    this.forceUpdate();
+
     let watchLatest = await this.props.app.db(
       "GET",
       "find",
@@ -121,6 +150,11 @@ export default class Home extends React.Component {
       }
     );
 
+    this.setState({
+      watchLatest: watchLatest.data,
+    });
+    this.forceUpdate();
+
     let watchFeatured = await this.props.app.db(
       "GET",
       "find",
@@ -134,6 +168,11 @@ export default class Home extends React.Component {
         },
       }
     );
+
+    this.setState({
+      watchFeatured: watchFeatured.data,
+    });
+    this.forceUpdate();
 
     let listenLatest = await this.props.app.db(
       "GET",
@@ -159,6 +198,11 @@ export default class Home extends React.Component {
       }
     );
 
+    this.setState({
+      listenFeatured: listenFeatured.data,
+    });
+    this.forceUpdate();
+
     let albumLatest = await this.props.app.db(
       "GET",
       "find",
@@ -170,6 +214,11 @@ export default class Home extends React.Component {
         },
       }
     );
+
+    this.setState({
+      albumLatest: albumLatest.data,
+    });
+    this.forceUpdate();
 
     let albumFeatured = await this.props.app.db(
       "GET",
@@ -183,6 +232,11 @@ export default class Home extends React.Component {
       }
     );
 
+    this.setState({
+      albumFeatured: albumFeatured.data,
+    });
+    this.forceUpdate();
+
     let readLatest = await this.props.app.db(
       "GET",
       "find",
@@ -195,6 +249,11 @@ export default class Home extends React.Component {
         limit: 15,
       }
     );
+
+    this.setState({
+      readLatest: readLatest.data,
+    });
+    this.forceUpdate();
 
     let readFeatured = await this.props.app.db(
       "GET",
@@ -211,25 +270,21 @@ export default class Home extends React.Component {
       }
     );
 
-    this.setState(
-      {
-        shorts: shorts.data,
-        watchFeatured: watchFeatured.data,
-        watchLatest: watchLatest.data,
-        listenFeatured: listenFeatured.data,
-        listenLatest: listenLatest.data,
-        albumFeatured: albumFeatured.data,
-        albumLatest: albumLatest.data,
-        readFeatured: readFeatured.data,
-        readLatest: readLatest.data,
-        loading: false,
-        loaded: true,
-      },
-      () => {
-        console.log(albumFeatured);
-        console.log(albumLatest);
-      }
-    );
+    this.setState({
+      readFeatured: readFeatured.data,
+    });
+    this.forceUpdate();
+
+    this.setState({
+      watchFeatured: watchFeatured.data,
+      watchLatest: watchLatest.data,
+      listenFeatured: listenFeatured.data,
+      listenLatest: listenLatest.data,
+      albumFeatured: albumFeatured.data,
+      albumLatest: albumLatest.data,
+      loading: false,
+      loaded: true,
+    });
     this.forceUpdate();
   }
 
@@ -274,250 +329,275 @@ export default class Home extends React.Component {
                 </div>
               </div>
             </section>
-
-            <section id="shorts" className="p-3 bg-white">
-              <div className="" style={{ padding: "0px 15px" }}>
-                <div className="section-header pb-3">
-                  <div className="row">
-                    <div className="col-12 align-self-center">
-                      <h3 className="section-title">Shorts</h3>
+            {this.state.shorts.length > 0 && (
+              <section id="shorts" className="p-3 bg-white">
+                <div className="" style={{ padding: "0px 15px" }}>
+                  <div className="section-header pb-3">
+                    <div className="row">
+                      <div className="col-12 align-self-center">
+                        <h3 className="section-title">Shorts</h3>
+                      </div>
                     </div>
                   </div>
+                  <Shorts shorts={this.state.shorts} />
                 </div>
-                <Shorts shorts={this.state.shorts} />
-              </div>
-            </section>
+              </section>
+            )}
 
-            <section id="watch" className="bg-white p-3">
-              <div style={{ margin: "0 15px" }}>
-                <div className="section-header pb-3">
-                  <div className="row">
-                    <div className="col-12 align-self-center">
-                      <a
-                        onClick={() => {
-                          this.props.redirect("/watch");
-                          this.forceUpdate();
-                        }}
-                        href={"#"}
-                      >
-                        <h3 className="section-title">Watch</h3>
-                        &nbsp; &gt; &nbsp;
+            {this.state.watchLatest.length > 0 && (
+              <section id="watch" className="bg-white p-3">
+                <div style={{ margin: "0 15px" }}>
+                  <div className="section-header pb-3">
+                    <div className="row">
+                      <div className="col-12 align-self-center">
                         <a
                           onClick={() => {
                             this.props.redirect("/watch");
                             this.forceUpdate();
                           }}
                           href={"#"}
-                          className="text-danger"
                         >
-                          View More
+                          <h3 className="section-title">Watch</h3>
+                          &nbsp; &gt; &nbsp;
+                          <a
+                            onClick={() => {
+                              this.props.redirect("/watch");
+                              this.forceUpdate();
+                            }}
+                            href={"#"}
+                            className="text-danger"
+                          >
+                            View More
+                          </a>
                         </a>
-                      </a>
-                      <ul class="nav nav-tabs custom-tab">
-                        <li class="nav-item">
-                          <a
-                            onClick={this.handleWatchToggle}
-                            href={"#"}
-                            class={`nav-link ${
-                              this.state.watchToggle === "LATEST"
-                                ? "active"
-                                : ""
-                            }`}
-                          >
-                            <span>LATEST</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            onClick={this.handleWatchToggle}
-                            href={"#"}
-                            class={`nav-link ${
-                              this.state.watchToggle === "FEATURED"
-                                ? "active"
-                                : ""
-                            }`}
-                          >
-                            <span>FEATURED</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="nav nav-tabs custom-tab">
+                          <li class="nav-item">
+                            <a
+                              onClick={this.handleWatchToggle}
+                              href={"#"}
+                              class={`nav-link ${
+                                this.state.watchToggle === "LATEST"
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <span>LATEST</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              onClick={this.handleWatchToggle}
+                              href={"#"}
+                              class={`nav-link ${
+                                this.state.watchToggle === "FEATURED"
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <span>FEATURED</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
+                  <div className="p-2"></div>
+
+                  {this.state.watchToggle === "LATEST" ? (
+                    <SwiperComp
+                      {...this.props}
+                      featuredItems={this.state.watchLatest}
+                    />
+                  ) : (
+                    <SwiperComp
+                      {...this.props}
+                      featuredItems={this.state.watchFeatured}
+                    />
+                  )}
+
+                  <div className="p-2"></div>
                 </div>
-                <div className="p-2"></div>
+              </section>
+            )}
 
-                {this.state.watchToggle === "LATEST" ? (
-                  <SwiperComp
-                    {...this.props}
-                    featuredItems={this.state.watchLatest}
-                  />
-                ) : (
-                  <SwiperComp
-                    {...this.props}
-                    featuredItems={this.state.watchFeatured}
-                  />
-                )}
-
-                <div className="p-2"></div>
-              </div>
-            </section>
-
-            <section id="listen" className="p-3 pb-0 bg-white">
-              <div className="" style={{ padding: "0px 15px" }}>
-                <div className="section-header">
-                  <div className="row">
-                    <div className="col-12 align-self-center">
-                      <a
-                        onClick={() => {
-                          this.props.redirect("/listen");
-                          this.forceUpdate();
-                        }}
-                        href={"#"}
-                      >
-                        <h3 className="section-title">Listen</h3>
-                        &nbsp; &gt; &nbsp;
+            {this.state.shorts.length > 0 && (
+              <section id="listen" className="p-3 pb-0 bg-white">
+                <div className="" style={{ padding: "0px 15px" }}>
+                  <div className="section-header">
+                    <div className="row">
+                      <div className="col-12 align-self-center">
                         <a
                           onClick={() => {
                             this.props.redirect("/listen");
                             this.forceUpdate();
                           }}
                           href={"#"}
-                          className="text-danger"
                         >
-                          View More
+                          <h3 className="section-title">Listen</h3>
+                          &nbsp; &gt; &nbsp;
+                          <a
+                            onClick={() => {
+                              this.props.redirect("/listen");
+                              this.forceUpdate();
+                            }}
+                            href={"#"}
+                            className="text-danger"
+                          >
+                            View More
+                          </a>
                         </a>
-                      </a>
-                      <ul class="nav nav-tabs custom-tab">
-                        <li class="nav-item">
-                          <a
-                            onClick={this.handleListenToggle}
-                            href={"#"}
-                            class={`nav-link ${
-                              this.state.listenToggle === "LATEST"
-                                ? "active"
-                                : ""
-                            }`}
-                          >
-                            <span>LATEST</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            onClick={this.handleListenToggle}
-                            href={"#"}
-                            class={`nav-link ${
-                              this.state.listenToggle === "FEATURED"
-                                ? "active"
-                                : ""
-                            }`}
-                          >
-                            <span>FEATURED</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="nav nav-tabs custom-tab">
+                          <li class="nav-item">
+                            <a
+                              onClick={this.handleListenToggle}
+                              href={"#"}
+                              class={`nav-link ${
+                                this.state.listenToggle === "LATEST"
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <span>LATEST</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              onClick={this.handleListenToggle}
+                              href={"#"}
+                              class={`nav-link ${
+                                this.state.listenToggle === "FEATURED"
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <span>FEATURED</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
+                  <div className="p-2"></div>
+
+                  {this.state.listenToggle === "LATEST" ? (
+                    <Listen {...this.props} listen={this.state.listenLatest} />
+                  ) : (
+                    <Listen
+                      {...this.props}
+                      listen={this.state.listenFeatured}
+                    />
+                  )}
+
+                  <div className="p-2"></div>
                 </div>
-                <div className="p-2"></div>
+              </section>
+            )}
 
-                {this.state.listenToggle === "LATEST" ? (
-                  <Listen {...this.props} listen={this.state.listenLatest} />
-                ) : (
-                  <Listen {...this.props} listen={this.state.listenFeatured} />
-                )}
-
-                <div className="p-2"></div>
-              </div>
-            </section>
-
-            
-
-            <section id="read" className="p-3 pb-0 bg-light">
-              <div style={{ padding: "0px 15px" }}>
-                <div className="section-header">
-                  <div className="row">
-                    <div className="col-12 align-self-center">
-                      <a
-                        onClick={() => {
-                          this.props.redirect("/read");
-                          this.forceUpdate();
-                        }}
-                        href={"#"}
-                      >
-                        <h3 className="section-title">Read</h3>
-                        &nbsp; &gt; &nbsp;
+            {this.state.readLatest.length > 0 && (
+              <section id="read" className="p-3 pb-0 bg-light">
+                <div style={{ padding: "0px 15px" }}>
+                  <div className="section-header">
+                    <div className="row">
+                      <div className="col-12 align-self-center">
                         <a
                           onClick={() => {
                             this.props.redirect("/read");
                             this.forceUpdate();
                           }}
                           href={"#"}
-                          className="text-danger"
                         >
-                          View More
+                          <h3 className="section-title">Read</h3>
+                          &nbsp; &gt; &nbsp;
+                          <a
+                            onClick={() => {
+                              this.props.redirect("/read");
+                              this.forceUpdate();
+                            }}
+                            href={"#"}
+                            className="text-danger"
+                          >
+                            View More
+                          </a>
                         </a>
-                      </a>
 
-                      <ul class="nav nav-tabs custom-tab">
-                        <li class="nav-item">
-                          <a
-                            onClick={this.handleReadToggle}
-                            href={"#"}
-                            class={`nav-link ${
-                              this.state.readToggle === "LATEST" ? "active" : ""
-                            }`}
-                          >
-                            <span>LATEST</span>
-                          </a>
-                        </li>
-                        <li class="nav-item">
-                          <a
-                            onClick={this.handleReadToggle}
-                            href={"#"}
-                            class={`nav-link ${
-                              this.state.readToggle === "FEATURED"
-                                ? "active"
-                                : ""
-                            }`}
-                          >
-                            <span>FEATURED</span>
-                          </a>
-                        </li>
-                      </ul>
+                        <ul class="nav nav-tabs custom-tab">
+                          <li class="nav-item">
+                            <a
+                              onClick={this.handleReadToggle}
+                              href={"#"}
+                              class={`nav-link ${
+                                this.state.readToggle === "LATEST"
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <span>LATEST</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              onClick={this.handleReadToggle}
+                              href={"#"}
+                              class={`nav-link ${
+                                this.state.readToggle === "FEATURED"
+                                  ? "active"
+                                  : ""
+                              }`}
+                            >
+                              <span>FEATURED</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
+                  <div className="p-2"></div>
+
+                  {this.state.readToggle === "LATEST" ? (
+                    <Read {...this.props} read={this.state.readLatest} />
+                  ) : (
+                    <Read {...this.props} read={this.state.readFeatured} />
+                  )}
+
+                  <div className="p-2"></div>
                 </div>
-                <div className="p-2"></div>
-
-                {this.state.readToggle === "LATEST" ? (
-                  <Read {...this.props} read={this.state.readLatest} />
-                ) : (
-                  <Read {...this.props} read={this.state.readFeatured} />
-                )}
-
-                <div className="p-2"></div>
-              </div>
-            </section>
+              </section>
+            )}
 
             <section id="projects" className="p-3 pb-0 bg-white">
-             
-            <div className="p-3"></div>
+              <div className="p-3"></div>
               <div className="project-list">
-                  {
-                    this.projects.map((x)=>{
-                      return <div className="text-center">
-                        <a href={x.link} target="_blank" style={{color: x.color !== undefined ? x.color : "#d21d25"}} ref={'noreferrer'}>
-                          <div className="project-logo" style={{maxHeight:"90px", maxWidth:"90px", margin: "auto"}}>
-                            <img src={x.logo} alt={x.title} style={{maxWidth:"100%"}} />
-                          </div>
-                          
-                          <h5 className="project-title pt-3">
-                            {x.title}
-                          </h5>
-                        </a>
-                      </div>
-                    })
-                  }
+                {this.projects.map((x) => {
+                  return (
+                    <div className="text-center">
+                      <a
+                        href={x.link}
+                        target="_blank"
+                        style={{
+                          color: x.color !== undefined ? x.color : "#d21d25",
+                        }}
+                        ref={"noreferrer"}
+                      >
+                        <div
+                          className="project-logo"
+                          style={{
+                            maxHeight: "90px",
+                            maxWidth: "90px",
+                            margin: "auto",
+                          }}
+                        >
+                          <img
+                            src={x.logo}
+                            alt={x.title}
+                            style={{ maxWidth: "100%" }}
+                          />
+                        </div>
+
+                        <h5 className="project-title pt-3">{x.title}</h5>
+                      </a>
+                    </div>
+                  );
+                })}
               </div>
               <div className="p-3"></div>
             </section>
